@@ -1,0 +1,178 @@
+\mode*
+
+\setmonofont{Verdana}
+\newmintedfile{java}{frame=single,linenos,samepage}
+\newmintedfile{antlr}{linenos}
+
+\section{Java-Technologie kurz erklärt}
+\label{sec:java-technologie}
+
+Java ist eine Programmiersprache und Computerplattform, die erstmals 1995 von 
+Sun Microsystems veröffentlicht wurde. Es gibt viele Anwendungen und
+Websites, die nicht funktionieren, es sei denn, Sie haben Java installiert, 
+und jeden Tag werden weitere erstellt. Java ist schnell, sicher und
+zuverlässig. Von Laptops bis hin zu Rechenzentren, Spielkonsolen bis hin zu 
+wissenschaftlichen Supercomputern, Handys bis hin zum Internet.
+
+Am 20. April 2009 kündigte Oracle die Übernahme von Sun Microsystems für 
+7,4 Milliarden US-Dollar an, welche in den Folgemonaten durch verschiedene
+Behörden überprüft und anschliessend genehmigt wurde.
+
+Java als Entwicklungs- und Laufzeitumgebung kann in verschiedenen Varianten
+von den folgenden Seiten heruntergeladen und installiert werden:
+
+\subsection{Installation der Umgebung}
+\label{subsec:installation}
+
+\begin{frame}{Installation der Umgebung}
+	Wir unterscheiden im Wesentlichen zwischen den beiden Installationstypen
+	JRE ({\em Java Runtime Environment}) und JDK ({\em Java 
+	Development Kit}).
+	
+    \begin{itemize}
+		\item \href{https://java.com}{java.com}   
+		\item \href{https://openjdk.java.net}{openjdk.java.net}
+    \end{itemize}
+\end{frame}
+
+In der Softwareentwicklung konzentrieren wir uns ausschliesslich auf das JDK,
+da wir auf die vielen zusätzlichen {\em Tools} in der Entwicklung angewiesen
+sind.
+	
+\begin{frame}{Werkzeuge und Befehle}
+	Die JDK-Tools und ihre Befehle ermöglichen es uns, 
+	Entwicklungsaufgaben wie das Kompilieren und Ausführen eines Programms, 
+	das Paketieren von Quelldateien und vieles mehr zu erledigen.
+	
+	\mode<presentation>{Hier nur eine kleine Auswahl:}
+	\begin{itemize}
+		\item\href{https://docs.oracle.com/en/java/javase/11/tools/javac.html}
+		{javac}---Kompilieren von Klassen- und Schnittstellendefinitionen 
+		in Bytecode.
+		\item\href{https://docs.oracle.com/en/java/javase/11/tools/java.html}
+		{java}---Starten/Interpretieren eines Java Programms.
+		\item\href{https://docs.oracle.com/en/java/javase/11/tools/jar.html}
+		{jar}---Erstellen eines Java Archives.
+		\item\href{https://docs.oracle.com/en/java/javase/11/tools/jshell.html}
+		{jshell}---Interaktives Auswerten von Deklarationen, Anweisungen und 
+		Ausdrücken der Programmiersprache Java. 
+		\item<article>\href{https://docs.oracle.com/en/java/javase/11/tools/javap.html}
+		{javap}---Befehl, um eine oder mehrere Klassendateien zu 
+		disassemblieren.
+		\item<article>\href{https://docs.oracle.com/en/java/javase/11/tools/javadoc.html}
+		{javadoc}---Erstellen der Java Dokumentation
+		\item<article>\href{https://docs.oracle.com/en/java/javase/11/tools/keytool.html}
+		{keytool}---Befehl und Optionen zum Verwalten eines kryptografischer Schlüssel.
+		\item<article>\href{https://docs.oracle.com/en/java/javase/11/tools/jarsigner.html}
+		{jarsigner}---Signieren und verifizieren von Java Archiven
+	\end{itemize}
+\end{frame}
+
+Diese Liste stellt keinen Anspruch auf Vollständigkeit. Die komplette Dokumentation
+zu den einzelnen Umgebungen und deren {\em Tools} kann jederzeit unter
+\href{https://docs.oracle.com/en/java/}{docs.oracle.com} eingesehen werden.
+
+Vorsicht ist allerdings geboten, wenn es um den Einsatz und die Lizenzierung von Java geht.
+Oracle wird nach Januar 2019 keine weiteren Updates von Java SE 8 zur 
+gewerblichen Nutzung auf seinen Download-Sites veröffentlichen. Kunden, die 
+weiterhin Zugriff auf kritische Fehlerkorrekturen und Sicherheitslücken sowie 
+eine allgemeine Wartung von Java SE 8 bzw. früheren Versionen benötigen, 
+können einen langfristigen Support über Oracle Java SE Advanced erhalten. 
+Oracle Java SE Advanced Desktop oder Oracle Java SE Suite. Für weitere 
+Informationen und Details, wie Sie einen längerfristigen Support für Oracle 
+JDK 8 erhalten, finden Sie in der 
+\href{http://www.oracle.com/technetwork/java/eol-135779.html}
+{Oracle Java SE Support-Roadmap}.
+
+Die offizielle \href{https://www.oracle.com/corporate/pricing/#java-se}
+{Preisliste} hilft, sich mit dem Oracle Java SE Abonnement für On Premise, 
+Enterprise, Desktop, Server und Cloud Workloads vertraut zu machen.
+
+
+\begin{frame}{Beliebte Java-Lernressourcen}
+	\begin{itemize}
+		\item\textbf{Finch Robot}---Dieser kleine Roboter von 
+		\href{https://www.birdbraintechnologies.com/finch/}
+		{Bird Technology} nutzt verschiedene Sensoren,
+		die via Java angesteuert werden können.
+		\item\textbf{Oracle Academy}---Die 
+		\href{https://academy.oracle.com/en/training-self-study.html}
+		{Oracle Academy} bietet verschiedene 
+		Online-Kurse und Anleitungen
+		\item\textbf{Scratch}---Dies ist eine sehr einfache, am
+		\href{https://scratch.mit.edu/}{MIT} entwickelte Programmierumgebung.
+		Typischerweise wird diese im Vorschulalter eingesetzt. 
+		\item\textbf{BlueJ}---Als sehr professionelle und stark vereinfachte
+		(Entwicklungs-) Umgebung wird \href{http://www.bluej.org/}{BlueJ} 
+		auch im späteren Alter noch für Schulungszwecke verwendet.
+	\end{itemize}
+\end{frame}
+	
+\begin{Exercise}[%
+	title={Installation der Software},
+	label={ex:installation}]
+	
+	Bevor wir mit unseren Übungen starten müssen wir sicherstellen, dass Java und
+	seine {\em Tools} komplett und korrekt installiert sind.
+	
+	Bitte installieren Sie das {\em Java Development Kit} (JDK) gemäss 
+	\href{https://jdk.java.net/11/}{Anleitung}.
+	
+	Anschliessend überprüfen wir die korrekte Installation mit Hilfe der Konsole wie folgt:
+	
+\begin{minted}[frame=single]{shell}
+$ java -version
+openjdk version "11.0.1" 2018-10-16
+OpenJDK Runtime Environment 18.9 (build 11.0.1+13)
+OpenJDK 64-Bit Server VM 18.9 (build 11.0.1+13, mixed mode)
+\end{minted}
+	
+\end{Exercise}	
+
+\subsection{Interaktive Entwicklungsumgebung}
+
+\section{Analyzing a Problem and Designing a Solution}
+
+
+\section{Entwicklung eines Java Programms}
+
+\subsection{Meine erstes Programm}
+
+\subsection{Struktur einer Java Datei}
+
+
+\section{Deklarieren, initialisieren und verwenden von Variablen}
+
+\section{Erstellen von Objekten}
+
+
+\subsection{Das Projekt Lombok}
+
+Mit dem Projekt ``\href{https://projectlombok.org/}{Lombok}'' erreichen wir 
+eine Vereinfachung unseres Codes, indem sogenannte Wiederholungen automatisch 
+in die Datei `{\tt .class}' generiert werden und die Datei `{\tt .java}' somit 
+entlastet und somit lesbarer/wartbarer wird.
+
+Wir versuchen dies in Form einfacher Beispiele zu erläutern.
+
+\textbf{\\@NonNull}
+
+Die Parameter einer Funktion oder eines Konstruktors können bei der Verwendung 
+den Wert {\tt null} einnehmen, was möglicherweise einen ungewollten Ablauf 
+provozieren kann. Falls wir dies vermeiden wollen, dann bleibt uns nur eine 
+entsprechende Fehlerbehandlung. Es ist an dieser Stelle sehr rasch ersichtlich, 
+dass dies zwangläufig zu Wiederholungen in der Programmierung führen wird.
+
+
+Viel einfacher sieht der Code aus, bei der Verwendung der Annotation 
+\mintinline{java}{@NonNull}. Falls wir mit IntelliJ IDEA arbeiten, dann
+könnten wir das selbe Resultat mit der vordefinierten Annotation 
+\mintinline{java}{@NotNull} von JetBrains erreichen.
+
+
+\section{Using Operators and Decision Constructs}
+\section{Using Loop Constructs}
+\section{Developing and Using Methods}
+\section{Implementing Encapsulation and Constructors}
+\section{Creating and Using Arrays}
+\section{Implementing Inheritance}

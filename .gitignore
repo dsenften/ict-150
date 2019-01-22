@@ -1,8 +1,23 @@
+# IntelliJ IDEA
+/.idea
+/target
+
+# TeX
+*.aux
+*.loe
+*.log
+*.lol
+*.out
+*.toc
+*.nav
+*.snm
+*.vrb
+_minted*
+main.article.pdf
+main.beamer.pdf
+
 # Compiled class file
 *.class
-
-# Log file
-*.log
 
 # BlueJ files
 *.ctxt
