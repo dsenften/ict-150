@@ -1,2 +1,2 @@
-# gibb-150
+# ict-150
 E-Business-Applikationen anpassen
