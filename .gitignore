@@ -5,8 +5,11 @@
 # TeX
 *.aux
 *.loe
+*.lof
 *.log
 *.lol
+*.lot
+*.lox
 *.out
 *.toc
 *.nav

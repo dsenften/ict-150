@@ -1,27 +1,55 @@
-\documentclass{manual}
+\documentclass[table]{manual}
 \setjobnamebeamerversion{main.beamer} 
 
 \pagestyle{fancy}
 \rhead{Modul 150}
 \lhead{E-Business-Applikationen anpassen}
-\cfoot{\thepage}
+\rfoot{\thepage}
 
 \title{Modul 150}
 \subtitle{E-Business-Applikationen anpassen}
 
 \date{\today}
-\author{\href{mailto:daniel.senften@talent-factory.ch}{Daniel Senften}}
+\author{abc}
+\author{%
+    Philipp Gressly
+    \and
+    Gerd Gesell
+    \and\href{mailto:daniel.senften@talent-factory.ch}{Daniel Senften}}
 
 % ----------------------------------
 
 \begin{document}
 
-\input{manual.tex}
+    \renewcommand*\l@section{\@dottedtocline{1}{1.5em}{2.3em}}
 
-\newpage\appendix
-\listofexercises
+    % TODO In der endgültigen Version des Dokumentes den Befehl auskommentieren
+    \fxsetup{draft}
 
-\renewcommand{\listoflistingscaption}{Programmbeispiele}
-\newpage\listoflistings
+    \setmainfont{Verdana}
+    \DeclareGraphicsExtensions{.pdf,.jpg,.tif}
+    \maketitle
+    \pagestyle{fancy}
+    \newpage
+    
+    \tableofcontents % Inhaltsverzeichnis
+
+    \newpage
+    \listoffigures   % Abbildungsverzeichnis
+    \listoftables    % Tabellenverzeichnis
+    \listofexercises % Liste der Übungen
+
+    \renewcommand{\listoflistingscaption}{Programmbeispiele}
+    \listoflistings
+
+    \listoffixmes
+
+    \parindent0em\parskip1em
+    \newpage
+
+
+    \newmintedfile{java}{frame=single,linenos,samepage}
+
+    \input{manual.tex}
 
 \end{document}

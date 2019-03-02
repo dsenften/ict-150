@@ -1,178 +1,567 @@
 \mode*
 
 \setmonofont{Verdana}
-\newmintedfile{java}{frame=single,linenos,samepage}
-\newmintedfile{antlr}{linenos}
 
-\section{Java-Technologie kurz erklärt}
-\label{sec:java-technologie}
+% ===========================================================================
+\section{Modulidentifkation}
 
-Java ist eine Programmiersprache und Computerplattform, die erstmals 1995 von 
-Sun Microsystems veröffentlicht wurde. Es gibt viele Anwendungen und
-Websites, die nicht funktionieren, es sei denn, Sie haben Java installiert, 
-und jeden Tag werden weitere erstellt. Java ist schnell, sicher und
-zuverlässig. Von Laptops bis hin zu Rechenzentren, Spielkonsolen bis hin zu 
-wissenschaftlichen Supercomputern, Handys bis hin zum Internet.
+\definecolor{mydarkgrey}{RGB}{96,96,96}
+\definecolor{mygrey}{RGB}{224,224,224}
 
-Am 20. April 2009 kündigte Oracle die Übernahme von Sun Microsystems für 
-7,4 Milliarden US-Dollar an, welche in den Folgemonaten durch verschiedene
-Behörden überprüft und anschliessend genehmigt wurde.
+\rowcolors{1}{mygrey}{white}
 
-Java als Entwicklungs- und Laufzeitumgebung kann in verschiedenen Varianten
-von den folgenden Seiten heruntergeladen und installiert werden:
+\begin{center}
+    \begin{tabular}[h]{|p{4cm}|p{12.5cm}|}
+        \hline
+        Modulnummer & 150 \\ \hline
+        Titel & E-Business-Applikationen anpassen \\ \hline
+        Kompetenz & E-Business-Applikationen gemäss Vorgabe und unter Beachtung der
+        Sicherheitsvorschriften und technischer Rahmenbedingungen anpassen. \\ \hline
+        \multirow{1}{*}{Handlungsziele} &
+        Aufbau der Applikation, Transaktionskonzept, Applikationsumgebung
+        und Rahmenbedingungen (Sicherheit, Performance, Verfügbarkeit, Transaktionsvolumen, usw.) erfassen. \\
+        \cellcolor{white}  & Vorgabe analysieren, clientseitigen, serverseitigen und datenbankseiti-gen
+        Änderungsbedarf formulieren. \\
+        \cellcolor{white}  & Auswirkungen der Änderungen auf Sicherheit und Schutzwürdigkeit der
+        Informationen bei allen beteiligten Komponenten wie Client, Webserver, Applikationsserver
+        und Datenbankserver überprüfen und dokumentieren. \\
+        \cellcolor{white}  & Änderungen inklusive Implementierung und Test (funktional und nicht-funktional)
+        gemäss einem vordefinierten Änderungsprozess planen. \\
+        \cellcolor{white}  & Änderungen realisieren, testen und dokumentieren. \\ \hline
+        Kompetenzfeld & Web Engineering \\ \hline
+        Objekt & Online-Shop, Ticketing, Wiki oder E-Learning Lösung. \\ \hline
+        Niveau & 4 \\ \hline
+    \end{tabular}
+\end{center}
 
-\subsection{Installation der Umgebung}
-\label{subsec:installation}
+% ===========================================================================
+\section{Einleitung und Rahmenbedingungen}
 
-\begin{frame}{Installation der Umgebung}
-	Wir unterscheiden im Wesentlichen zwischen den beiden Installationstypen
-	JRE ({\em Java Runtime Environment}) und JDK ({\em Java 
-	Development Kit}).
-	
-    \begin{itemize}
-		\item \href{https://java.com}{java.com}   
-		\item \href{https://openjdk.java.net}{openjdk.java.net}
-    \end{itemize}
-\end{frame}
+\subsection{Begriffsdefnitionen - Modul 150}
 
-In der Softwareentwicklung konzentrieren wir uns ausschliesslich auf das JDK,
-da wir auf die vielen zusätzlichen {\em Tools} in der Entwicklung angewiesen
-sind.
-	
-\begin{frame}{Werkzeuge und Befehle}
-	Die JDK-Tools und ihre Befehle ermöglichen es uns, 
-	Entwicklungsaufgaben wie das Kompilieren und Ausführen eines Programms, 
-	das Paketieren von Quelldateien und vieles mehr zu erledigen.
-	
-	\mode<presentation>{Hier nur eine kleine Auswahl:}
-	\begin{itemize}
-		\item\href{https://docs.oracle.com/en/java/javase/11/tools/javac.html}
-		{javac}---Kompilieren von Klassen- und Schnittstellendefinitionen 
-		in Bytecode.
-		\item\href{https://docs.oracle.com/en/java/javase/11/tools/java.html}
-		{java}---Starten/Interpretieren eines Java Programms.
-		\item\href{https://docs.oracle.com/en/java/javase/11/tools/jar.html}
-		{jar}---Erstellen eines Java Archives.
-		\item\href{https://docs.oracle.com/en/java/javase/11/tools/jshell.html}
-		{jshell}---Interaktives Auswerten von Deklarationen, Anweisungen und 
-		Ausdrücken der Programmiersprache Java. 
-		\item<article>\href{https://docs.oracle.com/en/java/javase/11/tools/javap.html}
-		{javap}---Befehl, um eine oder mehrere Klassendateien zu 
-		disassemblieren.
-		\item<article>\href{https://docs.oracle.com/en/java/javase/11/tools/javadoc.html}
-		{javadoc}---Erstellen der Java Dokumentation
-		\item<article>\href{https://docs.oracle.com/en/java/javase/11/tools/keytool.html}
-		{keytool}---Befehl und Optionen zum Verwalten eines kryptografischer Schlüssel.
-		\item<article>\href{https://docs.oracle.com/en/java/javase/11/tools/jarsigner.html}
-		{jarsigner}---Signieren und verifizieren von Java Archiven
-	\end{itemize}
-\end{frame}
+Mit dem Präfix 'E' versehen, geistern in der Informatik viele Begriffe herum.
+Auch in der Modulidentifikation zu diesem Modul werden die Begriffe \emph{E-Business}
+und \emph{E-Commerce} parallel verwendet. Je nach verwendeter Literatur, werden
+zwischen diesen beiden Begriffen aber wesentliche Unterschiede gemacht.
+In diesem Skript werden wir uns aus mühsamen Begriffsdefinitionen möglichst
+heraus halten und einen Überblick über Techniken und Grundlagen geben,
+die bei der Anpassung und beim Entwurf von Webapplikationen eine Rolle
+spielen. Wenn hier im Skript der Begriff \emph{E-Business} verwendet wird,
+bezeichnet er Applikationen, die mindestens die Komponenten Produktauswahl,
+Zahlungsverkehr und Warentransport (elektronisch oder physikalisch) enthalten.
 
-Diese Liste stellt keinen Anspruch auf Vollständigkeit. Die komplette Dokumentation
-zu den einzelnen Umgebungen und deren {\em Tools} kann jederzeit unter
-\href{https://docs.oracle.com/en/java/}{docs.oracle.com} eingesehen werden.
+Soziale Plattformen, Foren und so weiter gehören nicht zu dieser
+Applikationsgruppe. Die meisten hier betrachteten Techniken werden
+auch bei diesen Anwendungen eingesetzt.
 
-Vorsicht ist allerdings geboten, wenn es um den Einsatz und die Lizenzierung von Java geht.
-Oracle wird nach Januar 2019 keine weiteren Updates von Java SE 8 zur 
-gewerblichen Nutzung auf seinen Download-Sites veröffentlichen. Kunden, die 
-weiterhin Zugriff auf kritische Fehlerkorrekturen und Sicherheitslücken sowie 
-eine allgemeine Wartung von Java SE 8 bzw. früheren Versionen benötigen, 
-können einen langfristigen Support über Oracle Java SE Advanced erhalten. 
-Oracle Java SE Advanced Desktop oder Oracle Java SE Suite. Für weitere 
-Informationen und Details, wie Sie einen längerfristigen Support für Oracle 
-JDK 8 erhalten, finden Sie in der 
-\href{http://www.oracle.com/technetwork/java/eol-135779.html}
-{Oracle Java SE Support-Roadmap}.
+Sie sollten in diesem Modul einen Überblick über Themen bekommen, die im
+Bereich \emph{E-Business} wichtig sind. Die können in 40 Lektionen zwar nicht
+vollständig bearbeitet werden, aber eine Sensibilisierung auf mögliche
+Probleme und der Erwerb von Grundkenntnissen mit zusätzlicher selbstständiger
+Vertiefung sind sicher möglich.
 
-Die offizielle \href{https://www.oracle.com/corporate/pricing/#java-se}
-{Preisliste} hilft, sich mit dem Oracle Java SE Abonnement für On Premise, 
-Enterprise, Desktop, Server und Cloud Workloads vertraut zu machen.
+\subsection{Projektmanagement}
+
+Die Abwicklung von Webprojekten und die Realisierung von E-Business Lösungen
+erfordert ein professionelles Projektmanagement. Welche Methoden dabei
+eingesetzt werden, ist von den beteiligten Unternehmen und von der Anwendung
+abhängig und nicht Bestandteil dieses Moduls. Lediglich der Begriff \emph{Change
+Management} sei hier noch erwähnt, auf den wir später kurz eingehen werden.
 
 
-\begin{frame}{Beliebte Java-Lernressourcen}
-	\begin{itemize}
-		\item\textbf{Finch Robot}---Dieser kleine Roboter von 
-		\href{https://www.birdbraintechnologies.com/finch/}
-		{Bird Technology} nutzt verschiedene Sensoren,
-		die via Java angesteuert werden können.
-		\item\textbf{Oracle Academy}---Die 
-		\href{https://academy.oracle.com/en/training-self-study.html}
-		{Oracle Academy} bietet verschiedene 
-		Online-Kurse und Anleitungen
-		\item\textbf{Scratch}---Dies ist eine sehr einfache, am
-		\href{https://scratch.mit.edu/}{MIT} entwickelte Programmierumgebung.
-		Typischerweise wird diese im Vorschulalter eingesetzt. 
-		\item\textbf{BlueJ}---Als sehr professionelle und stark vereinfachte
-		(Entwicklungs-) Umgebung wird \href{http://www.bluej.org/}{BlueJ} 
-		auch im späteren Alter noch für Schulungszwecke verwendet.
-	\end{itemize}
-\end{frame}
-	
-\begin{Exercise}[%
-	title={Installation der Software},
-	label={ex:installation}]
-	
-	Bevor wir mit unseren Übungen starten müssen wir sicherstellen, dass Java und
-	seine {\em Tools} komplett und korrekt installiert sind.
-	
-	Bitte installieren Sie das {\em Java Development Kit} (JDK) gemäss 
-	\href{https://jdk.java.net/11/}{Anleitung}.
-	
-	Anschliessend überprüfen wir die korrekte Installation mit Hilfe der Konsole wie folgt:
-	
-\begin{minted}[frame=single]{shell}
-$ java -version
-openjdk version "11.0.1" 2018-10-16
-OpenJDK Runtime Environment 18.9 (build 11.0.1+13)
-OpenJDK 64-Bit Server VM 18.9 (build 11.0.1+13, mixed mode)
-\end{minted}
-	
-\end{Exercise}	
+\subsection{Partnerrollen bei Webapplikationen}
 
-\subsection{Interaktive Entwicklungsumgebung}
+Auch wenn die Begriffsdefinitionen hier nicht im Vordergrund stehen, müssen
+wir eine Reihe von Merkmalen kennen, da sie die Applikation und auch die
+eingesetzte Technik stark beeinflussen. Wir müssen uns klar machen, welche
+Unterschiede in Bezug auf die Geschäftspartner bei Webapplikationen bestehen
+und in welchem Gebiet unsere Applikation eingesetzt wird. Das hat Konsequenzen
+auf den Entwurf, die anzuwendenden Gesetze, die Technik und die Gestaltung
+der Applikation.
 
-\section{Analyzing a Problem and Designing a Solution}
+Anmerkung bezüglich der Partnerrolle 'C': In der Literatur
+und auch im Internet finden wir die Bezeichnungen \emph{customer} und \emph{consumer}.
+In Verbindung mit der Rolle 'A' für \emph{administration} bedeutet es dann
+\emph{citizen} also Bürger.
+
+\subsubsection*{B2C - Business to Customer/Consumer}
+
+Diese Geschäftsbeziehung fällt einem vermutlich als erste mögliche Beziehungsvariante
+ein. Sie entspricht dem klassischen Ladengeschäft, das seine Waren an Endkunden
+verkauft. In der elektronischen Variante ist dazu kein physikalischer Laden mehr
+nötig, aber viele der gesetzlichen Bestimmungen zum Thema Konsumentenschutz, sind
+mittlerweile auch im Internet-Handel gültig. Etwas komplizierter wird es durch die
+Globalisierung via Internet. Wenn zwischen den Ländern des Verkäufers und des Käufers
+Gesetze und Vereinbarungen bestehen, ist die Unsicherheit zwar limitiert, aber Zölle,
+Einfuhrbeschränkungen auf bestimmte Güter, Versandmodalitäten und eventuell auch
+sprachliche Schwierigkeiten sorgen für ausreichend Möglichkeiten einen Geschäftsvorgang
+kompliziert werden zu lassen. Was die juristischen Anforderungen zum Thema
+Konsumentenschutz betrifft, sind hier besonders das Rückgaberecht und die
+Auszeichnungspflicht (Angabe des Warenpreises inklusive Mehrwertsteuer) zu nennen.
+Diese Konstellation der Geschäftspartner entspricht auch meistens den von uns
+untersuchten WebshopAnwendungen.
+
+\subsubsection*{B2B - Business to Business}
+
+Hierbei handelt es sich um die Beziehung zweier Geschäftspartner. Beide Partner
+sind sich im Normalfall bekannt. Zumindest muss eine Überprüfung der Autorisierung
+erfolgen, um sicher zu stellen, dass es sich bei beiden Partnern um Firmen handelt.
+Vor unberechtigten Zugriffen durch Endkunden muss die Anwendung geschützt werden.
+Bei Verkaufsgeschäften bestehen keine Rücknahmepflichten und die Preisauszeichnung
+erfolgt ohne Angabe der Mehrwertsteuer. Ein privater Kunde hat andere Anforderungen
+und Erwartungen an eine Applikation als ein Lieferant oder Zwischenhändler.
+Zumeist wird diesen mehr Können in Bezug auf \emph{Usability} und Ziele der
+Applikation zugemutet als es bei anonymen Endkunden möglich ist. So kann die
+Schnittstelle durchaus einmal aus einem autorisierten
+FTP\footnote{File Transfer Protocol}-Download einer Datenbank bestehen.
+
+\subsubsection*{C2C - Customer to Customer}
+
+Das wohl erfolgreichste Beispiel für diese Kundenbeziehung ist EBay\textsuperscript{TM}.
+Ursprünglich ging es hier um einen Gebrauchtwarenhandel, der zu Beginn
+ausschliesslich zwischen Privatpersonen durchgeführt wurde. Aktuell tummeln
+sich aber auch jede Menge Händler auf der Plattform und bieten Neuwaren an.
+Allerdings habe diese die Verpflichtung sich klar als solche zu kennzeichnen
+und die Bedingungen entsprechen dann einer B2C-Beziehung.
+
+Findige (und zumeist auch windige) Juristenbüros haben diesen Umstand
+ausgenutzt und untersuchen die Anbieter nach ihren Artikel- und Angebotsprofilen.
+Wer eine alte CD-Sammlung auflöst, verkauft verschiedene CDs einmal und selten
+vielleicht zweimal. Wer aber die gleiche CD mehrfach verkauft muss sich eine
+gute Argumentation zurechtlegen, warum er sich nicht als Händler ausgibt
+und muss entsprechend mit Abmahnungen rechnen (siehe auch
+Kapitel~\ref{subsec:juristische-grundlagen} auf Seite~\pageref{subsec:juristische-grundlagen}).
+
+\subsubsection*{A2C - Administration to A, B, C}
+
+Es gibt eine ganze Reihe von eBegriffen, die im Bereich von Behördenapplikationen
+verwendet werden. eGovernment, eAdministration, eJustice und eDemocracy sind
+einige davon. Interessant ist die derzeitige Diskussion in den Diskussionsforen
+der deutschen Wikipedia (zum Beispiel beim Begriff E-Government). Es wird
+wohl noch einige Zeit verstreichen, bis sich feste Begriffe mit eindeutigen
+Definitionen durchgesetzt haben. Generell geht es aber um Applikationen,
+die Bürgern, Firmen oder anderen Behörden angeboten werden, um den Kontakt
+auf elektronischem Weg zu ermöglichen. Das können stark sicherheitsrelevante
+Anwendungen wie Steuerabrechnungen, E-Voting (wählen und abstimmen über das
+Internet) und Ausschreibungen sein, aber auch einfache Applikationen, die den
+Gang zur Verwaltung ersparen.
+
+Ein Beispiel für eine \emph{Administration to Business}-Applikation finden Sie
+auf der Website des
+\href{https://www.blw.admin.ch/blw/de/home.html}{Bundesamts für Landwirtschaft BLW}.
+Dort werden Einfuhrkontingente von landwirtschaftlichen Erzeugnissen wie Fleisch,
+Wurstwaren, Zuchtrinder, Kartoffelprodukte periodisch versteigert. Allerdings
+richtet sich die Web-Applikation eVersteigerung nicht an Gelegenheitsnutzer,
+sondern erfordert eine vorherige Anmeldung und die Installation eines Zertifikates.
+Anschliessend können Gebote für die ausgeschriebenen Importprodukte abgegeben
+werden. Für die Bieter ist das nicht immer transparent und führt gelegentlich
+zu Aufruhr, wie im Bericht ``Import von Filets ist eine Lotterie''
+\footnote{Bericht im Tages-Anzeiger vom Montag, 08. Februar 2010} nachzulesen ist.
+
+\subsubsection*{B2E - Business to Employee}
+
+Anwendungen, die sich an die Angestellten einer Firma wenden, unterliegen
+ebenfalls Bedingungen zum Datenschutz und auch zur Datensicherheit.
+Besonders der Zugang von unautorisierten Personen ist hier ein Thema, denn
+sonst wäre es ja keine reine B2E-Applikation mehr. Diese Applikationen
+laufen meistens auf dem Intranet, da sie am Arbeitsplatz benötigt werden,
+sie können aber teilweise auch via Internet sinnvoll sein, wie zum Beispiel
+ein spezieller Webshop, der sich nur an Mitarbeiter richtet. Diese Kategorie
+ist in der Übersicht nicht vertreten.
+
+\rowcolors{2}{mygrey}{white}
+\begin{table}
+    \begin{center}
+        \begin{tabular}[ht]{|p{3.5cm}|p{4cm}|p{4cm}|p{4cm}|}
+            \hline
+            \cellcolor{orange!25} &
+            \cellcolor{orange!25}\textbf{Administration} &
+            \cellcolor{orange!25}\textbf{Business} &
+            \cellcolor{orange!25}\textbf{Consumer} \\ \hline
+            \cellcolor{orange!25}\textbf{Administration} & \textbf{A2A} & \textbf{A2B} & \textbf{A2C}      \\
+            \cellcolor{orange!25}                  & Applikation zwischen Behörden (z.B. Interpol)
+            & Applikationen für öffentliche Ausschreibungen &      \\ \hline
+            \cellcolor{orange!25}\textbf{Business} & \textbf{B2A} & \textbf{B2B} & \textbf{B2C}  \\
+            \cellcolor{orange!25}                  & & & Webshops; Anbieter sind gewerbsmässige Unternehmen  \\ \hline
+            \cellcolor{orange!25}\textbf{Consumer} & \textbf{C2A} & \textbf{C2B} & \textbf{C2C}  \\
+            \cellcolor{orange!25}                  & & Angebotssuche potentielle Kunden schreiben ihre Projekte aus, Firmen bieten an
+            & Kleinanzeigen, Flohmärkte, alle privaten Handelsmöglichkeiten \\ \hline
+        \end{tabular}
+    \end{center}
+    \caption{Anwendungsbereiche des eBusiness}
+\end{table}
 
 
-\section{Entwicklung eines Java Programms}
+\subsection{Juristische Grundlagen}
+\label{subsec:juristische-grundlagen}
 
-\subsection{Meine erstes Programm}
+Aufgrund der vermeintlichen (aber definitiv nicht realen) Anonymität im
+Internet und der automatischen Globalisierung von Webauftritten, wird das
+Internet von vielen als rechtsfreier Raum angesehen. Das kann aber
+spätestens dann zu einem bösen Erwachen führen, wenn man eine Abmahnung
+oder gar eine Klage erhält. Zumindest mit den wesentlichen rechtlichen
+Begriffen und Gepflogenheiten muss man sich als Webentwickler auskennen.
+Dabei ist es gleichgültig, ob es sich bei den erstellten Auftritten um
+professionelle oder um private Seiten handelt.
 
-\subsection{Struktur einer Java Datei}
+\subsubsection*{Abmahnungen}
+
+Bei Abmahnungen handelt es sich ursprünglich um Verfahrensvereinfachungen im
+Wettbewerbsrecht. Wer einen Verstoss im Wettbewerbsrecht feststellt, war damit
+nicht mehr gezwungen auf dem gerichtlichen Weg vorzugehen, sondern konnte
+aussergerichtlich direkt mit der anderen Partei Kontakt aufnehmen und den
+Fall lösen. Erst wenn sich die Partner nicht einigen können werden die
+Gerichte damit belastet. Bei offensichtlichen Verstössen und einsichtigen
+Konfliktparteien, können damit nicht nur die Gerichte entlastet werden, sondern
+auch die Folgekosten für die widerrechtlich handelnde Partei stark reduziert
+werden.
+
+Soweit die grundsätzlich positive Idee dieses Rechtsmittels.
+
+Leider wird dieses Instrument auch stark missbraucht. Es hat sich als ein
+einträgliches Geschäft erwiesen, im Internet nach kleinen Verstössen zu
+fahnden und die Urheber einfach abzumahnen, in der Hoffnung, dass diese--bei
+relativ geringen Abmahngebühren--den Weg des geringsten Widerstandes nehmen
+und bezahlen. Ein grosser Teil der Abmahngründe ist dabei juristisch nicht
+haltbar. Natürlich hat sich auch eine Gegenbewegung gebildet, die bei Bedarf
+Hilfe anbietet. Zum Beispiel \href{http://www.abmahnwelle.de}{http://www.abmahnwelle.de}.
+
+\subsubsection*{Impressum}
+
+Ein Impressum ist die Angabe von verantwortlichen Personen und deren Kontaktdaten.
+Den Ursprung hat das Impressum bei Druckereierzeugnissen wie zum Beispiel
+Zeitungen, Flugblättern und Werbeprospekten. Dort muss nicht nur der verantwortliche
+Redakteur genannt werden, sondern auch die Adresse des Medienunternehmens und
+eventuelle Beteiligungen, um mehr Transparenz in Bezug auf wirtschaftliche
+Verflechtungen zu erhalten. In der Schweiz gilt die Impressumspflicht generell
+für Medienhäuser und greift damit lange nicht so weit wie das EU-Recht.
+
+Kompliziert werden internationale Kombinationen: eine Schweizer Internetfirma
+hostet und entwirft den Auftritt für ein EU-Unternehmen und so weiter.
+Neben diesen juristischen Finessen ist es bei eBusiness-Applikationen aus
+Gründen der Transparenz und Offenheit wichtig, den Kunden nicht mit anonymen
+Partnern arbeiten zu lassen. Ein Webauftritt, der den Betreiber im Dunkeln
+lässt, wird kaum als seriös eingestuft und wird Mühe haben, zu den Kunden
+eine bindende Beziehung herzustellen. Die meisten potentiellen Kunden werden
+sich sträuben Informationen wie Adresse oder gar die Nummer der Kreditkarte
+bekannt zu geben.
+
+\subsubsection*{Disclaimer}
+
+Die juristische Relevanz von Disclaimern wird in der Praxis zumeist überschätzt.
+Grossfirmen haben gelegentlich am Ende ihrer Mails einen Hinweis auf die
+Vertraulichkeit des Inhalts und dass bei fehlgeleiteten Mails deren Inhalt
+nicht weitergegeben werden darf. Es ist halt ein Versuch, aber auch nicht
+mehr. Denn juristisch entsprechen diese Hinweise Geschäftsbedingungen.
+Und diese sind vor einer Geschäftshandlung bekannt zugeben und zu akzeptieren.
+Korrekt, aber praktisch nicht machbar wäre es, zuerst den Disclaimer zu
+senden und--falls der Empfänger die Bedingungen akzeptiert--erst anschliessend
+den Inhalt.
+
+Ebenso unwirksam sind die meisten Disclaimer auf Webseiten. Es ist--auch vor
+Gericht--nicht glaubwürdig auf andere Webseiten zu verweisen und sich gleichzeitig
+von diesen zu distanzieren. Wer in seriöser Absicht auf eine andere Webseite
+verlinkt, sollte deren Inhalt auch kennen. Wenn der Inhalt nach dem Einbau des
+Links verändert und eventuell juristisch bedenklich geworden ist, wird einem
+das kaum als Vergehen angerechnet werden. Allerdings muss man nach einem
+entsprechenden Hinweis darauf reagieren und seinen Eintrag anpassen.
+
+\subsubsection*{Urheberrechtsschutz}
+
+Ein juristisches Thema, das ebenfalls im Kapitel über eDistribution erwähnt
+wird, ist das Urheberrecht. Es bezieht sich generell auf alle Medien. Hier
+sei besonders auf die Situation im Bildbereich hingewiesen. Für die
+Gestaltung der Produktkataloge werden zur Illustration oft Produktfotos
+eingesetzt. Selbst wenn Sie diese nur von der Herstellerseite herunterladen
+und verwenden, verstossen Sie gegen das Urheberrecht. Ausser die Fotos
+sind explizit zur freien Verwendung deklariert. Selbst wer Fotos kauft,
+muss sich über die Rechte seines Verkäufers informieren. Wenn später der
+Fotograf seine Rechte geltend macht, kann die Verantwortung zwar an den
+Verkäufer weitergegeben werden, nur hat man Pech, falls dieser Konkurs
+gegangen ist oder nicht mehr auffindbar ist. Daher verwenden viele Firmen
+für Ihre Webauftritte ausschliesslich Fotos, deren Urheberrecht sie selber
+haben. Die also durch einen Fotografen speziell für sie erstellt werden.
+
+% ===========================================================================
+\section{Bestandteile des eBusiness}
+
+\subsection{Übersicht der Wertschöpfungskette}
+
+\subsection{Elemente der Wertschöpfungskette}
+
+\subsubsection*{eProducts \& eServices}
+
+Für den Anbieter von Waren ist die Präsentation seiner Produkte ein
+zentraler Punkt. Die Darstellung, Beschreibung mit Attributen und
+Fotos und Gliederung ermöglicht es den potentiellen Kunden ein
+gewünschtes Produkt zu finden und bestenfalls auch zu bestellen. Für
+diesen Zweck muss der Produktkatalog ständig auf dem aktuellen Stand
+gehalten werden. Ein Aufwand, der bei grossen Systemen, die mehrere
+hunderttausend Artikel enthalten können, nicht zu unterschätzen ist.
+Bei komfortableren Systemen gibt es Möglichkeiten die Produkte hierarchisch
+in Warengruppen zu gliedern. Damit können einige Produktattribute eventuell
+schon auf der höheren Hierarchiestufe beschrieben werden und müssen
+nicht redundant erstellt und gewartet werden.
+
+Je nach Produkt besteht für den Kunden auch die Option seine Artikel
+selber zu konfigurieren (zum Beispiel Dell: Konfiguration beziehungsweise
+Modifikation von Ausstattungsvorschlägen). Dann benötigen einzelne
+Komponenten noch weitere technische Angaben (Konfigurationsregeln), um
+technisch falsche oder sinnlose Kombinationen zu verhindern. Der Aufbau
+eines Konfigurationssystems ist natürlich aufwendiger und es hat auch
+Auswirkungen auf die Produktion und Distribution der Produkte. Sie können
+unter Umständen erst nach der Bestellung hergestellt werden, wenn es
+sich bei der Konfiguration nicht nur um eine sehr geringe Anzahl an
+Variationsmöglichkeiten handelt.
+
+\subsubsection*{eProcurement}
+
+Unter \emph{procurement} wird der Beschaffungsprozess in einem Unternehmen
+verstanden. Mit dem E-Zusatz versehen, handelt es sich dann um die durch
+spezielle Applikationen unterstützte elektronische Variante. Es
+werden generell 3 Varianten unterschieden:
+
+\begin{itemize}
+    \item\textbf{Sell-Side}: Das System ist auf Verkäuferseite installiert.
+    Der Aufwand mehrere Lieferantensysteme zu bedienen liegt beim Käufer.
+    \item\textbf{Buy-Side}: Das System ist auf der Käuferseite installiert.
+    Mit einem System können mehrere Lieferanten behandelt werden.
+    \item\textbf{Marktplatz}: Plattform mit mehreren Anbietern und Nachfragern.
+    Der Betreiber ist in der Regel eine unabhängige Drittfirma .
+\end{itemize}
+
+\subsubsection*{eMarketing}
+
+Im Marketing gibt es die bekannte AIDA-Formel. Die Abkürzung steht für
+\emph{Attention}, \emph{Interest}, \emph{Desire} und \emph{Action}.
+So wie viele Erkenntnisse des klassischen Marketings ist auch diese
+Formel im eMarketing gültig. Natürlich gibt es zusätzlich jede Menge
+systemspezifische Merkmale. Die Einteilung der Kunden in Gruppen,
+die dann vom Marketing separat betrachtet und mit Massnahmen gesegnet
+werden können ist etwas anders als im klassischen Marketing. Wir
+unterscheiden im eMarketing folgende Gruppen:
+
+\begin{itemize}
+    \item Online Surfer
+    \item Online Consumer
+    \item Online Prosumer \\
+    (Mischung aus Produzent und Consumer--trägt zur Wertschöpfungskette
+    positiv bei und ist gleichzeitig auch Konsument)
+    \item Online Buyer und
+    \item Online Key Customer
+\end{itemize}
 
 
-\section{Deklarieren, initialisieren und verwenden von Variablen}
+Ein bei Webshops häufig vernachlässigtes Gebiet ist die Verkaufs-Psychologie.
+Wenn wir uns in Warenhäusern oder Supermärkten bewegen ist unsere gesamte
+Umgebung nach psychologischen Kenntnissen gestaltet. Das ist nicht nur
+die Akustik (also zumeist eine Hintergrundmusik), sondern kann auch
+olfaktorisch (Geruchsstoffe) und optisch über die Beleuchtung erreicht
+werden. Es ist zum Beispiel bekannt, dass die Gestaltung des Bodens
+(hart oder weich) einen starken Einfluss auf unsere Gehgeschwindigkeit hat
+und wird entsprechend eingesetzt. Eine unvollständige und etwas willkürliche
+Aufzählung finden Sie zum Beispiel unter
+\href{http://www.orbit9.de/wissen/verkaufspsychologie.php}
+{http://www.orbit9.de/wissen/verkaufspsychologie.php}.
+Mittlerweile gibt es aber auch im online-Bereich schon mehr Erfahrung,
+die auch in professionellen Systemen eingesetzt wird. Diese Erkenntnisse
+werden aber nicht sehr freizügig verbreitet. Wie sehr solche psychologischen
+Tricks dann trotzdem auf Personen wirken, die sie kennen ist dann noche
+eine weitere Diskussion. Das Wissen, dass zuviel Alkoholkonsum Kopfschmerzen
+verursacht verhindert den Konsum ja auch nicht vollständig.
 
-\section{Erstellen von Objekten}
+Weitere wichtige Punkte im eMarketing sind cross-selling und up-selling,
+die noch im weiteren Verlauf des Skriptes behandelt werden.
 
+\subsubsection*{eContracting}
 
-\subsection{Das Projekt Lombok}
+\begin{itemize}
+    \item\textbf{elektronischer Verhandlungsprozess} \\
+    Softwaresysteme, die den elektronischen Verhandlungsprozess
+    unterstützen, müssen die Dokumente und Unterlagen des gesamten
+    Geschäftsprozesses verwalten und archivieren. Dazu gehören sämtliche
+    Vereinbarungen und Vertragsabschlüsse, aber auch die digitalen
+    Signaturen und das Controlling nach dem Vertragsabschluss.
+    \item\textbf{digitale Signatur} \\
+    Um rechtsgültige Vertragsabschlüsse im Internet zu erhalten,
+    müssen sich die Geschäftspartner eindeutig identifizieren.
+    Dies geschieht mittels digitaler Signaturen
+    (siehe auch Kapitel~\ref{subsec:digitale-signatur} auf Seite~\ref{subsec:digitale-signatur}).
+    Dokumente, die mit gültigen Signaturen versehen sind, sind rechtswirksam.
+\end{itemize}
 
-Mit dem Projekt ``\href{https://projectlombok.org/}{Lombok}'' erreichen wir 
-eine Vereinfachung unseres Codes, indem sogenannte Wiederholungen automatisch 
-in die Datei `{\tt .class}' generiert werden und die Datei `{\tt .java}' somit 
-entlastet und somit lesbarer/wartbarer wird.
+\subsubsection*{eDistribution}
 
-Wir versuchen dies in Form einfacher Beispiele zu erläutern.
+Die Auswahl eines Distributionssystems sorgt für die Verteilung der Produkte,
+Waren oder Dienstleistungen an die Kunden. Die Definition des Distributionskanals legt
+fest, ob ein Produkt direkt oder indirekt abgesetzt wir. Beim indirekten Absatz
+findet der Vertrieb nicht direkt zwischen dem Hersteller und dem Endkunden statt,
+sondern es gibt eine oder mehrere Zwischenhändlerstufen. Bei digitalen Produkten
+nennen sich die Zwischenhändler auch Infomediäre. Eine weitere strategische Aufgabe
+ist die Bestimmung der Distributionslogistik. Hierbei wird definiert, ob eine Ware
+gelagert wird oder in \emph{just-in-time} produziert wird, auf welchem Transportnetz und
+mit welchem Service die Verteilung stattfindet.
 
-\textbf{\\@NonNull}
+\begin{itemize}
+    \item\textbf{online-Distribution} \\
+    Bei einer reinen online-Distribution findet kein materieller Güterfluss statt.
+    Musikvermarkter sind ein gutes Beispiel für diese Kategorie. Bei der
+    online-Distribution können aber genau wie beim materiellen Güterfluss
+    direkte und indirekte Absatzkanäle gewählt werden. Auch bei open-source
+    Sotwareprodukten werden häufig indirekte Kanäle in Form von Spiegelservern
+    verwendet, die von anderen Organisationen als dem Hersteller betrieben werden.
+    \item\textbf{offline-Distribution} \\
+    Für diesen Begriff gibt es mehrere Definitionen. So wird der Begriff
+    offline-Distribution verwendet, wenn in Abgrenzung zur online-Distribution,
+    ein materieller Güterfluss vorliegt. Dies kann durchaus auch bei digitalen
+    Gütern sinnvoll sein, um Medien mit grosser Qualität zu übertragen oder zum
+    Schutz der Urheberschaft. Ausserdem redet man von offline-Distribution, wenn
+    Medien innerhalb eines Intranets zur Verfügung stehen, ohne dass ein Zugriff
+    auf das Internet erfolgt. Das kann bei grossen Datenmengen wie Filmen oder
+    Datenbanken sinnvoll sein.
+    \item\textbf{hybride Distribution} \\
+    Bei der hybriden Distribution werden on- und offline-Distribution kombiniert.
+    Wenn die Produkte aus materiellen Gütern bestehen, können Zusätze wie
+    Handbücher, Software, Firmware und so weiter separat elektronisch verteilt
+    werden. Der Materiallieferung müssen dann keine CDs, DVDs oder sonstigen
+    Datenträger mehr beiliegen. Damit ist auch eine höhere Aktualität bei Updates
+    gewährleistet.
 
-Die Parameter einer Funktion oder eines Konstruktors können bei der Verwendung 
-den Wert {\tt null} einnehmen, was möglicherweise einen ungewollten Ablauf 
-provozieren kann. Falls wir dies vermeiden wollen, dann bleibt uns nur eine 
-entsprechende Fehlerbehandlung. Es ist an dieser Stelle sehr rasch ersichtlich, 
-dass dies zwangläufig zu Wiederholungen in der Programmierung führen wird.
+    Ein grosses Thema bei digitalen Produkten ist der Urheberrechtsschutz. Ohne
+    besondere Vorkehrungen hat der Hersteller keine Kontrolle über die weitere
+    Herstellung und Verteilung von Kopien. Bei Fotos können digitale Wasserzeichen
+    eingesetzt werden, um die Urheberschaft zu kennzeichnen. Bei Soft4 wareprodukten
+    werden oft sogenannte Dongles eingesetzt, die auf klassische Weise an den
+    Kunden verschickt werden. Oft kann die Software nach dem Download für eine
+    begrenzte Zeit ohne Einschränkungen verwendet werden und erst nach Ablauf
+    einer Frist wird die Verwendung eines Product-Keys oder Dongles überprüft.
+\end{itemize}
 
+\subsubsection*{ePayment}
 
-Viel einfacher sieht der Code aus, bei der Verwendung der Annotation 
-\mintinline{java}{@NonNull}. Falls wir mit IntelliJ IDEA arbeiten, dann
-könnten wir das selbe Resultat mit der vordefinierten Annotation 
-\mintinline{java}{@NotNull} von JetBrains erreichen.
+\subsection{Usability}
 
+\subsection{Personalisierung}
 
-\section{Using Operators and Decision Constructs}
-\section{Using Loop Constructs}
-\section{Developing and Using Methods}
-\section{Implementing Encapsulation and Constructors}
-\section{Creating and Using Arrays}
-\section{Implementing Inheritance}
+\subsection{Personalisierung}
+
+\subsection{Passantenfunktion}
+
+\subsection{Preisfindung}
+
+\subsection{Auftragsbestätigung}
+
+\subsection{Cross- und Up-Selling}
+
+\subsection{Data-Mining}
+
+\subsection{Warenkorb}
+
+\subsection{Produkte Auswahl}
+
+\subsection{Glaubwürdigkeit des eMarketing}
+
+% ===========================================================================
+\section{Informationssicherheit/Datensicherheit}
+
+\subsection{Ziele der Informationssicherheit}
+
+\subsection{Erwartungen an die Informationssicherheit}
+
+\subsection{Angriffe}
+\subsubsection*{Spionage}
+\subsubsection*{Passwort-Cracker/Passwort-Guesser}
+\subsubsection*{Horcher und \emph{The-Man-in-the-Middle}}
+\subsubsection*{E-Shop Lifting}
+\subsubsection*{Session Hijacking}
+\subsubsection*{Viren, Würmer und anderes Getier}
+\subsubsection*{DoS Attacken, Trojaner und Hintertüren}
+
+\subsection{Autorisierung/Authentifizierung}
+
+% ===========================================================================
+\section{Kryptographie}
+
+\subsection{Überblick}
+
+\subsection{Geschichte}
+\subsubsection*{Skytale}
+\subsubsection*{Cäsar-Verfahren}
+\subsubsection*{Monoalphabetische Substitutionen}
+
+\subsection{Verschlüsselungsverfahren (symmetrisch, asymmetrisch und hybrid)}
+\subsubsection*{Public Key}
+
+\subsection{Das XOR-Verfahren}
+
+\subsection{Digitale Signatur}
+\label{subsec:digitale-signatur}
+
+\subsection{Mathematische Grundlagen zu Krypto-Verfahren}
+\subsubsection*{ggT}
+\subsubsection*{Primzahlen}
+\subsubsection*{Modulo p}
+\subsubsection*{Inverses Modulo p}
+\subsubsection*{Einfach \& Schwierig}
+
+\subsection{Hashfunktionen}
+\subsubsection*{Standard-Hashfunktionen}
+\subsubsection*{salted Hash}
+
+\subsection{Das Verfahren von Diffie/Hellmann}
+\subsubsection*{Ausgangslage}
+\subsubsection*{Vorgehen im Diffie/Hellman-Verfahren}
+\subsubsection*{Ein Zahlenbeispiel}
+
+\subsection{Das Verfahren von Rivest, Shamir und Adleman (RSA)}
+\subsubsection*{Vorgehen im RSA-Verfahren}
+\subsubsection*{Ein Zahlenbeispiel}
+
+\subsection{Der eigene öffentliche Schlüssel}
+
+\subsection{Java Hilfsprogramme}
+\subsubsection*{\texttt{XorKryptRandom}}
+\subsubsection*{Grösster gemeinsamer Teiler: \texttt{GCD}}
+\subsubsection*{Das Inverse modulo einer Primzahl: \texttt{MInv}}
+\subsubsection*{Potenzieren modulo einer Primzahl: \texttt{AhBmC}}
+
+% ===========================================================================
+\section{Implementierung}
+
+\subsection{Anpassungen - Change Management}
+
+\subsection{Session}
+
+% ===========================================================================
+\section{Übungen und Aufgaben}
+
+\subsection{Warenkorb}
+\subsubsection*{Alternative: Neuer Shop}
+
+\subsection{Shop-Vergleich}
+
+\subsection{Sicherheit}
+\subsubsection*{Schutz gegen Angriffe}
+\subsubsection*{Angriff}
+
+\subsection{Verschlüsselung}
+
+\subsection{Verschlüsselung - Praxis}
+
+\subsection{Standard Web-Shops}
+
+% ===========================================================================
+\section{GnuPG}
+
+\subsection{Installation}
+
+\subsection{GPG-Home Verzeichnis}
+
+\subsection{Schlüssel generieren}
+
+\subsection{Importieren von Schlüsseln}
+
+\subsection{Schlüssel unterschreiben und beglaubigen}
+
+\subsection{Verschlüsseln / Entschlüsseln einer Botschaft}
+

@@ -6,7 +6,7 @@
 
     <groupId>talent-factory</groupId>
     <artifactId>java-fundamentals</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <organization>
         <name>Talent Factory</name>
         <url>http://www.talent-factory.ch</url>
@@ -26,7 +26,6 @@
 
         <java.source.version>11</java.source.version>
         <java.target.version>11</java.target.version>
-        <antlr.version>4.7.2</antlr.version>
         <junit.jupiter.version>5.3.2</junit.jupiter.version>
 
 
@@ -44,25 +43,7 @@
                     <target>${java.target.version}</target>
                 </configuration>
             </plugin>
-
-            <plugin>
-                <groupId>org.antlr</groupId>
-                <artifactId>antlr4-maven-plugin</artifactId>
-                <version>${antlr.version}</version>
-                <configuration>
-                    <visitor>true</visitor>
-                    <listener>true</listener>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>antlr</id>
-                        <goals>
-                            <goal>antlr4</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-
+            
             <plugin>
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>1.6.0</version>
@@ -119,12 +100,6 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.antlr/antlr4 -->
-        <dependency>
-            <groupId>org.antlr</groupId>
-            <artifactId>antlr4</artifactId>
-            <version>${antlr.version}</version>
-        </dependency>
         <dependency>
             <groupId>org.jetbrains</groupId>
             <artifactId>annotations</artifactId>
