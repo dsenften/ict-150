@@ -4,6 +4,9 @@
 
 # TeX
 *.aux
+*.bbl
+*.bcf
+*.blg
 *.loe
 *.lof
 *.log
