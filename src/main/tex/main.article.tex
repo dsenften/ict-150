@@ -31,15 +31,6 @@
     \newpage
     
     \tableofcontents % Inhaltsverzeichnis
-
-    \newpage
-    \listoffigures   % Abbildungsverzeichnis
-    \listoftables    % Tabellenverzeichnis
-    \listofexercises % Liste der Übungen
-
-    \renewcommand{\listoflistingscaption}{Programmbeispiele}
-    \listoflistings
-
     \listoffixmes
 
     \parindent0em\parskip1em
@@ -52,6 +43,13 @@
 
     \newpage\appendix
     \section{Verzeichnisse}
+    \parindent0em\parskip0em
+    \listoffigures   % Abbildungsverzeichnis
+    \listoftables    % Tabellenverzeichnis
+    \listofexercises % Liste der Übungen
+
+    \renewcommand{\listoflistingscaption}{Programmbeispiele}
+    \listoflistings
 
     \bibliographystyle{plain} % We choose the "plain" | "alpha" reference style
     \bibliography{bibliography}

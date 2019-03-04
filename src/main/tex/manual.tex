@@ -2,6 +2,9 @@
 
 \setmonofont{Verdana}
 
+\newtheorem{beispiel}{Beispiel}[section]
+\newtheorem*{bemerkung}{Bemerkung}
+
 % ===========================================================================
 \section{Modulidentifkation}
 
@@ -179,7 +182,7 @@ ist in der Übersicht nicht vertreten.
             \cellcolor{orange!25}\textbf{Business} &
             \cellcolor{orange!25}\textbf{Consumer} \\ \hline
             \cellcolor{orange!25}\textbf{Administration} & \textbf{A2A} & \textbf{A2B} & \textbf{A2C}      \\
-            \cellcolor{orange!25}                  & Applikation zwischen Behörden (z.B. Interpol)
+            \cellcolor{orange!25}                  & Applikation zwischen Behörden (z.B.~Interpol)
             & Applikationen für öffentliche Ausschreibungen &      \\ \hline
             \cellcolor{orange!25}\textbf{Business} & \textbf{B2A} & \textbf{B2B} & \textbf{B2C}  \\
             \cellcolor{orange!25}                  & & & Webshops; Anbieter sind gewerbsmässige Unternehmen  \\ \hline
@@ -749,6 +752,7 @@ Tricks. Eine Variante ist das (illegale) herunterladen ganzer Datenbestände
 von Web-Applikationen. Wie können wir uns dagegen wehren?
 
 \subsubsection*{Passwort-Cracker/Passwort-Guesser}
+\label{subsubsec:password-cracker}
 
 Wer an einem System genügend Logins durchführen darf, kann mit einem einfachen,
 jedoch zeitaufwändigen Verfahren Passwörter herausfinden. Sogenannte
@@ -928,9 +932,11 @@ Somit war das Verfahren für die damalige Zeit sicher genug.
 
 \image{Caesar}{Cäsar Verschlüsselung}
 
-\paragraph*{Beispiel (Cäsar)}
-\emph{Der Schlüssel sei 7. Das heisst, jeder
-Buchstabe wird im Alphabet um 7 Zeichen nach hinten verschoben.}
+\begin{beispiel}[Cäsar]
+    \label{ex:caesar}
+    Der Schlüssel sei 7. Das heisst, jeder
+    Buchstabe wird im Alphabet um 7 Zeichen nach hinten verschoben.
+\end{beispiel}
 
 ``Hallo'' $\Rightarrow$ ``Ohssv''.
 
@@ -1081,8 +1087,10 @@ Teiler} (engl. GCD = greatest common divisor).
 Definition: Der grösste gemeinsame Teiler von zwei Zahlen ist die
 grösste ganze Zahl, die beide Zahlen ohne Rest teilt.
 
-\paragraph*{Beispiel (ggT)}
-\emph{Grösster gemeinsamer Teiler}:
+\begin{beispiel}[ggT]
+    \label{ex:ggt}
+    Grösster gemeinsamer Teiler:
+\end{beispiel}
 
 \begin{minted}{text}
     ggT (48, 32) = 16
@@ -1091,8 +1099,9 @@ grösste ganze Zahl, die beide Zahlen ohne Rest teilt.
     ggT (35, 63) = 7
 \end{minted}
 
-\paragraph*{Bemerkung}
-\emph{Zwei Zahlen $a$ und $b$ sind genau dann teilerfremd, wenn ggT(a, b) = 1 ist.}
+\begin{bemerkung}
+    Zwei Zahlen $a$ und $b$ sind genau dann teilerfremd, wenn ggT$(a, b) = 1$ ist.
+\end{bemerkung}
 
 Um den ggT von zwei grossen Zahlen zu berechnen, verwenden Sie das Programm GCD:
 
@@ -1109,11 +1118,14 @@ Eine Primzahl ist eine Zahl, die neben sich selbst nur die 1 als
 Teiler hat. Mit anderen Worten: Eine Primzahl hat genau zwei
 Teiler. Die kleinste Primzahl ist 2.
 
-\paragraph*{Beispiel (Primzahlen)}
-\emph{Hier die ersten Primzahlen: 2, 3, 5, 7, 11, 13, 17, 19,$\ldots$}
+\begin{beispiel}[Primzahlen]
+    \label{ex:primzahlen}
+    Hier die ersten Primzahlen: 2, 3, 5, 7, 11, 13, 17, 19,$\ldots$
+\end{beispiel}
 
-\paragraph*{Bemerkung}
-\emph{Ist n eine beliebige positive, ganze Zahl, und p eine Primzahl, so gilt:}
+\begin{bemerkung}
+    Ist $n$ eine beliebige positive, ganze Zahl, und $p$ eine Primzahl, so gilt:
+\end{bemerkung}
 
 \rowcolors{1}{white}{white}
 \begin{tabular}{lcl}
@@ -1145,8 +1157,10 @@ Beispiele:
     \item $37 \mod 5 = 2$ (denn $37 = 6\times 5 + 2$)
 \end{enumerate}
 
-\paragraph*{Bemerkung (Distributivität von Modulo-Berechnungen)}
-\emph{Ist p eine Primzahl, gelten folgende Regeln:}
+\begin{bemerkung}[Distributivität von Modulo-Berechnungen]
+    Ist $p$ eine Primzahl, gelten folgende Regeln:
+\end{bemerkung}
+
 
 \begin{align}
     \label{eq:mod}
@@ -1155,31 +1169,215 @@ Beispiele:
     (a)^n \mod p &= [(a \mod p)^n] \mod p
 \end{align}
 
-\paragraph*{Beispiel (Modulo Beispiele)}
+\begin{beispiel}[Modulo Beispiele]
+    \label{ex:modulo}
+\end{beispiel}
+
 
 \begin{align*}
     (5 + 2)\mod 3 &= ((5\mod 3) + 2) \mod 3 = (2 + 2) \mod 3 = 4 \mod 3 = 1 \\
     (8 \times 15) \mod 7 &= (1 \times 1) \mod 7 = 1 \mod 7 = 1              \\
     (14 \times 35) \mod 3 &= (2 \times 2) \mod 3 = 4 \mod 3 = 1             \\
+    46^{10} \mod 11 &= 2^{10} \mod 11 = 4^5 \mod 11 = (4\times 4^4) \mod 11 = (4\times 16^2) \mod 11 \\
+    &= (4\times 5^2) \mod 11 = (4\time 25) \mod 11 = (4\times 3) \mod 11 = 1
 \end{align*}
+
+\begin{bemerkung}[RSA]
+    Für das RSA-Verfahren (siehe auch Kapitel~\ref{subsec:rsa} auf Seite~\pageref{subsec:rsa})
+    und das Verfahren von Diffie/Hellmann (siehe auch Kapitel~\ref{subsec:diffie-hellmann}
+    auf Seite~\pageref{subsec:diffie-hellmann}) brauchen wir $a^b \mod c$ zu berechnen.
+\end{bemerkung}
+
+\begin{Exercise}[%
+title={Modulo Berechnung},
+label={exercise:modulo}]
+\end{Exercise}
+Berechnen Sie zum Beispiel $23^{17} \mod 7$. Erstellen Sie hierzu ein kleines
+Hilfsprogramm in der Programmiersprache Ihrer Wahl (z.B.~Java). Der Aufruf dieses
+Hilfprogrammes könnte wie folgt aussehen:
+\begin{minted}[autogobble]{text}
+    >java AhBmC 23 17 7
+\end{minted}
+
 
 \subsubsection*{Inverses Modulo $p$}
 
+Für das RSA-Verfahren benötigen wir noch die folgende Rechenoperation.
+Wenn Sie sich nur für Difie-Hellman oder das Verfahren von ElGamal
+interessieren, so können Sie dieses Kapitel überblättern.
+
+Wenn wir Modulo $p$ rechnen und $p$ eine Primzahl ist, so gibt es für
+jede Zahl $m$ ein sogenanntes multiplikatives inverses Modulo $p$.
+Das heisst: für jedes $m$ gibt es ein $n$, so dass $(m\times n) \mod p = 1$ ist.
+
+\begin{align*}
+    p = 7, m = 3 &\rightarrow n = 5~ \text{(denn~} 3\times 5\mod 7 = 1 \text{)} \\
+    p = 7, m = 6 &\rightarrow n = 6~ \text{(denn~} 6\times 6\mod 7 = 1 \text{)} \\
+    p = 11, m = 5 &\rightarrow n = x
+\end{align*}
+
+Hier ein simples Vorgehen, um das Inverse ($\mod p$) zu finden:
+
+Nehmen wir z.B. $p = 13$ und $m = 5$
+
+\begin{align*}
+    5 \times 2 \mod 13 &= 10 \mod 13 = 10 \\
+    5 \times 3 \mod 13 &= 15 \mod 13 = 2  \\
+    5 \times 4 \mod 13 &= 20 \mod 13 = 7  \\
+    5 \times 5 \mod 13 &= 25 \mod 13 = 12 \\
+    5 \times 6 \mod 13 &= 30 \mod 13 = 4  \\
+    5 \times 7 \mod 13 &= 35 \mod 13 = 9  \\
+    5 \times 8 \mod 13 &= 49 \mod 13 = 1  \\
+\end{align*}
+
+Daraus ergibt sich 8 als das Inverse ($\mod 13$) zu 5,
+denn $5\times 8 \mod 13 = 1$.
+
+\begin{Exercise}[%
+title={Inverse Modulo Berechnung},
+label={exercise:inverse-modulo}]
+
+    Erstellen Sie hierzu ein kleines Hilfsprogramm in der Programmiersprache
+    Ihrer Wahl (z.B.~Java). Der Aufruf dieses Hilfprogrammes könnte wie folgt aussehen:
+    \begin{minted}[autogobble]{text}
+        >java MInv 5 13
+    \end{minted}
+\end{Exercise}
+
 \subsubsection*{Einfach \& Schwierig}
 \label{subsubsec:einfach}
+
+Es gibt nun zwei Eigenschaften, die die Primzahlverfahren sehr sicher machen:
+\begin{enumerate}
+    \item Die Zerlegung von groÿen Zahlen in ihre Primfaktoren ist schwierig,
+    die Multiplikation dagegen ist einfach.
+
+    Sind $p$ und $q$ zwei 300-stellige Primzahlen, so ist $p\times q$ einfach
+    zu berechnen; die Primfaktorzerlegung einer 600-stelligen Zahl hingegen
+    ist sehr zeitaufwändig (`pröbeln'). Genau diese Schwierigkeit nutzt
+    das RSA Verfahren.
+
+    \item Exponenten Modulo einer Primzahl zu rechnen ist einfach.
+    Die Umkehrung (den sog. diskreten Logarithmus) zu finden ist schwierig.
+    Diese Schwierigkeit wird vom Diffie/Hellman-Verfahren wie auch vom
+    ElGamal-Algorithmus ausgenutzt:
+
+    $a^b \mod p$ zu berechnen ist einfach (siehe Beispiel~\ref{ex:modulo})
+
+    Aus der Gleichung $a^n \mod p = s$ das $n$ zu berechnen, ist hingegen schwierig.
+\end{enumerate}
 
 \subsection{Hashfunktionen}
 \label{subsec:hash}
 
 \subsubsection*{Standard-Hashfunktionen}
+
+Hashfunktionen sind schnell zu berechnende Schlüsseltransformationen oder
+auf deutsch auch Streuwertfunktionen genannt. Sie bilden mittels einer
+Funktion Daten---wie zum Beispiel Passwörter, Schlüssel, Texte (lang
+und kurz), beliebige digitale Objekte, E-Mails und so weiter---auf
+einen vergleichsweise kleinen Wertebereich mit einheitlicher Grösse
+ab. So wird aus einem grossen Objekt eine möglichst kleine Datenstruktur
+aus nur wenigen Bytes.
+
+Hashfunktionen gehören zu den sogenannten Einwegfunktionen. Bei
+schwachen Hashfunktionen können zwar mehrere Ausgangstexte oder
+Urbilder auf den gleichen Hashcode verweisen\footnote{Das nennt sich dann
+Kollision} ich kann aber nicht von einem Hashwert auf den
+Ursprungstext zurückrechnen. Das ist unabhängig von Rechnerausstattung
+und Geschwindigkeit.
+
+Eine Eigenheit von herkömmlichen Hashfunktionen ist es, dass der
+gleiche Text bei jeder Anwendung der Funktion auf einen identischen
+Hashcode kommt. Zwei gleiche Passwörter liefern mir also auch den
+gleichen Hashcode. Das wird mit der Erstellung und Verwendung von
+\emph{rainbow-tables}, ausgenutzt. Das ist eine Sammlung von
+Hashcodes, deren Ausgangstexte bekannt sind.
+
+Ein simples Beispiel einer Hashfunktion ist die Quersummenbildung,
+auch wenn Sie viele Kriterien einer guten Hashfunktion nicht
+erfüllt. Damit wird eine belebig lange Zahlenreihe auf genau
+eine Ziffer reduziert. Für die meisten Anwendungen ist diese
+Funktion aber deutlich zu einfach, denn gute Hasfunktionen sollten
+die folgenden Eigenschaften erfüllen:
+
+\begin{tabular}{p{0.25\textwidth}|p{0.7\textwidth}}
+    \hline
+    schnell berechenbar &
+    Eine Hashfunktion soll sehr schnell berechnet werden können. \\ \hline
+
+    kleiner Wertebereich &
+    Objekte beliebiger Grösse werden auf wenige Bytes abgebildet. Java
+    verwendet eine Hashfunktion für Strings, die jede Zeichenkette
+    auf lediglich 4 Bytes abbildet. \\ \hline
+
+    nicht umkehrbar &
+    Hash Funktionen können nicht rückgängig gemacht werden. Es handelt
+    sich hier um eine Art Einwegfunktion. Jedoch nicht so, dass die
+    Funktion sehr schwierig umzukehren ist, wie dies bei den
+    Verschlüsselungsverfahren der Fall ist, sondern, dass die
+    Funktion überhaupt nicht umzukehren ist. Aus dem Hash-Wert
+    können die ursprünglichen Daten nicht wieder rekonstruiert werden.
+
+    Das ist übrigens eine einfache Konsequenz aus obiger Tatsache
+    des kleinen Wertebereiches. Mehrere Objekte können denselben
+    Hash-Wert erhalten. \\ \hline
+
+    gute Streuung &
+    Hashfunktionen sollen im Wertebereich stark streuen. Das heisst:
+    Zwei unterschiedliche Objekte sollten mit grosser Wahrscheinlichkeit
+    zwei verschiedene Hash-Werte liefern. \\ \hline
+\end{tabular}
+
+Einsatzgebiete:
+\begin{itemize}
+    \item Digitale Signatur (siehe auch Kapitel~\ref{subsec:digitale-signatur}
+    auf Seite~\pageref{subsec:digitale-signatur})
+    \item Digitaler Fingerabdruck
+    \item Prüfsummenbildung
+    \item Passwortlisten (siehe auch Kapitel~\ref{subsubsec:password-cracker}
+    auf Seite~\pageref{subsubsec:password-cracker})
+    \item Indexierung von Textattributen in Datenbanken
+    \item Hash-Tabellen (nicht Inhalt dieses Kurses.)
+\end{itemize}
+
+\begin{Exercise}[%
+title={Hash-Code Berechnung},
+label={exercise:hash-code}]
+
+    Erstellen Sie hierzu ein kleines Hilfsprogramm in der Programmiersprache
+    Ihrer Wahl (z.B.~Java). Der Aufruf dieses Hilfprogrammes könnte wie folgt aussehen:
+    \begin{minted}[autogobble]{text}
+        >java Hash "Geheimnachricht" "Geheim Nachricht"
+
+        Hashcode of 'Geheimnachricht' = '0x4A70B2C1'
+        Hashcode of 'Geheim Nachricht' = '0xAB60729F'
+    \end{minted}
+\end{Exercise}
+
+
 \subsubsection*{salted Hash}
 
+Die einzige anerkannte Methode um vom Hashwert wieder auf sein Urbild
+zu kommen sind die oben erwähnten \emph{rainbow-tables}. Sehr lange
+und aus verschiedenen Zeichentypen bestehende Passwörter wird man
+mit grosser Sicherheit auch so nicht finden, aber welcher Administrator
+wird sich da schon auf das Sicherheitsverständnis der Benutzer
+verlassen - zumal auch die Passwortwahl von Administratoren nicht
+über alle Zweifel erhaben ist.
+
+Ein Ausweg sind sogenannte Salts. Das sind zufallsgenerierte Codes,
+die dem Ursprungstext hinzugefügt werden, bevor die Hashfunktion
+angewendet wird. Der Salt muss natürlich ebenfalls abgespeichert
+werden. Aber der Aufwand um jetzt alle Passwortkombinationen mit
+dem Salt durchzutesten ist riesig.
+
 \subsection{Das Verfahren von Diffie/Hellmann}
+\label{subsec:diffie-hellmann}
+
 \subsubsection*{Ausgangslage}
 
 \subsubsection*{Vorgehen im Diffie/Hellman-Verfahren}
-\label{subsubsec:diffie-hellmann}
-
 \subsubsection*{Ein Zahlenbeispiel}
 
 \subsection{Das Verfahren von Rivest, Shamir und Adleman (RSA)}
