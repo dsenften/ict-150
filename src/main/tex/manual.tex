@@ -1518,20 +1518,139 @@ Schlüssel von daniel.senften@talent-factory.ch ist (r = 289073 und c = 353)}.
 
 % ===========================================================================
 \section{Implementierung}
+\label{sec:implementierung}
+
+In diesem Abschnitt finden Sie Informationen, die teilweise programmier- und produktspezifisch sind.
 
 \subsection{Anpassungen - Change Management}
+\label{subsub:change-management}
+
+
+Vermutlich nicht ganz unbeabsichtigt, kommt im Titel des Moduls ``E-Business-Applikation anpassen''
+das Wort anpassen vor. Ab wann genau etwas eine Anpassung ist oder eine Neuentwicklung ist leider
+wieder eine Definitionsfrage. Durch die Verwendung von Frameworks und Generatoren sind auf
+Neuentwicklungen auf Codebasis eigentlich nur Anpassungen. Wenn es sich aber um eine Applikation
+handelt, die bereits produktiv im Einsatz ist, dann unterscheidet sich das Vorgehen von einer
+Neuentwicklung. Vor allem die Überführung aus der Testumgebung in die produktive Umgebung
+ist in diesem Fall heikel, da der bestehende Applikationseinsatz ungehindert und fehlerfrei
+weiterlaufen soll. Laut ITIL\footnote{IT Infrastructure Library.}
+soll dies kontrolliert, effizient und unter Minimierung der Risiken geschehen.
+
+Das Change-Management ist dafür verantwortlich standardisierte Prozesse zu definieren,
+die bei Änderungen der IT-Infrastruktur angewendet werden. Gerade bei \emph{running-systems}
+kann der Schaden erheblich sein, wenn nach Änderungen Störungen auftreten oder das System
+im Extremfall ganz ausfällt.
+
+Die Anpassungen können darin bestehen, dass vorgegebene Parameter verändert werden - verändern
+der Einstellungen auch Customizing genannt oder dass Codeanpassungen durch Anfügen,
+Entfernen oder Modifizieren bestehender Funktionen gemacht werden.
+
+Ressourcen:
+\begin{itemize}
+    \item \href{https://de.wikipedia.org/wiki/Change_Management_(ITIL)}{Change Management (ITIL)}
+    \item \href{http://www.change-management.com}{www.change-management.com}
+\end{itemize}
+
+In der Praxis werden häufig Versionierungssysteme wie \href{https://de.wikipedia.org/wiki/Concurrent_Versions_System}{CVS},
+\href{https://de.wikipedia.org/wiki/Apache_Subversion}{Subversion} oder heute
+vermehrt \href{https://de.wikipedia.org/wiki/Git}{Git} eingesetzt.
 
 \subsection{Session}
+\label{subsec:session}
+
+Ein generelles Phänomen von Multi-User Applikationen (und somit im speziellen auch
+von Web-Applikationen) ist die Tatsache, dass jeder Benutzer seine eigenen Variablen
+besitzen muss.
+
+Sessions (Sitzungen) implementieren auf verbindungslosen Protokollen (hier http) eine
+Beziehung vom Client zu einem zugehörigen Prozess auf dem Server. Es wird dem Client eine
+ID\footnote{Identifikationsnummer oder -string} zugewiesen. Jeder nun folgende Aufruf des
+Clients übergibt dem Server diese ID. Somit kann der Server seine Prozesse und Daten eindeutig
+den Clients zuweisen. Eine andere Möglichkeit wäre es, alle Nutzdaten auf dem Client abzulegen.
+
+Mögliche Implementationen über \texttt{http}:
+\begin{description}
+    \item[Cookies] Speichern von Variablenwerten durch den Browser auf dem Client.
+    Ein `Cookie' enthält den Namen, den Inhalt (\emph{Content}), die Domain, den Pfad, ein
+    Verfallsdatum, eine \emph{Policy} und den Sicherheitszustand (\emph{secure}).
+
+    \item[URL-Rewriting] Beim URL\footnote{Uniform Resource Locator}-Rewriting wird jedem
+    Hyperlink eine Identifikationsnummer mitgegeben, z.B.
+
+    \begin{minted}[autogobble]{text}
+        <a href="http://www.xyz.com?SessionID=Sz45Km232Kxw22">
+    \end{minted}
+
+    \item[Uidden-Fields] Variablen können auch in versteckten Feldern der
+    Formulare (im \texttt{<form>}-Element) mitgegeben werden.
+\end{description}
+
+Überlegen Sie sich die Sicherheitsrisiken oder allfällige Datenschutzproblematiken der
+drei genannten Verfahren.
+
+In PHP wird eine Session einfach mit  generiert.
+Die Applikationsentwickler müssen sich nicht mehr um das darunterliegende Verfahren kümmern.
 
 % ===========================================================================
 \section{Übungen und Aufgaben}
+\label{sec:uebungen}
 
 \subsection{Warenkorb}
+\label{subsec:wahrenkorb}
+
 \subsubsection*{Alternative: Neuer Shop}
 
 \subsection{Shop-Vergleich}
+\label{subsec:shop-vergleich}
+
+Es gibt eine ganze Menge an bestehenden Webshops - allerdings von unterschiedlicher Qualität.
+Untersuchen Sie möglichst Ihnen bereits bekannte Webshops. Diese müssen nicht optimal sein -
+im Gegenteil. Sie sollen ja gerade Schwachstellen entdecken. Analysieren Sie mindestens 2 Shops.
+Hier sind noch ein paar Kriterien aufgelistet, aber Sie können eigene hinzufügen und müssen
+die aufgelisteten nicht unbedingt verwenden.
+
+\begin{multicols}{2}
+    \begin{itemize}
+        \item Warenkorb
+        \item Suchfunktionen
+        \item Zahlungsverkehr / -möglichkeiten
+        \item Kategorisierung von Artikeln
+        \item Konfiguration von Artikeln
+        \item Benutzerschnittstelle (Bestellvorgehen, Ergonomie; Verfolgung Auftragsstatus, Usability)
+        \item Login und Benutzerdaten
+        \item Undo-Funktionalität (Rückgängig machen von Aktionen)
+        \item Zusätzliche Funktionen
+    \end{itemize}
+\end{multicols}
+
+In einigen Shops ist es auch möglich etwas zu den folgenden Punkten zu sagen:
+
+\begin{itemize}
+    \item eingesetzte Architektur (ASP, JSP, PHP, Java-Script, Applets,$\ldots$)
+    \item Sicherheit (GET-Parameter, \texttt{https},$\ldots$)
+    \item verwendete Standardsoftware oder Frameworks
+\end{itemize}
+
+Die folgenden Beispiele für mögliche Shops finden Sie in der elektronischen Variante
+dieses Skripts als Link. Aber suchen Sie auch eigene Shops:
+
+\begin{multicols}{3}
+    \begin{itemize}
+        \item\href{https://www.amazon.com}{amazon.com}
+        \item\href{https://www.orellfuessli.ch/shop/home/show/}{books.ch}
+        \item\href{https://www.sbb.ch/}{sbb.ch}
+        \item\href{https://www.ticketcorner.ch}{ticketcorner.ch}
+        \item\href{https://www.jukebox.ch}{jukebox.ch}
+        \item\href{https://www.leshop.ch/}{leshop.ch}
+        \item\href{https://www.coopathome.ch}{www.coopathome.ch}
+        \item\href{https://de.fotolia.com}{fotolia.com}
+        \item\href{https://www.thalia.de/}{thalia.de}
+    \end{itemize}
+\end{multicols}
 
 \subsection{Sicherheit}
+\label{subsec:sicherheit}
+
 \subsubsection*{Schutz gegen Angriffe}
 \subsubsection*{Angriff}
 
@@ -1543,16 +1662,91 @@ Schlüssel von daniel.senften@talent-factory.ch ist (r = 289073 und c = 353)}.
 
 % ===========================================================================
 \section{GnuPG}
+\label{sec:gnupg}
+
+Wie wird GnuPG von Hand eingesetzt? Hier einige wichtige Befehle und Optionen,
+falls Sie sich entscheiden, nicht die graphische Benutzeroberfläche von PGP zu verwenden.
 
 \subsection{Installation}
+\label{subsec:gnupg-installation}
+
+Zuerst müssen Sie das gpg-Tool herunterladen. Zum Beispiel hier: (\href{https://www.openpgp.org}{www.pgpi.org} oder
+\href{https://www.gnupg.org}{www.gnupg.org})
+
+\begin{enumerate}
+    \item Erstellen Sie ein Verzeichnis (z.B.~\texttt{'/temp/gpg'}\footnote{Falls Sie in
+    beliebigen Verzeichnissen Schreibrechte haben, können Sie selbstverständlich das
+    Programm auch in ein anderes Verzeichnis kopieren. Sie können dann auch auf den
+    (im Folgenden immer erwähnten Zusatz \texttt{'homedir'}) verzichten.}) und kopieren
+    Sie alles vom Netz da hinein.
+
+    \item Wechseln Sie entweder ins oben erstellte Verzeichnis (\texttt{'cd /temp/gpg'})
+    oder geben Sie dieses Ihrem System-Pfad bekannt.
+
+\end{enumerate}
 
 \subsection{GPG-Home Verzeichnis}
+\label{subsec:gpg-home}
+
+GnuPG benötigt ein Heim-Verzeichnis, um die Schlüssel zu speichern. Wenn nichts angegeben
+wird, sucht sich GnuPG selbständig ein solches Verzeichnis aus. Wenn Sie auf den
+Maschinen nicht überall Schreibrechte haben oder wenn Sie das Verzeichnis explizit
+angeben wollen, verwenden Sie bei jedem Aufruf von \texttt{'gpg'} die Option
+\texttt{'homedir <Verzeichnis>'}. Dabei steht \texttt{'<Verzeichnis>'} für das von
+Ihnen gewählte Verzeichnis.
 
 \subsection{Schlüssel generieren}
+\label{subsec:gpg-key-generieren}
+
+Mit der Option \texttt{'-gen-key'} wird ein Schlüssel generiert. ElGamal-Schlüssel
+sind in der Regel sicher. Wegen einem Implementationsfehler sollten Sie aber nicht
+zum Unterschreiben eingesetzt werden. Für unsere kleine Übung ist das jedoch kein
+Problem, denn der Aufwand, den privaten Schlüssel dennoch zu knacken, ist immer
+noch hoch genug.
+
+\begin{minted}{text}
+    gpg --homedir  /temp/gpg --gen-key
+\end{minted}
 
 \subsection{Importieren von Schlüsseln}
+\label{subsec:gpg-key-import}
+
+Damit Sie später für jemanden etwas verschlüsseln können, müssen Sie seinen
+Public-Key importieren; im Volksmund gesagt: Hängen Sie den öffentlichen Schlüssel
+des Empfängers an Ihren Schlüsselbund (Key-Ring). Das geschieht mit der Option import.
+
+\begin{minted}{text}
+    gpg --homedir /temp/gpg --import phi.key
+\end{minted}
+
+Den erfolgreichen Import testen Sie am einfachsten mit dem Auflisten aller
+Schlüssel in Ihrem Schlüsselbund.
+
+\begin{minted}{text}
+    gpg --homedir /temp/gpg --list-keys
+\end{minted}
 
 \subsection{Schlüssel unterschreiben und beglaubigen}
+\label{subsec:gpg-sign-key}
+
+Es gibt noch zwei weitere Befehle, die je nach Anwendung der Schlüssel einzusetzen
+sind: Schlüssel unterschreiben (\texttt{'sign-key'}) und Schlüssel beglaubigen
+(\texttt{'edit-key'} und \texttt{'trust'}).
 
 \subsection{Verschlüsseln / Entschlüsseln einer Botschaft}
+\label{subsec:gpg-encrypt-decrypt}
+
+
+Das Verschlüsseln für einen Empfänger (z.B.~daniel.senften@talent-factory.ch) ist nun,
+nachdem die obigen Schritte durchgeführt sind, keine Hexerei mehr. Der Befehl
+\texttt{'-encrypt'} verschlüsselt den Text. Hier können mehrere Empfänger angegeben
+werden. Sobald eine Leerzeile eingegeben wird, wird der Text für alle angegebenen
+Empfänger verschlüsselt.
+
+\begin{minted}{text}
+    gpg --homedir /temp/gpg --encrypt geheim.txt
+\end{minted}
+
+Zum Entschlüsseln verwenden Sie den Befehl \texttt{'-decryp'}.
+
 
