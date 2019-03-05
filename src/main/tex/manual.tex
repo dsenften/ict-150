@@ -1375,15 +1375,135 @@ dem Salt durchzutesten ist riesig.
 \subsection{Das Verfahren von Diffie/Hellmann}
 \label{subsec:diffie-hellmann}
 
+\image{DHVerfahren}{Das Diffie Hellmann Verfahren}
+
+Das Verfahren von Diffie/Hellmann (DH-Verfahren\footnote{Whitfield Diffie,
+Martin Hellman und Ralph Merkle} 1976) erlaubt es, Daten verschlüsselt
+zu übermitteln, ohne vorab einen geheimen Schlüssel auf einem separaten
+Kanal zu transportieren\footnote{Das Verfahren wurde schon vor Diffie und
+Hellman von Malcolm Williamson vorgeschlagen.}.
+
 \subsubsection*{Ausgangslage}
 
+\begin{itemize}
+    \item Ausgangssituation: Alice (A) und Bob (B) wollen Nachrichten über
+    eine öffentlich zugängliche Leitung austauschen. Diese Leitung wird
+    möglicherweise abgehorcht.
+    \item Alice und Bob hatten vorher noch keine Schlüssel miteinander ausgetauscht.
+    \item Das Diffie/Hellman-Verfahren erlaubt es, eine Botschaft über eine
+    Leitung zu übermitteln, ohne dass ein `Horcher' die Nachricht verstehen kann.
+    \item Es wird davon ausgegangen, dass der `Horcher' sich nicht als Sender
+    oder Empfänger ausgeben kann. (Die Transaktion sei zu schnell, als
+    dass die \emph{Man-in-the-Middle}-Attacke funktionieren könnte.)
+\end{itemize}
+
 \subsubsection*{Vorgehen im Diffie/Hellman-Verfahren}
-\subsubsection*{Ein Zahlenbeispiel}
+
+Das Diffie/Hellman-Verfahren besteht aus folgenden Schritten:
+\begin{enumerate}
+    \item Die Kommunikationspartner A und B (Alice und Bob) entscheiden sich
+    gemeinsam für eine grosse Primzahl $p$. (Je grösser die Primzahl, umso
+    sicherer das Verfahren.)
+
+    \item A und B suchen eine Zahl $s$, die kleiner als $p$ ist
+    (Bedingung: $1 < s < p$)\footnote{Genaugenommen sollte $s$ eine sogenannte
+    Primitivwurzel modulo $p$ sein (Siehe~\cite{buchmann}). Das Verfahren
+    funktioniert auch für andere Zahlen, kann aber unter Umständen einfach werden.}.
+    Wichtig: Die beiden Zahlen $p$ und $s$ können unverschlüsselt über die
+    Telefonleitung übermittelt werden; sie sind also öffentlich zugänglich.
+    Cleo (C) in der Mitte hört $p$ und $s$, kann aber mit diesen Zahlen
+    noch nichts anfangen.
+
+    \item Alice sucht sich im Geheimen eine Zahl $a$; Bob sucht sich im Geheimen
+    eine Zahl $b$; Die beiden Zahlen sollten kleiner als $p − 1$ sein.
+
+    \item A berechnet $m := s \mod p$ und schickt das Resultat an B;
+    B berechnet $n := s \mod p$ und schickt das Resultat an A;
+    Cleo hört zwar $m$ und $n$ mit und kann damit nun theoretisch $a$ und $b$
+    berechnen. Er braucht dazu aber viel zu lange.
+
+    \item A berechnet die Geheimzahl $g = n \mod p$;
+    B berechnet die Geheimzahl $g = m \mod p$.
+
+    Bemerkung $g = n^a = m^b \text{, denn } n^a = {(s^b)}^a = s^{ba} = s^{ab} = {(s^a)}^b = m^b$
+
+    C kann $g$ nicht in nützlicher Frist berechnen. Das einzige mathematische Verfahren für C,
+    um $g$ zu `berechnen', heisst \emph{ausprobieren}.
+    \footnote{Es gibt einige mathematische Tricks (das Babystep-Giantstep-Verfahren von
+    Shanks, der Pollard-ρ-Algorithmus oder das Verfahren von Pohlig-Hellman), um schneller
+    zum Ziel zu kommen, und es gibt Fälle von Primzahlen, bei denen das Verfahren schneller
+    werden kann als stures ausprobieren.}.
+
+    \item A und B können nun ihre Nachrichten mit $g$ verschlüsseln und entschlüsseln
+    (z.B.~mit dem XOR-Verfahren (siehe auch Kapitel~\ref{subsec:xor}auf Seite~\pageref{subsec:xor})).
+\end{enumerate}
+
+%\subsubsection*{Ein Zahlenbeispiel}
 
 \subsection{Das Verfahren von Rivest, Shamir und Adleman (RSA)}
 \label{subsec:rsa}
 
+Das RSA-Verfahren wurde von Ronald R. Rivest, Adi Shamir und Leonard M.
+Adleman entwickelt.
+
+Das RSA-Verfahren ist ein \emph{Public Key} Verfahren. Das heisst, der Algorithmus
+und der Schlüssel zum Verschlüsseln (codieren, chiffrieren) von Botschaften wird
+öffentlich bekannt gegeben. Nur der Schlüssel zum Entschlüsseln (decodieren,
+in Klartext zurückverwandeln) der Botschaften wird geheim gehalten.
+
+Das RSA-Verfahren basiert auf der Tatsache, dass es sehr einfach ist, zwei
+Primzahlen miteinander zu multiplizieren, dass es aber äusserst aufwändig ist,
+die beiden Primzahlen wieder zu finden, falls nur noch das Produkt bekannt ist.
+
 \subsubsection*{Vorgehen im RSA-Verfahren}
+
+Das RSA-Verfahren besteht aus vier Schritten.
+
+\begin{enumerate}
+    \item Der Empfänger generiert ein Schlüsselpaar: einen privaten (geheimen)
+    und einen dazu passenden öffentlichen Schlüssel,
+    \item der Empfänger publiziert den öffentlichen Teil,
+    \item der Sender verschlüsselt mit dem öffentlichen Schlüssel des Empfängers
+    seine Botschaft und
+    \item der Empfänger entschlüsselt die Botschaft mit seinem geheimen Schlüssel.
+\end{enumerate}
+
+Der Trick dabei ist, dass nur der Empfänger die Botschaft in sinnvoller Zeit
+entschlüsseln kann, denn nur er kennt die Primfaktorzerlegung des Schlüssels,
+wie wir gleich sehen werden. Nun aber die 4 Schritte im Detail:
+
+\paragraph*{Schritt 1: Schlüssel generieren}
+In diesem Schritt generiert der Empfänger einen öffentlichen Schlüssel.
+Alle können danach mit diesem Schlüssel Botschaften chiffrieren (verschlüsseln),
+aber nur der Empfänger kann sie wieder dechiffrieren (entschlüsseln).
+
+\renewcommand{\theenumi}{\alph{enumi}}
+\begin{enumerate}[label={\alph*)}]
+    \item Der Empfänger sucht zwei (möglichst grosse) Primzahlen $p$ und $q$.
+    \item Der Empfänger berechnet $r = p\times q$.
+    \item Der Empfänger berechnet zudem $s = (p − 1) \times (q − 1)$.
+    \item Der Empfänger bestimmt ein beliebiges $c$ mit den beiden folgenden
+    Eigenschaften: $c < s$ und ggT$(c, s) = 1$. Das erreicht der Empfänger
+    zum Beispiel einfach, indem er eine Primzahl sucht, die kleiner als $s$
+    ist. Hier kann das Programm GCD eingesetzt werden:
+
+    \begin{center}
+        \texttt{>java GCD c s}
+    \end{center}
+
+    muss 1 ergeben!
+\end{enumerate}
+
+
+\paragraph*{Schritt 2: Veröffentlichen des Schlüssels}
+Der Empfänger gibt $r$ und $c$ als öffentlichen Schlüssel bekannt.
+Zum Beispiel steht auf seiner Homepage vereinfacht: \emph{Der öffentliche
+Schlüssel von daniel.senften@talent-factory.ch ist (r = 289073 und c = 353)}.
+
+
+\paragraph*{Schritt 3: Verschlüsseln einer Botschaft}
+
+
 \subsubsection*{Ein Zahlenbeispiel}
 
 \subsection{Der eigene öffentliche Schlüssel}
