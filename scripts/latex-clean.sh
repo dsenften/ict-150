@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 
 rm -f *.aux
+rm -f *.bbl
+rm -f *.bcf
+rm -f *.blg
 rm -f *.loe
 rm -f *.lof
 rm -f *.log

@@ -2,6 +2,9 @@
 
 \setmonofont{Verdana}
 
+\newtheorem{beispiel}{Beispiel}[section]
+\newtheorem*{bemerkung}{Bemerkung}
+
 % ===========================================================================
 \section{Modulidentifkation}
 
@@ -129,8 +132,7 @@ ausgenutzt und untersuchen die Anbieter nach ihren Artikel- und Angebotsprofilen
 Wer eine alte CD-Sammlung auflöst, verkauft verschiedene CDs einmal und selten
 vielleicht zweimal. Wer aber die gleiche CD mehrfach verkauft muss sich eine
 gute Argumentation zurechtlegen, warum er sich nicht als Händler ausgibt
-und muss entsprechend mit Abmahnungen rechnen (siehe auch
-Kapitel~\ref{subsec:juristische-grundlagen} auf Seite~\pageref{subsec:juristische-grundlagen}).
+und muss entsprechend mit Abmahnungen rechnen \totalref{subsec:juristische-grundlagen}.
 
 \subsubsection*{A2C - Administration to A, B, C}
 
@@ -179,7 +181,7 @@ ist in der Übersicht nicht vertreten.
             \cellcolor{orange!25}\textbf{Business} &
             \cellcolor{orange!25}\textbf{Consumer} \\ \hline
             \cellcolor{orange!25}\textbf{Administration} & \textbf{A2A} & \textbf{A2B} & \textbf{A2C}      \\
-            \cellcolor{orange!25}                  & Applikation zwischen Behörden (z.B. Interpol)
+            \cellcolor{orange!25}                  & Applikation zwischen Behörden (z.B.~Interpol)
             & Applikationen für öffentliche Ausschreibungen &      \\ \hline
             \cellcolor{orange!25}\textbf{Business} & \textbf{B2A} & \textbf{B2B} & \textbf{B2C}  \\
             \cellcolor{orange!25}                  & & & Webshops; Anbieter sind gewerbsmässige Unternehmen  \\ \hline
@@ -220,8 +222,8 @@ Soweit die grundsätzlich positive Idee dieses Rechtsmittels.
 
 Leider wird dieses Instrument auch stark missbraucht. Es hat sich als ein
 einträgliches Geschäft erwiesen, im Internet nach kleinen Verstössen zu
-fahnden und die Urheber einfach abzumahnen, in der Hoffnung, dass diese--bei
-relativ geringen Abmahngebühren--den Weg des geringsten Widerstandes nehmen
+fahnden und die Urheber einfach abzumahnen, in der Hoffnung, dass diese---bei
+relativ geringen Abmahngebühren---den Weg des geringsten Widerstandes nehmen
 und bezahlen. Ein grosser Teil der Abmahngründe ist dabei juristisch nicht
 haltbar. Natürlich hat sich auch eine Gegenbewegung gebildet, die bei Bedarf
 Hilfe anbietet. Zum Beispiel \href{http://www.abmahnwelle.de}{http://www.abmahnwelle.de}.
@@ -255,11 +257,11 @@ nicht weitergegeben werden darf. Es ist halt ein Versuch, aber auch nicht
 mehr. Denn juristisch entsprechen diese Hinweise Geschäftsbedingungen.
 Und diese sind vor einer Geschäftshandlung bekannt zugeben und zu akzeptieren.
 Korrekt, aber praktisch nicht machbar wäre es, zuerst den Disclaimer zu
-senden und--falls der Empfänger die Bedingungen akzeptiert--erst anschliessend
+senden und---falls der Empfänger die Bedingungen akzeptiert---erst anschliessend
 den Inhalt.
 
-Ebenso unwirksam sind die meisten Disclaimer auf Webseiten. Es ist--auch vor
-Gericht--nicht glaubwürdig auf andere Webseiten zu verweisen und sich gleichzeitig
+Ebenso unwirksam sind die meisten Disclaimer auf Webseiten. Es ist---auch vor
+Gericht---nicht glaubwürdig auf andere Webseiten zu verweisen und sich gleichzeitig
 von diesen zu distanzieren. Wer in seriöser Absicht auf eine andere Webseite
 verlinkt, sollte deren Inhalt auch kennen. Wenn der Inhalt nach dem Einbau des
 Links verändert und eventuell juristisch bedenklich geworden ist, wird einem
@@ -284,12 +286,23 @@ haben. Die also durch einen Fotografen speziell für sie erstellt werden.
 
 % ===========================================================================
 \section{Bestandteile des eBusiness}
+\label{sec:ebusiness}
 
 \subsection{Übersicht der Wertschöpfungskette}
+\index{Wertschöpfungskette}
+
+\image{Wertschoepfungskette}{Wertschöpfungskette}
+
 
 \subsection{Elemente der Wertschöpfungskette}
+\label{subsec:value-chain}
+
+
 
 \subsubsection*{eProducts \& eServices}
+\index{Produktkatalog}
+\index{eProducts}
+\index{eServices}
 
 Für den Anbieter von Waren ist die Präsentation seiner Produkte ein
 zentraler Punkt. Die Darstellung, Beschreibung mit Attributen und
@@ -315,6 +328,7 @@ sich bei der Konfiguration nicht nur um eine sehr geringe Anzahl an
 Variationsmöglichkeiten handelt.
 
 \subsubsection*{eProcurement}
+\index{eProcurement}
 
 Unter \emph{procurement} wird der Beschaffungsprozess in einem Unternehmen
 verstanden. Mit dem E-Zusatz versehen, handelt es sich dann um die durch
@@ -330,9 +344,15 @@ werden generell 3 Varianten unterschieden:
     Der Betreiber ist in der Regel eine unabhängige Drittfirma .
 \end{itemize}
 
-\subsubsection*{eMarketing}
+\image{eProcurement}{Marktmodelle eProcurement}
+\label{MMeP}
 
-Im Marketing gibt es die bekannte AIDA-Formel. Die Abkürzung steht für
+\subsubsection*{eMarketing}
+\index{eMarketing}
+\index{Marketing}
+
+Im Marketing gibt es die bekannte AIDA-Formel\index{AIDA-Formel}.
+Die Abkürzung steht für
 \emph{Attention}, \emph{Interest}, \emph{Desire} und \emph{Action}.
 So wie viele Erkenntnisse des klassischen Marketings ist auch diese
 Formel im eMarketing gültig. Natürlich gibt es zusätzlich jede Menge
@@ -345,7 +365,7 @@ unterscheiden im eMarketing folgende Gruppen:
     \item Online Surfer
     \item Online Consumer
     \item Online Prosumer \\
-    (Mischung aus Produzent und Consumer--trägt zur Wertschöpfungskette
+    (Mischung aus Produzent und Consumer---trägt zur Wertschöpfungskette
     positiv bei und ist gleichzeitig auch Konsument)
     \item Online Buyer und
     \item Online Key Customer
@@ -374,6 +394,7 @@ Weitere wichtige Punkte im eMarketing sind cross-selling und up-selling,
 die noch im weiteren Verlauf des Skriptes behandelt werden.
 
 \subsubsection*{eContracting}
+\index{eContracting}
 
 \begin{itemize}
     \item\textbf{elektronischer Verhandlungsprozess} \\
@@ -385,12 +406,12 @@ die noch im weiteren Verlauf des Skriptes behandelt werden.
     \item\textbf{digitale Signatur} \\
     Um rechtsgültige Vertragsabschlüsse im Internet zu erhalten,
     müssen sich die Geschäftspartner eindeutig identifizieren.
-    Dies geschieht mittels digitaler Signaturen
-    (siehe auch Kapitel~\ref{subsec:digitale-signatur} auf Seite~\ref{subsec:digitale-signatur}).
+    Dies geschieht mittels digitaler Signaturen \totalref{subsec:digitale-signatur}.
     Dokumente, die mit gültigen Signaturen versehen sind, sind rechtswirksam.
 \end{itemize}
 
 \subsubsection*{eDistribution}
+\index{eDistribution}
 
 Die Auswahl eines Distributionssystems sorgt für die Verteilung der Produkte,
 Waren oder Dienstleistungen an die Kunden. Die Definition des Distributionskanals legt
@@ -431,137 +452,1523 @@ mit welchem Service die Verteilung stattfindet.
     besondere Vorkehrungen hat der Hersteller keine Kontrolle über die weitere
     Herstellung und Verteilung von Kopien. Bei Fotos können digitale Wasserzeichen
     eingesetzt werden, um die Urheberschaft zu kennzeichnen. Bei Soft4 wareprodukten
-    werden oft sogenannte Dongles eingesetzt, die auf klassische Weise an den
+    werden oft sogenannte Dongles\footnote{Es werden auch die Begriffe Kopierschutzstecker,
+    Hardlock oder Key verwendet. Die eingesetzte Software kontrolliert regelmässig
+    die Existenz dieses Steckers.}
+    eingesetzt, die auf klassische Weise an den
     Kunden verschickt werden. Oft kann die Software nach dem Download für eine
     begrenzte Zeit ohne Einschränkungen verwendet werden und erst nach Ablauf
     einer Frist wird die Verwendung eines Product-Keys oder Dongles überprüft.
 \end{itemize}
 
 \subsubsection*{ePayment}
+\index{ePayment}
+
+Die elektronische Abwicklung von Zahlungsvorgängen lässt sich folgendermassen
+klassifizieren:
+
+\begin{itemize}
+    \item\textbf{Höhe des Betrages} \\
+    Abweichend vom klassischen Handel, werden im Web Geschäfte abgehandelt,
+    bei denen nur sehr kleine Beträge fällig werden---zum Beispiel für Webcontent.
+    Das Problem bei Kleinstbeträgen ist es, den administrativen Aufwand so gering
+    wie möglich zu halten damit die Kosten für die Buchungen nicht den Wert des
+    Geldflusses übersteigen. Man unterscheidet bei der Höhe der Geldbeträge
+    zwischen Nano-, Pico-, Micro- und Macropayment. Die genauen Betragsgrenzen
+    sind nicht fix deklariert, sondern fliessend.
+    \item\textbf{Zeitpunkt der Zahlung} \\
+    Die Zahlung einer Dienstleistung oder eines Produktes kann vor, exakt bei
+    der Übergabe oder nach der Übergabe erfolgen. Dies entspricht sinngemäss
+    den drei Begriffen \emph{pre-paid} (z. B. Geldkarten), \emph{pay now}
+    (z. B. Nachnahme) und \emph{pay later} (z. B. Rechnung).
+    \item\textbf{Anonymität} \\
+    Genau wie im klassischen Handel, gibt es auch im elektronischen Geschäft
+    die Möglichkeit anonym oder nicht anonym zu bezahlen. Entscheidend ist
+    dabei, ob der Käufer aufgrund des Zahlungsvorganges identifizierbar ist.
+    Die klassische Bargeldbezahlung steht dabei für die anonyme Transaktion.
+    Bei Kreditkarten, Rechnungen usw. kann der Käufer zumindest über mehrere
+    Organisationsstufen eindeutig identifiziert werden.
+    \item\textbf{Technik} \\
+    Die eingesetzten Techniken können ebenso zur Differenzierung herangezogen
+    werden. Die Form der Abrechnung oder der Speicherung sind mögliche Kriterien.
+    Wie wird konkret abgerechnet? Werden die Geldbeträge auf Konten gutgeschrieben
+    und nach gewissen Regeln in realen Währungen (was auch immer das ist)
+    ausbezahlt? Bleibt der Gewinn innerhalb des Systems und kann nur gegen
+    gerechnet werden - als Parallelwelt zum realen Wirtschaftssystem?
+\end{itemize}
 
 \subsection{Usability}
 
-\subsection{Personalisierung}
+Der Begriff \emph{Usability} ist umfassend und wäre auch ein Kandidat für eine
+Begriffsdefinition (aus der wir uns hier ja bekanntlich raushalten wollen). Es
+geht um gute Anwendbarkeit, klare Orientierung und Ausrichtung auf den Benutzer
+einer Applikation. Ein spezielles Problem von Webapplikationen ist die Anonymität
+des Benutzers. Zu Beginn einer Sitzung haben wir kaum Informationen über Vorwissen,
+Computererfahrung, Sprache und weitere Eigenschaften des Anwenders. Lediglich ein
+paar technische Informationen wie Browsertyp, Betriebssystem und IP-Adresse sind
+uns bekannt. Im Web wird eine grosse Anzahl potentieller Benutzer von vornherein
+durch die Sprache ausgegrenzt. Mittlerweile hat man zumindest erkannt, dass Anwender
+mit Behinderungen ebenfalls das Web benutzen und dass es die Effzienz steigert,
+wenn auch diese Benutzergruppen integriert werden können.
+
+Eine gute Web-Applikation sollte die Vielfalt der Anforderungen abdecken und
+ergonomisch gestaltet sein. Die folgende Aufzählung sind ein paar Kriterien
+ohne Anspruch auf Vollzähligkeit und sollten auf jeden Fall beachtet werden.
+
+\begin{description}
+    \item[Performance] Die Antwortzeiten sollten---auch bei langsameren
+    Internetverbindungen---angemessen sein. Vermeiden sie ``schwere'' Grafiken.
+    Auch wenn im Desktop-Bereich die Bedeutung der Bandbreite nicht mehr im
+    Vordergrund steht, tauchen durch die Verbreitung von Smartphones und Tablets
+    erneut hohe Anforderungen an eine effziente Programmierung auf.
+
+    \item[Verfügbarkeit] Wie für \emph{Stand-Alone}-Applikationen gilt auch auf dem
+    Web: Das System muss stabil laufen und sollte sich korrekt verhalten, auch
+    wenn viele Benutzer gleichzeitig zugreifen.
+
+    \item[Plattformunabhängigkeit] Die Applikation sollte auf den gängigsten
+    Browsern getestet sein und fehlerfrei dargestellt werden. Präferenzen der
+    Webentwickler sind dabei unwichtig. Die Zielgruppe sind die potentiellen
+    Benutzer des Webauftritts. Statistische Auswertungen zeigen an mit welchen
+    Clientkonfigurationen auf die Applikationen und Seiten zugegriffen wird.
+    Diese Informationen können bei Optimierungen verwendet werden. Die aktuelle
+    HardwarePalette wie Desktop-PCs mit grossen Bildschirmen, Laptops,
+    Smartphones und Tablets sollte betriebssystemunabhängig abgedeckt werden.
+
+    \item[Barrierefreiheit] Für blinde oder stark sehbehinderte Menschen ist
+    das Internet eine gut zugängliche Informationsquelle, die Ihnen eine
+    grosse Selbstständigkeit gibt. Sie verwenden Zusatzgeräte, die Ihnen die
+    Informationen zum Beispiel in Brailleschrift (Punktschrift) oder durch
+    Reader akustisch darstellen. Daher ist Barrierefreiheit ein grosses Thema
+    in der Webentwicklung. Grafiken, Bilder, Filme sind Medien, die natürlich
+    mehr auf optische Wahrnehmung ausgerichtet sind und zumindest durch die
+    Verwendung \texttt{alt}- und \texttt{title}-Tags erkennbar gemacht werden sollten.
+
+    \item[Lesbarkeit] Die Schrift sollte gut lesbar sein: Schriftgrösse und
+    Kontrast auf diversen Systemen prüfen. Hintergrundgrafiken können die
+    Lesbarkeit extrem vermindern.
+
+    \item[Seitenlänge] Auf Internetseiten sollte möglichst wenig
+    \emph{gescrollt}\footnote{Rollen mittels Rollbalken.} Schreiben Sie nicht:
+    \texttt{Siehe weiter unten im Text}$\ldots$ sondern verwenden Sie
+    lieber ber einen sogenannten \emph{Hyperlink} auf eine neue Seite. Auf der
+    Hauptseite (\emph{home}) sollte \textbf{nie} gescrollt werden müssen. Vorteile von
+    kurzen Seiten: Bessere Navigierbarkeit, bessere Strukturierung möglich,
+    schnellere \emph{download}-Zeiten, bessere Wartbarkeit.
+
+    \item[Orientierung] Der Benutzer sollte jederzeit sehen, wo er sich gerade
+    in der Informationshierarchie befindet. Verwenden Sie immer das \texttt{<title>}-Tag
+    im Seitenkopf, damit die User die Seite in den Favoriten (bzw. \emph{Bookmarks})
+    einfach wieder finden können. Auf jeder Seite eine
+    Navigationshierarchie\footnote{Breadcrumb-trails:
+    (\href{http://psychology.wichita.edu/surl/usabilitynews/52/breadcrumb.htm}
+    {http://psychology.wichita.edu/surl/usabilitynews/52/breadcrumb.htm})}
+    anzugeben ist auch sinnvoll:
+
+    \texttt{MyShop > Zahlungsmodalitäten > Rechnung > Howto}
+
+    \item[Konsistenz] Alle Seiten einer Web-Applikation sollten sich immer
+    gleichartig verhalten. Die Grafiken und Anordnungen der Steuerelemente
+    sollten einheitlich sein. Verwenden Sie Fluchtlinien, um das Auge zu
+    beruhigen. Beachten Sie, dass auch allfällige Bannerwerbung zum Layout passt.
+
+    Verwenden Sie für Abstände, Rahmen, Farben, Schrift und so weiter wenn immer
+    möglich CSS\footnote{Cascading Style Sheets.}-Vorlagen. Die Applikation wirkt
+    einheitlicher, ruhiger und professioneller. Zudem können Sie diese viel
+    einfacher \textbf{anpassen}.
+
+    \item[Didaktik] Das System sollte leicht erlernbar sein---wenn möglich ohne
+    Einführung oder Hilfe-Seiten. Alle Informationen und \emph{Links},
+    die benötigt werden, um den nächsten Schritt (Warenkorb ansehen, Artikel
+    zukaufen, Zahlungsbedingung aushandeln, $\ldots$) auszuwählen, sollten
+    permanent ersichtlich sein.
+\end{description}
+
+Bei \emph{B2B} (bzw. \emph{B2E} Applikationen hat die \emph{Usability} natürlich
+einen anderen Schwerpunkt. Hier sollte schnell gearbeitet werden können und der
+User ist in der Regel ein professioneller Anwender. Oft wird eine
+Einarbeitungszeit oder gar eine Schulung in Kauf genommen, um danach eine
+höhere Performance zu erreichen.
 
 \subsection{Personalisierung}
+
+Als Personalisierung bezeichnen wir die Zuordnung von Aktivitäten und
+Zugriffen zu Personen oder Gruppen. Damit können formale und inhaltliche
+Merkmale abgespeichert werden. Nach der Identifikation ist eine individuelle
+Ansprache möglich und die Anzeige von persönlichen Zusatzinformationen wie
+Warenkorb oder Wunschliste. Eventuell kann der Kunde Inhalt und Layout
+für sich verändern. Diese Informationen werden in einem Kundenprofil
+abgespeichert. Einen Teil dieser Daten kann der Kunde in seinen
+Profildaten selbstständig verändern und seinen Bedürfnissen anpassen.
+
+Ausserdem kann das vorhandene Wissen über bereits getätigte Käufe und auch
+über das Surfverhalten im angemeldeten Zustand innerhalb des eigenen
+Webautrittes des Anbieters für Marketingaktivitäten verwendet werden.
+Der Anbieter erhält so weitere Informationen, die auch für Data-Minig
+verwendet werden können.
+
+\subsection{Bannerwerbung}
+
+Bannerwerbungen sind für die Kunden lästig. Es ist jedoch eine einfache
+Möglichkeit, Werbefläche für bares Geld zu verkaufen. Die Werbefläche kann
+auch per \emph{Click} oder per \emph{Show} verkauft werden.
 
 \subsection{Passantenfunktion}
 
+Passantenfunktionen werden alle Funktionen genannt, die Besucher eines
+Webshops ohne Anmeldung ausführen können. Aus Sicht des Anbieters ist
+es ein zweischneidiges Schwert. Auf der einen Seite ist die Identifizierung
+eines Shopbesuchers für das eMarketing sehr wichtig. Nur durch eine genaue
+Zuordnung der online-Aktivitäten zu Benutzern können detaillierte Kundenprofile
+erstellt werden. Auf der anderen Seite möchten viele Shopbesucher genau
+das verhindern und wünschen keine umfangreiche Analyse ihres Verhaltens
+in deren Ergebnisse sie ja noch nicht einmal Einblick erhalten. Um diese
+potentiellen Käufer trotzdem nicht zu verlieren und die Eintrittsschwelle
+so tief wie möglich zu halten ist es in vielen Shops möglich einen direkten
+Kauf zu tätigen ohne ein Kundenkonto zu eröffnen. Für den Kunden entfallen
+dann diverse Vereinfachungen wie Einmalerfassung seiner Adresse, Erstellung
+von persönlichen Profilen (My-Account), Übersicht über alle Bestellungen
+und so weiter. Wer aber bei einem unbekannten Lieferanten voraussichtlich
+nur einmal etwas kaufen möchte, hofft so eventuell nicht in die permanente
+Kundenstammdatenbank aufgenommen zu werden. Wenn das Produkt per eDistribution
+bezogen wird und die Zahlung mit einer anonymen Methode erfolgt, kann er
+mit dieser Annahme durchaus richtig liegen. Falls aber doch eine Identifizierung
+erfolgt, ist es für den Anbieter zwar aufwendiger ein Profil zu erstellen,
+aber trotzdem möglich.
+
+Für Passantenfunktionen erfolgt also kein Login und die Daten über Zahlungsart
+und Lieferadresse muss der Kunde---wenn überhaupt---erst ganz am Schluss
+eingeben, wenn er wirklich etwas kaufen will.
+
+
 \subsection{Preisfindung}
+
+Durch die hohe Transparenz im Internet ist die Preispolitik extrem heikel.
+Ein Webshopbetreiber, der nicht bereits aufgrund seiner Bekanntheit eine
+hohe Kundenbindung hat, darf sich vom Preisniveau kaum von seinen Mitbewerbern
+absetzen. Es ist wichtig, die Preise für die Kunden klar erkennbar zu halten
+und eventuelle Rabatte (z. B. bei grösseren Mengen oder Einkäufen über einen
+bestimmten Zeitraum) möglichst früh auszuweisen. Wenn gewisse Rabatte erst
+dann gewährt werden, wenn die Ware bereits im Einkaufskorb liegt, kann das für
+eine längerfristige Kundenbindung zwar positiv sein, für einen Spontankauf
+oder bei einem Preisvergleich mit Mitbewerbern ist das aber nicht förderlich.
 
 \subsection{Auftragsbestätigung}
 
+Bevor eine Bestellung wirklich ausgeführt wird, hat der Kunde die Möglichkeit,
+alle Artikel, Preise, Rechnungs- und Lieferanschriften, Rabatte und so weiter
+anzuschauen. Der Kunde sieht alle Produkte, die Lieferadresse und die Zahlungsart
+noch einmal, bevor er zuallerletzt auf den Schalter `Auftrag versenden' klickt.
+
 \subsection{Cross- und Up-Selling}
+
+Mit Cross-Selling---auch Querverkauf genannt---werden die Marketingaktivitäten
+bezeichnet, die ergänzende Produkte zu einem bereits ausgewählten Produkt
+anbieten. Dabei kann es sich im engeren Sinne um Dienstleistungen oder
+Produkte handeln, die direkt mit der Auswahl zusammenhängen, also Zubehör
+oder Erweiterungen. Erweitert werden jedoch auch Produkte angeboten, die
+keinen direkten Zusammenhang mit dem bisherigen Kauf haben. Zum Teil wird
+dies offen kommuniziert: ``Kunden, die $x$ gekauft haben, haben auch $y$
+gekauft''---ob das dann auch tatsächlich so ist, ist eine andere Sache.
+In dem Zusammenhang spricht man auch von \emph{recommender}-Systemen.
+
+Mit Up-Selling werden die Bemühungen bezeichnet dem Kunden statt dem
+ausgewählten Produkt ein höherwertigeres oder zumindest teureres Produkt
+zu verkaufen. Wer bei der SBB eine Bahnfahrkarte zweiter Klasse löst,
+bekommt meist auch Angebote für die 1. Klasse angezeigt. Oder es werden
+Mengenrabatte beim Bezug grösserer Mengen als der bisher gewünschten angezeigt.
 
 \subsection{Data-Mining}
 
+In grossen Warenhäusern werden Statistiken erzeugt, die Zusammenhänge im
+Kaufverhalten aufdecken, um besseres Cross- bzw. Upselling zu betreiben.
+Ebenso kann damit personalisiert und Aktionen können sinnvoll geplant werden.
+
 \subsection{Warenkorb}
+
+Der Warenkorb ist eine zentrale Funktion des Webshops. Wichtig ist zu wissen,
+wie die Inhalte im Warenkorb gespeichert sind. Die Variante, die Inhalte
+clientseitig zu speichern, birgt Risiken. Auf der Serverseite gibt es zwei
+Varianten: a) persistent: Der Inhalt des Warenkorbes wird in einer Datenbank
+gespeichert und b) transient: Der Warenkorb lebt in der \emph{Session} als
+temporäre Variable. Hier muss man sich überlegen, ob die Waren auch noch
+nach längerer Zeit im Korb liegen sollten. Oder macht es Sinn, die
+Session-Variablen nach einer halben Stunde---mit allen Waren im
+Korb---zu löschen. Die Anwenderin muss sich dann wieder neu anmelden.
 
 \subsection{Produkte Auswahl}
 
+Um Produkte eines Web-Shops zu finden, gibt es diverse Strategien. Wichtig
+ist, dass der Kunde rasch auf das gesuchte Produkt stösst. Das kann bei
+kleinen Anbietern eine einfache Tabelle mit allen im Lager befindlichen
+Artikeln sein. Eine Suche nach Artikeln kann diverse Stichworte
+berücksichtigen oder aber nach allen im Text vorkommenden Wörtern
+suchen (Index). Häufig werden auch Produktehierarchien angeboten. So
+kann sich ein Käufer wie im Supermarkt von Stockwerk zu Stockwerk
+und anschliessend von Regal zu Regal bewegen, bis er beim gewünschten
+Produkt ankommt.
+
 \subsection{Glaubwürdigkeit des eMarketing}
+
+Die Authentizität von Kundenfeedbacks, Foreneinträgen und die Überlegungen,
+die hinter Cross-Selling-Aktionen stehen, sollten von kritischen Verbrauchern
+immer hinterfragt werden. Zwar sind in der Vergangenheit gelegentlich
+Politiker aufgeflogen, weil sie ihre Darstellungen im Internet unter einem
+Decknamen, aber blöderweise von der IP-Adresse ihres Büros geschönt haben.
+Man kann aber sicher sein, dass es viel professionellere Agenturen gibt,
+die positive Rückmeldungen und Produktebeschreibungen lancieren, um den
+Absatz zu erhöhen und eine Ware oder Dienstleistung in einem guten Licht
+erscheinen zu lassen.
 
 % ===========================================================================
 \section{Informationssicherheit/Datensicherheit}
+\label{sec:security}
 
 \subsection{Ziele der Informationssicherheit}
 
+Für die Sicherheit in der Informationstechnik müssen drei Eigenschaften erfüllt sein:
+
+\begin{description}
+    \item[Vertraulichkeit] Unberechtigte können die Informationen nicht einsehen.
+    \item[Integrität] Die Inhalte sind unverfälscht.
+    \item[Authentizität] Der Absender ist eindeutig erkennbar.
+\end{description}
+
+Je nach Einsatz und Anwendungsgebiet der IT-Infrastruktur ist noch eine
+weitere Eigenschaft gefordert:
+
+\begin{description}
+    \item[Nichtwiderlegbarkeit/Nonrepudiation] Der Absender einer Nachricht
+    kann vom Empfänger gegenüber Dritten unabstreitbar identifiziert werden.
+\end{description}
+
 \subsection{Erwartungen an die Informationssicherheit}
 
+Eine 100\%-ige Sicherheit existiert ebensowenig wie es fehlerfreie komplexe
+Systeme gibt. Der Aufwand der betrieben wird, um eine IT-Umgebung
+abzusichern und um die oben genannten Ziele der Informationssicherheit
+zu erfüllen hängt vom Betreiber ab. Das Bewusstsein, dass immer ein
+Restrisiko vorhanden ist, ist vielleicht beunruhigend aber sicher besser
+als ein arroganter Sicherheitsglaube.
+
 \subsection{Angriffe}
+\label{subsec:angriffe}
+\index{Angriffe}
+
+Die Ziele eines Angriffes sind nur selten reine Zerstörung von Daten. Viel
+häufiger ist die Kontrolle über Infrastruktur und Daten das Ziel eines
+Angriffes. Bot-Netze bedienen sich einer ganzen Anzahl von unabhängigen
+Rechnern, um damit wiederum Angriffe wie DoS-Attacken \totalref{subsub:dos}
+zu starten. Ebenso
+wie bei der Spionage geht es also nicht um die Zerstörung, sondern um
+einen Informations- und Kontrollgewinn. Die Urheber sind absolut nicht
+an einer Entdeckung ihrer Tat interessiert und versuchen alle Spuren und
+Verdachtsmomente zu vermeiden. In der Sicherheitstechnologie werden die
+verschiedenen Angreifer je nach Technik und Ziel kategorisiert.
+
 \subsubsection*{Spionage}
+
+Um an vertrauliche oder wertvolle Firmendaten zu gelangen gibt es eine Menge
+Tricks. Eine Variante ist das (illegale) herunterladen ganzer Datenbestände
+von Web-Applikationen. Wie können wir uns dagegen wehren?
+
 \subsubsection*{Passwort-Cracker/Passwort-Guesser}
+\label{subsubsec:password-cracker}
+
+Wer an einem System genügend Logins durchführen darf, kann mit einem einfachen,
+jedoch zeitaufwändigen Verfahren Passwörter herausfinden. Sogenannte
+\emph{Cracker}-Angriffe probieren \emph{brute-force}\footnote{``Mit aller Kraft'',
+stur, durch simples Probieren aller Varianten}
+alle Möglichkeiten durch. Password-\emph{Guesser} hingegen versuchen aufgrund
+von Daten des Benutzers (Geburtsdatum, Namen von Verwandten, Beruf, $\ldots$)
+an mögliche und sinnvolle Passwörter heranzukommen.
+
+Meistens geschehen Passwort-Angriffe aber nicht von extern (also von ausserhalb
+der Firma). Wer im Besitz einer Passwortliste ist, kann autorisierten Zugriff
+auf verschiedene Konten erhalten\footnote{Das funktioniert oft auch für
+verschlüsselte Passwortlisten, da diese mit sogenannten öffentlich bekannten
+\emph{Hash}-Funktionen arbeiten.}.
+
+\paragraph*{Unsichere SQL-Anfragen}
+Eine spannende Art, sich Zugang zu einem Webserver ohne Rechte zu verschaffen,
+funktioniert mittels unsicheren SQL-Abfragen. Häufig werden Anfragen an die
+Datenbank wie folgt gestellt (hier ein PHP Beispiel):
+
+\inputminted[firstline=1,lastline=4]{php}{query.php}
+
+Ein schlauer Benutzer könnte nun bei der Anfrage nach seinem Benutzernamen
+ins Feld einfach folgenden Eintrag tätigen.
+
+Benutzer: \mintinline{text}{blah'; UPDATE user SET password='simple}
+
+Falls dieser Benutzername eins-zu-eins in die Variable \$uname eingesetzt
+wird, so lautet die SQL-Anfrage nun wie folgt:
+
+\inputminted[firstline=6,lastline=10]{php}{query.php}
+
+Der Benutzer ist zwar damit noch nicht eingeloggt, aber das Passwort wurde
+bei allen Benutzern nach 'simple' abgeändert. Somit kann ein späteres
+Einloggen nicht wirklich schwierig sein.
+
+\paragraph*{Abhilfe} Abhilfe verschafft man sich, indem vor alle Apostrophe,
+die vom Benutzer eingegeben wurden, ein Back-Slash \textbackslash~vorangestellt
+wird\footnote{PHP kennt hier die Methode \texttt{addslashes()}}.
+Somit kann ein SQL-Statement nicht mehr mutwillig beendet werden.
+
 \subsubsection*{Horcher und \emph{The-Man-in-the-Middle}}
+
+Ein Abhorcher (Horcher) schaut sich den ganzen Datentransfer zwischen zwei
+Sockets an und versucht so, Informationen über die Schwachstellen des
+Systems zu erhalten. Später kann er mit diesem Wissen das System direkt angreifen.
+
+Ein \emph{Man-in-the-Middle} dagegen fängt den gesamten Verkehr zwischen zwei
+Systemen ab, modifiziert den Inhalt und sendet die Änderungen ans Gegenüber.
+Somit ist es einem \emph{Man-in-the-Middle} z.B.~möglich, einem System vorzugaukeln,
+er sei ein legaler Kunde. Ein solches Einschleusen funktioniert nur bei `langsamen'
+Transaktionen (z.B.~E-Mail), wo die Endpunkte nichts von der Verzögerung
+(die durch die Veränderung am Inhalt entsteht) mitbekommen.
+
 \subsubsection*{E-Shop Lifting}
+
+Falls es einem Angreifer möglich ist, die Preise auf einer Webseite zu verändern
+und so Angebote billiger zu erschleichen, so sprechen wir von E-Shop Lifting oder
+auch von ``virtuellem Ladendiebstahl''\cite{ct:26:2002}. Das funktioniert z.B.~dann,
+wenn der `Shop' die Preise in \emph{Hidden-Fields} auf dem Client ablegt.
+
 \subsubsection*{Session Hijacking}
+
+Ein Angreifer übernimmt eine bestehende Sitzung. Dieses Vorgehen wurde bei
+TCP\footnote{Transfer Control Protocol.}
+eingehend untersucht. Natürlich ist dies bei einfachen SessionIDs keine Hexerei.
+
 \subsubsection*{Viren, Würmer und anderes Getier}
+
+Viren, Würmer und Enten (Hoax) gefährden in erster Linie die Endanwender und
+nicht die Web-Applikation. Es gibt jedoch immer wieder Fälle, wo auch die
+Webserver mehr oder weniger gezielt attackiert werden.
+
 \subsubsection*{DoS Attacken, Trojaner und Hintertüren}
+\label{subsub:dos}
+
+Webserver werden eher Ziel einer \textbf{Denial of Service}-Attacke (DoS) als der
+allgemeine Heimanwender. Dabei machen mehrere PCs gleichzeitig simple Anfragen
+an einen Webserver. Dieser Server wird dann durch die Fülle von Anfragen lahmgelegt.
+
+Um DoS-Attacken vorzubereiten, werden häufig sogenannte
+\textbf{trojanische Pferde}\footnote{Griechische Mythologie (Ilias): Die Griechen
+eroberten die Stadt Troja mit Hilfe des hölzernen Trojanischen Pferdes,
+in dessen hohlem Bauch sich die tapfersten Helden verbargen und so von den
+ahnungslosen Trojanern in die Stadt geführt wurden.}
+eingesetzt. Diese setzen, ohne das Wissen des PC-Besitzers, zu einem bestimmten
+Zeitpunkt Anfragen auf das Opfer der DoS-Attacke ab.
+
+Trojanische Pferde können aber auch eingesetzt werden, um \textbf{Hintertüren}
+(sog. Backdoors ) zu öffnen. Mit offenen Hintertüren ist es einem entfernten
+Angreifer möglich, alle Information über das System zu erhalten und dieses
+auch nach seinen Wünschen zu modifizieren.
 
 \subsection{Autorisierung/Authentifizierung}
+
+Um auf einem entfernten System arbeiten zu können, braucht es Zugriff
+(Authentifizierung) und Berechtigungen (Autorisierung).
+
+Die Authentifizierung geschieht im Normalfall mit Passwörtern. Es wird
+unterschieden zwischen schwacher (allein mittels Passwörtern) und
+starker Authentifizierung. Letztere benötigt \emph{something to know}
+und \emph{something to have} (Passwort und Streichliste). Die Autorisierung
+(Bevollmächtigung mit Privilegien) geschieht nach der Authentifizierung.
+
+\paragraph*{Definition 1 (Authentifizierung)}
+Authentifizieren heisst: ``Die Echtheit von etwas bezeigen, beglaubigen``\cite{wahrig}.
+In der Informatik wird ein Benutzer oder ein System (Software, Client,$\ldots$)
+authentifiziert. Der Server will wissen, den Dienst in Anspruch nimmt. Dieses
+Wissen über das Gegenüber erlaubt z.B.~eine Autorisierung oder eine finanzielle
+Abrechnung. Zur starken Authentifizierung kann mittels Streichlisten oder
+Secure-IDs vorgegangen werden.
+
+\paragraph*{Definition 2 (Autorisierung)}
+Das WAHRIG Fremdwörterlexikon umschreibt Autorisierung mit `Bevollmächtigung'.
+In verteilten Systemen ist es wichtig, dass nur ermächtigte Personen Privilegien
+auf bestimmten Daten erhalten: hinzufügen, suchen, ansehen, löschen, verändern,
+vergeben weiterer Rechte,$\ldots$
+Hier geht es darum, \textbf{was} eine Person oder ein System tun darf.
 
 % ===========================================================================
 \section{Kryptographie}
 
 \subsection{Überblick}
 
+Kryptographie ist die Verschlüsselung von Daten, um diese vor fremder Einsicht
+zu schützen. Die Ziele der Kryptographie entsprechen denen aus
+\totalref{sec:security}.
+Gemäss dem Sprichwort ``viele Wege führen nach Rom'' gibt es auch viele Verfahren,
+um Informationen sicher zu übertragen. Einige dieser Methoden wollen wir in
+diesem Kapitel betrachten.
+
+Wir beginnen mit einem kurzen Einstieg zur Geschichte der Kryptographie.
+Anschliessend erhalten Sie einige technische Informationen zum \textbf{XOR}-Verfahren
+\totalref{subsec:xor} und einige
+mathematische Grundlagen. Diese werden im Verfahren von Diffie/Hellmann und
+RSA \totalref{subsec:rsa} angewendet.
+Im letzten Abschnitt \totalref{subsec:java-programme} wird noch erklärt, wie die mathematischen
+Hilfsprogramme zu bedienen sind.
+
+Mathematische Verschlüsselungsverfahren, die auf grossen Primzahlen basieren,
+haben die Stärke, dass genau berechnet werden kann, wie gross der durchschnittliche
+(zeitliche, rechnerische) Aufwand sein wird, um eine Botschaft unrechtmässig
+zu `entschlüsseln'.
+
 \subsection{Geschichte}
 \subsubsection*{Skytale}
-\subsubsection*{Cäsar-Verfahren}
-\subsubsection*{Monoalphabetische Substitutionen}
 
-\subsection{Verschlüsselungsverfahren (symmetrisch, asymmetrisch und hybrid)}
+Bereits vor mehr als 2500 Jahren (also ca. 5. Jh. v. Chr.) verwendeten die
+Spartaner zur Übermittlung zumeist militärischer Botschaften ein aus heutiger
+Sicht sehr einfaches Verschlüsselungsverfahren: die Skytale.
+
+\begin{wrapfigure}{r}{0.3\textwidth}
+    \begin{center}
+        \includegraphics[width=0.25\textwidth]{images/Skytale.png}
+    \end{center}
+    \caption{Skytale}
+\end{wrapfigure}
+
+Benötigt wird ein runder Stab und ein Papierstreifen oder Lederstreifen.
+Der Schlüssel ist der Durchmesser des Stabes. Wer einen Stab der selben
+Dicke besitzt, kann die verschlüsselte Botschaft entziffern. Dieses
+Verfahren gehört zu den Transkriptionsverfahren. Dabei bleiben die
+Zeichen des Klartextes erhalten, werden aber in ihrer Position verändert.
+Im Gegensatz zur mono- oder polyalphabetischen Substitution
+\totalref{subsubsec:monoalphabetische-substitution}, bei der die
+Position bestehen bleibt und die Zeichen ersetzt werden.
+
+\subsubsection*{Cäsar-Verfahren}
+\index{Cäsar ! Verfahren von}
+
+Der Algorithmus von Cäsar ist nicht viel sicherer. Das Verfahren verschiebt
+die Buchstaben im Alphabet um eine vorgegebene Anzahl Buchstaben. Es kommen
+26 Buchstaben im Alphabet vor, somit gibt es lediglich 26 mögliche Schlüssel.
+Bedenken Sie aber, dass um 50 v. Chr. noch fast niemand lesen oder schreiben konnte.
+Somit war das Verfahren für die damalige Zeit sicher genug.
+
+\image{Caesar}{Cäsar Verschlüsselung}
+
+\begin{beispiel}[Cäsar]
+    \label{ex:caesar}
+    Der Schlüssel sei 7. Das heisst, jeder
+    Buchstabe wird im Alphabet um 7 Zeichen nach hinten verschoben.
+\end{beispiel}
+
+``Hallo'' $\Rightarrow$ ``Ohssv''.
+
+\subsubsection*{Monoalphabetische Substitutionen}
+\label{subsubsec:monoalphabetische-substitution}
+
+\begin{tabular}{|c|c|c|c|c|c|c|c}
+    \hline
+    A & B & C & D & E & F & G &  $\ldots$ \\ \hline
+    $\chi$ & $\pi$ & $\beta$ & $\mu$ & $\sigma$ & $\Phi$ & $\Omega$ &  $\ldots$ \\ \hline
+\end{tabular}
+
+Häufig wird anstelle einer Translation des Alphabetes eine beliebige
+Permutation (Vertauschung) verwendet. Ob man wieder Buchstaben oder
+irgendwelche kryptisch anmutenden Zeichen verwendet, spielt hier keine Rolle.
+
+Das Verfahren kann jedoch auch sehr rasch geknackt werden. Wie wohl?
+
+Bemerkung: Das Verfahren von Cäsar ist ein Spezialfall einer
+monoalphabetischen Substitution.
+
+
+\subsection{Verschlüsselungsverfahren}
+
+Den oben genannten Verfahren ist gemeinsam, dass die Entschlüsselung einer
+Botschaft mit dem gleichen Schlüssel erfolgt, mit dem auch die Verschlüsselung
+durchgeführt wurde. Der Schwachpunkt dieser symmetrischen Verfahren ist die
+Übertragung des Schlüssels auch wenn die eigentliche Verschlüsselung---wie
+zum Beispiel beim XOR-Verfahren---sehr sicher ist. Die Lösung des Problems
+ist die asymetrische Verschlüsselung, bei der ein mathematisch
+zusammenhängendes Schlüsselpaar kreiert wird. Der public key muss dann
+öffentlich zur Verfügung gestellt werden und dient der Verschlüsselung
+durch den Absender. Der private key ist nur dem Empfänger bekannt und die
+mit dem public key verschüsselte Nachricht kann nur mit Hilfe des private
+keys wieder entschlüsselt werden.
+
+Da die asymmetrische Entschlüsselung sehr rechenintensiv ist, werden die
+beiden Verfahren in der Praxis gemischt eingesetzt (hybrid). Eine Botschaft
+wird mit dem XOR-Verfahren verschlüsselt, der Schlüssel selber wird dann
+mit dem public key des Empfängers verschlüsselt. Diese beiden verschlüsselten
+Teile können dem Empfänger geschickt werden. Ohne private key kann niemand
+den Schlüssel entschlüsseln und ohne Schlüssel nicht die Botschaft. Der
+Empfänger macht aber genau das in der entsprechenden Reihenfolge.
+Wobei dem Anwender diese Aufteilung kaum bewusst wird, denn dies
+sollte von entsprechender Software automatisch erledigt werden.
+
 \subsubsection*{Public Key}
 
+James H. Ellis hat 1970 ein Verfahren entwickelt, bei dem Schlüssel, oder
+zumindest Teile davon, öffentlich übermittelt werden können. Auch wer
+diese Schlüsselteile kennt, kann Botschaften noch nicht genügend rasch
+knacken. Die Idee ist brillant, doch---werden Sie sich fragen---geht
+das überhaupt?
+
+In der Regel wird bei einem solchen Public-Key\footnote{Public-Key = öffentlicher Schlüssel}
+Verfahren eine Rechenoperation eingesetzt, die nicht einfach umzukehren ist.
+Denken Sie z.B.~an das Wurzelziehen aus der Grundschule. Das Multiplizieren
+zweier Zahlen geht rasch und einfach. Jedoch die Quadratwurzel einer Zahl
+zu bestimmen, braucht schon wesentlich grösseren Aufwand. Auf einer
+ähnlichen Grundidee basieren moderne Krypto-Verfahren.
+
+Erst mittels solcher `Einwegfunktionen'\footnote{Im Gegensatz zu
+Hash-Funktionen \totalref{subsubsec:einfach} sind diese Funktionen umkehrbar.
+Jedoch ist der Aufwand, die Funktion umzukehren enorm viel höher,
+als die Funktion zu berechnen.} wird es möglich, dass zwei Parteien,
+die vorher noch nie miteinander in Kontakt getreten sind, geheime
+Botschaften austauschen! Bisher mussten (wie beim XOR-Verfahren)
+die Parteien vorher einen Schlüssel über einen geheimen Kanal verschicken!
+
 \subsection{Das XOR-Verfahren}
+\label{subsec:xor}
+
+Die Bezeichnung XOR steht für exklusive or-Verknüpfung. Der Unterschied
+zur einfachen or-Verknüpfung liegt darin, dass beim xor nur die
+Verknüpfungen true ergeben, bei denen nur ein Zustand auf true
+gesetzt ist. Beispiel: true or true ergibt false. XOR ist also
+nichts weiter als eine boolsche Verknüpfung. Es ist keine
+Verschlüsselung, obwohl häuffg von XOR-Verschlüsselung gesprochen
+wird. Gemeint ist dann die Verschlüsselung unter Verwendung des
+XOR-Verfahrens.
+
+Wie funktioniert das XOR-Verfahren? Wir gehen davon aus, dass eine
+Datei verschlüsselt werden soll. Diese Datei können wir einfach
+in eine Byte- bzw. eine Bitfolge verwandeln. Wenn nun der Sender
+und Empfänger eine zufällige Bitfolge als Schlüssel austauschen,
+können der Sender Botschaft und Schlüssel bitweise mit XOR verknüpfen.
+Der Empfänger kann den erhaltenen Hypher-Code mit dem Schlüssel
+eindeutig wieder in die Originalbotschaft zurückwandeln.
+
+Das XOR-Verfahren ist absolut sicher, wenn wir davon ausgehen,
+dass der Schlüssel genug streut (die Null- und Einsbits sind rein
+zufällig gewählt). Jetzt kann das Verfahren nicht mehr geknackt
+werden. Um an die Information zu kommen, muss der Schlüssel
+`geraubt' werden\footnote{Ein analoges Verfahren zum XOR-Verfahren
+ist der \emph{One Time Pad} von AT\&T (1917).}.
+
+Wichtig ist auch zu wissen, dass ein XOR-Schlüssel nur einmal
+eingesetzt werden sollte.
+
+Das XOR-Verfahren kann z.B.~auch mit einem Pseudozufallszahlen-Algorithmus
+gestartet werden. Hierbei ist der Schlüssel eine sogenannte
+\emph{Random-Seed}-Zahl. Wenn zwei gleich gebaute Zufallszahlengeneratoren
+mit demselben Startwert beginnen, so liefern sie auch dieselbe
+Zahlenfolge. Das hat den Vorteil, dass nur eine kleine Information
+ausgetauscht werden muss. Das Verfahren verliert dabei aber an Sicherheit!
 
 \subsection{Digitale Signatur}
 \label{subsec:digitale-signatur}
 
+Die digitale Signatur entspricht einer Unterschrift oder einem Siegel.
+Nur wer den Siegelring (hier den Private-Key) besitzt, kann die Signatur
+anfertigen.
+
+Im Gegensatz zur Geheimhaltung bleibt beim digitalen signieren die
+Botschaft unverschlüsselt. Es wird lediglich ein Hash-Code
+\totalref{subsec:hash}
+der Botschaft \textbf{verschlüsselt}; und zwar diesmal mit dem
+\textbf{Private-Key}.
+
+Alle sollen die Herkunft der Botschaft überprüfen können. Hierzu wird
+mit dem Public-Key der verschlüsselte Hash-Code dechiffriert und mit
+dem Hash-Code der unverschlüsselten Botschaft verglichen. Da der
+Public-Key öffentlich zugänglich sein soll, ist es für jede Person
+möglich, die Unterschrift auf Echtheit zu prüfen; vorausgesetzt
+natürlich, dass bereits dem Public-Key vertraut werden kann
+
 \subsection{Mathematische Grundlagen zu Krypto-Verfahren}
+
+Dieses Kapitel beleuchtet die mathematischen Hintergründe, die für
+die Anwendung der Verfahren RSA, ElGamal und Diffe/Hellmann notwendig sind.
+
+Diese Einführung erhebt keinen Anspruch auf Vollständigkeit.
+Insbesondere werden wichtige Beweise weggelassen.
+
+Es geht in den nachfolgenden Kapiteln lediglich darum, dass die
+beiden Verfahren RSA und Diffie/Hellmann in groben Zügen verstanden
+und angewendet werden können.
+
+Trotz meinem pragmatischen Ansatz werden einige Grundlagen der
+Zahlentheorie eingeführt:
+
 \subsubsection*{ggT}
+
+Der `ggT' von natürlichen Zahlen, ist der \textbf{grösste gemeinsame
+Teiler} (engl. GCD = greatest common divisor).
+
+Definition: Der grösste gemeinsame Teiler von zwei Zahlen ist die
+grösste ganze Zahl, die beide Zahlen ohne Rest teilt.
+
+\begin{beispiel}[ggT]
+    \label{ex:ggt}
+    Grösster gemeinsamer Teiler:
+\end{beispiel}
+
+\begin{minted}{text}
+    ggT (48, 32) = 16
+    ggT (10, 11) = 1
+    ggT (50, 70) = 10
+    ggT (35, 63) = 7
+\end{minted}
+
+\begin{bemerkung}
+    Zwei Zahlen $a$ und $b$ sind genau dann teilerfremd, wenn ggT$(a, b) = 1$ ist.
+\end{bemerkung}
+
+Um den ggT von zwei grossen Zahlen zu berechnen, verwenden Sie das Programm GCD:
+
+\begin{minted}{text}
+    # java GDC
+    Enter first number:735
+    Enter second number:249
+    GCD of given numbers is: 3
+\end{minted}
+
 \subsubsection*{Primzahlen}
+
+Eine Primzahl ist eine Zahl, die neben sich selbst nur die 1 als
+Teiler hat. Mit anderen Worten: Eine Primzahl hat genau zwei
+Teiler. Die kleinste Primzahl ist 2.
+
+\begin{beispiel}[Primzahlen]
+    \label{ex:primzahlen}
+    Hier die ersten Primzahlen: 2, 3, 5, 7, 11, 13, 17, 19,$\ldots$
+\end{beispiel}
+
+\begin{bemerkung}
+    Ist $n$ eine beliebige positive, ganze Zahl, und $p$ eine Primzahl, so gilt:
+\end{bemerkung}
+
+\rowcolors{1}{white}{white}
+\begin{tabular}{lcl}
+    ggT$(n,p)$ & = & $p$, wenn $p$ Teiler von $n$ ist. \\
+    & & $1$, wenn $p$ kein Teiler von $n$ ist.
+\end{tabular}
+
+Für unsere Aufgaben müssen wir Primzahlen finden---je grösser umso besser.
+Beispiele von Primzahlen finden wir z.B.~auf dem Internet unter:
+
+\href{http://www.geocities.ws/primes_r_us/small/index.html}
+{http://www.geocities.ws/primes\_r\_us/small/index.html}
+
+Natürlich werden für sehr sichere Verschlüsselungen weitaus grössere
+Primzahlen (ab 300 Stellen) verwendet. Abgesehen davon, dass die
+Primzahlverfahren sehr sicher sind, weisen sie noch eine zusätzliche
+Stärke auf: Es ist berechenbar, mit welchem durchschnittlichen
+Zeit- bzw. Rechenaufwand die Verfahren geknackt werden können.
+
 \subsubsection*{Modulo p}
+
+Mit Modulo (mod) bezeichnen wir das Berechnen von Divisionsresten.
+
+$\qquad m \bmod p$ := Rest, der entsteht, wenn wir $m$ durch $p$ teilen.
+
+Beispiele:
+\begin{enumerate}
+    \item $17 \bmod 7 = 3$ (denn $17 = 2\times 7 + 3$)
+    \item $37 \bmod 5 = 2$ (denn $37 = 6\times 5 + 2$)
+\end{enumerate}
+
+\begin{bemerkung}[Distributivität von Modulo-Berechnungen]
+    Ist $p$ eine Primzahl, gelten folgende Regeln:
+\end{bemerkung}
+
+
+\begin{align}
+    \label{eq:mod}
+    (a + b) \bmod p &= [(a \bmod p) + (b \bmod p)] \bmod p             \\
+    (a \times b) \bmod p &= [(a \bmod p) \times (b \bmod p)] \bmod p   \\
+    (a)^n \bmod p &= [(a \bmod p)^n] \bmod p
+\end{align}
+
+\begin{beispiel}[Modulo Beispiele]
+    \label{ex:modulo}
+\end{beispiel}
+
+
+\begin{align*}
+    (5 + 2)\bmod 3 &= ((5\bmod 3) + 2) \bmod 3 = (2 + 2) \bmod 3 = 4 \bmod 3 = 1 \\
+    (8 \times 15) \bmod 7 &= (1 \times 1) \bmod 7 = 1 \bmod 7 = 1              \\
+    (14 \times 35) \bmod 3 &= (2 \times 2) \bmod 3 = 4 \bmod 3 = 1             \\
+    46^{10} \bmod 11 &= 2^{10} \bmod 11 = 4^5 \bmod 11 = (4\times 4^4) \bmod 11 = (4\times 16^2) \bmod 11 \\
+    &= (4\times 5^2) \bmod 11 = (4\time 25) \bmod 11 = (4\times 3) \bmod 11 = 1
+\end{align*}
+
+\begin{bemerkung}[RSA]
+    Für das RSA-Verfahren \totalref{subsec:rsa}
+    und das Verfahren von Diffie/Hellmann \totalref{subsec:diffie-hellmann}
+    brauchen wir $a^b \bmod c$ zu berechnen.
+\end{bemerkung}
+
+\begin{Exercise}[%
+title={Modulo Berechnung},
+label={exercise:modulo}]
+\end{Exercise}
+Berechnen Sie zum Beispiel $23^{17} \bmod 7$. Erstellen Sie hierzu ein kleines
+Hilfsprogramm in der Programmiersprache Ihrer Wahl (z.B.~Java). Der Aufruf dieses
+Hilfprogrammes könnte wie folgt aussehen:
+\begin{minted}[autogobble]{text}
+    >java AhBmC 23 17 7
+\end{minted}
+
+
 \subsubsection*{Inverses Modulo p}
+
+Für das RSA-Verfahren benötigen wir noch die folgende Rechenoperation.
+Wenn Sie sich nur für Difie-Hellman oder das Verfahren von ElGamal
+interessieren, so können Sie dieses Kapitel überblättern.
+
+Wenn wir Modulo $p$ rechnen und $p$ eine Primzahl ist, so gibt es für
+jede Zahl $m$ ein sogenanntes multiplikatives inverses Modulo $p$.
+Das heisst: für jedes $m$ gibt es ein $n$, so dass $(m\times n) \bmod p = 1$ ist.
+
+\begin{align*}
+    p = 7, m = 3 &\rightarrow n = 5~ \text{(denn~} 3\times 5\bmod 7 = 1 \text{)} \\
+    p = 7, m = 6 &\rightarrow n = 6~ \text{(denn~} 6\times 6\bmod 7 = 1 \text{)} \\
+    p = 11, m = 5 &\rightarrow n = x
+\end{align*}
+
+Hier ein simples Vorgehen, um das Inverse ($\bmod p$) zu finden:
+
+Nehmen wir z.B. $p = 13$ und $m = 5$
+
+\begin{align*}
+    5 \times 2 \bmod 13 &= 10 \bmod 13 = 10 \\
+    5 \times 3 \bmod 13 &= 15 \bmod 13 = 2  \\
+    5 \times 4 \bmod 13 &= 20 \bmod 13 = 7  \\
+    5 \times 5 \bmod 13 &= 25 \bmod 13 = 12 \\
+    5 \times 6 \bmod 13 &= 30 \bmod 13 = 4  \\
+    5 \times 7 \bmod 13 &= 35 \bmod 13 = 9  \\
+    5 \times 8 \bmod 13 &= 49 \bmod 13 = 1  \\
+\end{align*}
+
+Daraus ergibt sich 8 als das Inverse ($\bmod 13$) zu 5,
+denn $5\times 8 \bmod 13 = 1$.
+
+\begin{Exercise}[%
+title={Inverse Modulo Berechnung},
+label={exercise:inverse-modulo}]
+
+    Erstellen Sie hierzu ein kleines Hilfsprogramm in der Programmiersprache
+    Ihrer Wahl (z.B.~Java). Der Aufruf dieses Hilfprogrammes könnte wie folgt aussehen:
+    \begin{minted}[autogobble]{text}
+        >java MInv 5 13
+    \end{minted}
+\end{Exercise}
+
 \subsubsection*{Einfach \& Schwierig}
+\label{subsubsec:einfach}
+
+Es gibt nun zwei Eigenschaften, die die Primzahlverfahren sehr sicher machen:
+\begin{enumerate}
+    \item Die Zerlegung von grossen Zahlen in ihre Primfaktoren ist schwierig,
+    die Multiplikation dagegen ist einfach.
+
+    Sind $p$ und $q$ zwei 300-stellige Primzahlen, so ist $p\times q$ einfach
+    zu berechnen; die Primfaktorzerlegung einer 600-stelligen Zahl hingegen
+    ist sehr zeitaufwändig (`pröbeln'). Genau diese Schwierigkeit nutzt
+    das RSA Verfahren.
+
+    \item Exponenten Modulo einer Primzahl zu rechnen ist einfach.
+    Die Umkehrung (den sog. diskreten Logarithmus) zu finden ist schwierig.
+    Diese Schwierigkeit wird vom Diffie/Hellman-Verfahren wie auch vom
+    ElGamal-Algorithmus ausgenutzt:
+
+    $a^b \bmod p$ zu berechnen ist einfach (siehe Beispiel~\ref{ex:modulo})
+
+    Aus der Gleichung $a^n \bmod p = s$ das $n$ zu berechnen, ist hingegen schwierig.
+\end{enumerate}
 
 \subsection{Hashfunktionen}
+\label{subsec:hash}
+
 \subsubsection*{Standard-Hashfunktionen}
+
+Hashfunktionen sind schnell zu berechnende Schlüsseltransformationen oder
+auf deutsch auch Streuwertfunktionen genannt. Sie bilden mittels einer
+Funktion Daten---wie zum Beispiel Passwörter, Schlüssel, Texte (lang
+und kurz), beliebige digitale Objekte, E-Mails und so weiter---auf
+einen vergleichsweise kleinen Wertebereich mit einheitlicher Grösse
+ab. So wird aus einem grossen Objekt eine möglichst kleine Datenstruktur
+aus nur wenigen Bytes.
+
+Hashfunktionen gehören zu den sogenannten Einwegfunktionen. Bei
+schwachen Hashfunktionen können zwar mehrere Ausgangstexte oder
+Urbilder auf den gleichen Hashcode verweisen\footnote{Das nennt sich dann
+Kollision} ich kann aber nicht von einem Hashwert auf den
+Ursprungstext zurückrechnen. Das ist unabhängig von Rechnerausstattung
+und Geschwindigkeit.
+
+Eine Eigenheit von herkömmlichen Hashfunktionen ist es, dass der
+gleiche Text bei jeder Anwendung der Funktion auf einen identischen
+Hashcode kommt. Zwei gleiche Passwörter liefern mir also auch den
+gleichen Hashcode. Das wird mit der Erstellung und Verwendung von
+\emph{rainbow-tables}, ausgenutzt. Das ist eine Sammlung von
+Hashcodes, deren Ausgangstexte bekannt sind.
+
+Ein simples Beispiel einer Hashfunktion ist die Quersummenbildung,
+auch wenn Sie viele Kriterien einer guten Hashfunktion nicht
+erfüllt. Damit wird eine belebig lange Zahlenreihe auf genau
+eine Ziffer reduziert. Für die meisten Anwendungen ist diese
+Funktion aber deutlich zu einfach, denn gute Hasfunktionen sollten
+die folgenden Eigenschaften erfüllen:
+
+\begin{tabular}{p{0.25\textwidth}|p{0.7\textwidth}}
+    \hline
+    schnell berechenbar &
+    Eine Hashfunktion soll sehr schnell berechnet werden können. \\ \hline
+
+    kleiner Wertebereich &
+    Objekte beliebiger Grösse werden auf wenige Bytes abgebildet. Java
+    verwendet eine Hashfunktion für Strings, die jede Zeichenkette
+    auf lediglich 4 Bytes abbildet. \\ \hline
+
+    nicht umkehrbar &
+    Hash Funktionen können nicht rückgängig gemacht werden. Es handelt
+    sich hier um eine Art Einwegfunktion. Jedoch nicht so, dass die
+    Funktion sehr schwierig umzukehren ist, wie dies bei den
+    Verschlüsselungsverfahren der Fall ist, sondern, dass die
+    Funktion überhaupt nicht umzukehren ist. Aus dem Hash-Wert
+    können die ursprünglichen Daten nicht wieder rekonstruiert werden.
+
+    Das ist übrigens eine einfache Konsequenz aus obiger Tatsache
+    des kleinen Wertebereiches. Mehrere Objekte können denselben
+    Hash-Wert erhalten. \\ \hline
+
+    gute Streuung &
+    Hashfunktionen sollen im Wertebereich stark streuen. Das heisst:
+    Zwei unterschiedliche Objekte sollten mit grosser Wahrscheinlichkeit
+    zwei verschiedene Hash-Werte liefern. \\ \hline
+\end{tabular}
+
+Einsatzgebiete:
+\begin{itemize}
+    \item Digitale Signatur \totalref{subsec:digitale-signatur}
+    \item Digitaler Fingerabdruck
+    \item Prüfsummenbildung
+    \item Passwortlisten \totalref{subsubsec:password-cracker}
+    \item Indexierung von Textattributen in Datenbanken
+    \item Hash-Tabellen (nicht Inhalt dieses Kurses.)
+\end{itemize}
+
+\begin{Exercise}[%
+title={Hash-Code Berechnung},
+label={exercise:hash-code}]
+
+    Erstellen Sie hierzu ein kleines Hilfsprogramm in der Programmiersprache
+    Ihrer Wahl (z.B.~Java). Der Aufruf dieses Hilfprogrammes könnte wie folgt aussehen:
+    \begin{minted}[autogobble]{text}
+        >java Hash "Geheimnachricht" "Geheim Nachricht"
+
+        Hashcode of 'Geheimnachricht' = '0x4A70B2C1'
+        Hashcode of 'Geheim Nachricht' = '0xAB60729F'
+    \end{minted}
+\end{Exercise}
+
+
 \subsubsection*{salted Hash}
 
+Die einzige anerkannte Methode um vom Hashwert wieder auf sein Urbild
+zu kommen sind die oben erwähnten \emph{rainbow-tables}. Sehr lange
+und aus verschiedenen Zeichentypen bestehende Passwörter wird man
+mit grosser Sicherheit auch so nicht finden, aber welcher Administrator
+wird sich da schon auf das Sicherheitsverständnis der Benutzer
+verlassen - zumal auch die Passwortwahl von Administratoren nicht
+über alle Zweifel erhaben ist.
+
+Ein Ausweg sind sogenannte Salts. Das sind zufallsgenerierte Codes,
+die dem Ursprungstext hinzugefügt werden, bevor die Hashfunktion
+angewendet wird. Der Salt muss natürlich ebenfalls abgespeichert
+werden. Aber der Aufwand um jetzt alle Passwortkombinationen mit
+dem Salt durchzutesten ist riesig.
+
 \subsection{Das Verfahren von Diffie/Hellmann}
+\label{subsec:diffie-hellmann}
+
+\image{DHVerfahren}{Das Diffie Hellmann Verfahren}
+
+Das Verfahren von Diffie/Hellmann (DH-Verfahren\footnote{Whitfield Diffie,
+Martin Hellman und Ralph Merkle} 1976) erlaubt es, Daten verschlüsselt
+zu übermitteln, ohne vorab einen geheimen Schlüssel auf einem separaten
+Kanal zu transportieren\footnote{Das Verfahren wurde schon vor Diffie und
+Hellman von Malcolm Williamson vorgeschlagen.}.
+
 \subsubsection*{Ausgangslage}
+
+\begin{itemize}
+    \item Ausgangssituation: Alice (A) und Bob (B) wollen Nachrichten über
+    eine öffentlich zugängliche Leitung austauschen. Diese Leitung wird
+    möglicherweise abgehorcht.
+    \item Alice und Bob hatten vorher noch keine Schlüssel miteinander ausgetauscht.
+    \item Das Diffie/Hellman-Verfahren erlaubt es, eine Botschaft über eine
+    Leitung zu übermitteln, ohne dass ein `Horcher' die Nachricht verstehen kann.
+    \item Es wird davon ausgegangen, dass der `Horcher' sich nicht als Sender
+    oder Empfänger ausgeben kann. (Die Transaktion sei zu schnell, als
+    dass die \emph{Man-in-the-Middle}-Attacke funktionieren könnte.)
+\end{itemize}
+
 \subsubsection*{Vorgehen im Diffie/Hellman-Verfahren}
+
+Das Diffie/Hellman-Verfahren besteht aus folgenden Schritten:
+\begin{enumerate}
+    \item Die Kommunikationspartner A und B (Alice und Bob) entscheiden sich
+    gemeinsam für eine grosse Primzahl $p$. (Je grösser die Primzahl, umso
+    sicherer das Verfahren.)
+
+    \item A und B suchen eine Zahl $s$, die kleiner als $p$ ist
+    (Bedingung: $1 < s < p$)\footnote{Genaugenommen sollte $s$ eine sogenannte
+    Primitivwurzel modulo $p$ sein (Siehe~\cite{buchmann}). Das Verfahren
+    funktioniert auch für andere Zahlen, kann aber unter Umständen einfach werden.}.
+    Wichtig: Die beiden Zahlen $p$ und $s$ können unverschlüsselt über die
+    Telefonleitung übermittelt werden; sie sind also öffentlich zugänglich.
+    Cleo (C) in der Mitte hört $p$ und $s$, kann aber mit diesen Zahlen
+    noch nichts anfangen.
+
+    \item Alice sucht sich im Geheimen eine Zahl $a$; Bob sucht sich im Geheimen
+    eine Zahl $b$; Die beiden Zahlen sollten kleiner als $p − 1$ sein.
+
+    \item A berechnet $m := s \bmod p$ und schickt das Resultat an B;
+    B berechnet $n := s \bmod p$ und schickt das Resultat an A;
+    Cleo hört zwar $m$ und $n$ mit und kann damit nun theoretisch $a$ und $b$
+    berechnen. Er braucht dazu aber viel zu lange.
+
+    \item A berechnet die Geheimzahl $g = n \bmod p$;
+    B berechnet die Geheimzahl $g = m \bmod p$.
+
+    Bemerkung $g = n^a = m^b \text{, denn } n^a = {(s^b)}^a = s^{ba} = s^{ab} = {(s^a)}^b = m^b$
+
+    C kann $g$ nicht in nützlicher Frist berechnen. Das einzige mathematische Verfahren für C,
+    um $g$ zu `berechnen', heisst \emph{ausprobieren}.
+    \footnote{Es gibt einige mathematische Tricks (das Babystep-Giantstep-Verfahren von
+    Shanks, der Pollard-ρ-Algorithmus oder das Verfahren von Pohlig-Hellman), um schneller
+    zum Ziel zu kommen, und es gibt Fälle von Primzahlen, bei denen das Verfahren schneller
+    werden kann als stures ausprobieren.}.
+
+    \item A und B können nun ihre Nachrichten mit $g$ verschlüsseln und entschlüsseln
+    (z.B.~mit dem XOR-Verfahren \totalref{subsec:xor}).
+\end{enumerate}
+
 \subsubsection*{Ein Zahlenbeispiel}
 
+\begin{enumerate}
+
+\item Alice und Bob bestimmen gemeinsam die folgenden Zahlen und
+tauschen diese übers Internet aus:
+
+  \begin{eqnarray*}
+	 p &=& 467 \\
+         s &=& 44
+  \end{eqnarray*}
+
+\item Alice wählt sich eine beliebige Geheimzahl \(a\), Bob wählt sich die Geheimzahl \(b\).
+      Diese Zahl darf nicht übers Netz verraten werden! Auch nicht gegenseitig. Alice wird \(b\)
+      nicht erfahren; ebenso wird Bob die Zahl \(a\) nie erfahren:
+
+  \begin{eqnarray*}
+	 a &=& 101 \\
+         b &=& 133
+  \end{eqnarray*}
+
+\item Alice berechnet  \(m = s^a \bmod p  =  44^{101} \bmod 467 = 292\).
+      Alice schickt \(m = 292\) an Bob.
+
+      Bob berechnet  \(n = s^b \bmod p  =  44^{133} \bmod 467 = 115\).
+      Bob schickt \(n = 115\) an Alice.
+
+\item Alice berechnet \(g = n^a \bmod p = 115^{101} \bmod 467 = 150\).
+
+      Bob berechnet   \(g = m^b \bmod p = 292^{133} \bmod 467 = 150\).
+
+      Oh Wunder, es gibt dieselbe Geheimzahl. Nur Alice und Bob kennen sie!
+
+\item Jetzt können Alice und Bob die Zahl 150 als Basis für ein einfaches
+      Verschlüsselungsverfahren benutzen (z. B. das XOR-Verfahren).
+\end{enumerate}
+
+
+
 \subsection{Das Verfahren von Rivest, Shamir und Adleman (RSA)}
+\label{subsec:rsa}
+
+Das RSA-Verfahren wurde von Ronald R. Rivest, Adi Shamir und Leonard M.
+Adleman entwickelt.
+
+Das RSA-Verfahren ist ein \emph{Public Key} Verfahren. Das heisst, der Algorithmus
+und der Schlüssel zum Verschlüsseln (codieren, chiffrieren) von Botschaften wird
+öffentlich bekannt gegeben. Nur der Schlüssel zum Entschlüsseln (decodieren,
+in Klartext zurückverwandeln) der Botschaften wird geheim gehalten.
+
+Das RSA-Verfahren basiert auf der Tatsache, dass es sehr einfach ist, zwei
+Primzahlen miteinander zu multiplizieren, dass es aber äusserst aufwändig ist,
+die beiden Primzahlen wieder zu finden, falls nur noch das Produkt bekannt ist.
+
 \subsubsection*{Vorgehen im RSA-Verfahren}
-\subsubsection*{Ein Zahlenbeispiel}
+
+Das RSA-Verfahren besteht aus vier Schritten.
+
+\begin{enumerate}
+    \item Der Empfänger generiert ein Schlüsselpaar: einen privaten (geheimen)
+    und einen dazu passenden öffentlichen Schlüssel,
+    \item der Empfänger publiziert den öffentlichen Teil,
+    \item der Sender verschlüsselt mit dem öffentlichen Schlüssel des Empfängers
+    seine Botschaft und
+    \item der Empfänger entschlüsselt die Botschaft mit seinem geheimen Schlüssel.
+\end{enumerate}
+
+Der Trick dabei ist, dass nur der Empfänger die Botschaft in sinnvoller Zeit
+entschlüsseln kann, denn nur er kennt die Primfaktorzerlegung des Schlüssels,
+wie wir gleich sehen werden. Nun aber die 4 Schritte im Detail:
+
+\paragraph*{Schritt 1: Schlüssel generieren}
+In diesem Schritt generiert der Empfänger einen öffentlichen Schlüssel.
+Alle können danach mit diesem Schlüssel Botschaften chiffrieren (verschlüsseln),
+aber nur der Empfänger kann sie wieder dechiffrieren (entschlüsseln).
+
+\renewcommand{\theenumi}{\alph{enumi}}
+\begin{enumerate}[label={\alph*)}]
+    \item Der Empfänger sucht zwei (möglichst grosse) Primzahlen $p$ und $q$.
+    \item Der Empfänger berechnet $r = p\times q$.
+    \item Der Empfänger berechnet zudem $s = (p − 1) \times (q − 1)$.
+    \item Der Empfänger bestimmt ein beliebiges $c$ mit den beiden folgenden
+    Eigenschaften: $c < s$ und ggT$(c, s) = 1$. Das erreicht der Empfänger
+    zum Beispiel einfach, indem er eine Primzahl sucht, die kleiner als $s$
+    ist. Hier kann das Programm GCD eingesetzt werden:
+
+    \begin{center}
+        \texttt{>java GCD c s}
+    \end{center}
+
+    muss 1 ergeben!
+\end{enumerate}
+
+
+\paragraph*{Schritt 2: Veröffentlichen des Schlüssels}
+Der Empfänger gibt $r$ und $c$ als öffentlichen Schlüssel bekannt.
+Zum Beispiel steht auf seiner Homepage vereinfacht: \emph{Der öffentliche
+Schlüssel von daniel.senften@talent-factory.ch ist (r = 289073 und c = 353)}.
+
+\paragraph*{Schritt 3: Verschlüsseln einer Botschaft}
+
+
+\begin{enumerate}[label={\alph*)}]
+
+ \item Der Sender zerhackt seine Botschaft in kleinere Stücke, die
+danach einzeln verschlüsselt werden. Sind die Stücke sehr klein,
+z. B. 8 Bit, so kommt das Verfahren fast einer monoalphabetischen
+Substitution gleich. Die Stücke dürfen jedoch nicht mehr Bits in
+Anspruch nehmen als die Zahl \(r\). Ist z. B. \(r = 134565\), so darf ein
+Stück nicht mehr als 17 Bit in Anspruch nehmen (\(2^{17} =
+131072\)). Der Einfachheit halber würde man in einem solchen Fall wohl
+2 Byte belegen (2 Byte = 16 Bit \(<\) 17 Bit).
+
+In mathematischen Worten würde man wohl sagen: Die Originalbotschaft
+wird in Stücke \(B_i\) der Bitlänge des (ganzzahligen) Zweierlogarithmus von
+\(r\) unterteilt.
+
+
+\item Diese ``Kurzinformationen'' \(B_i\) muss der Sender nun mit \(r\) und \(c\) verschlüsseln:
+
+\begin{eqnarray*}
+	G_1 &=& B_1^c \bmod r \\
+	G_2 &=& B_2^c \bmod r \\
+	...
+\end{eqnarray*}
+Verwenden Sie das Java Hilfsprogramm
+
+\texttt{>java AhBmC Bi c r}.
+
+\item Diese ``Chiffrate'' (\(G_1\), \(G_2\), ...) sendet er/sie an den
+Empfänger. Das kann problemlos über die öffentliche Telefonleitung
+geschehen, denn nur der Empfänger kann diese entschlüsseln.
+
+\end{enumerate}
+
+
+\paragraph*{Schritt 4: Entschlüsseln der Botschaften}
+
+\begin{enumerate}[label={\alph*)}]
+
+\item Der Empfänger berechnet \(d := c^{-1} \bmod s\).\\
+
+Diesen Dechiffrierexponenten \(d\) kann nur er berechnen, denn nur er
+kennt \(s\)!
+
+Bem.: Alle können zwar rein theoretisch \(r\) in die Primfaktoren
+\(p\) und \(q\) zerlegen und so auch \(s\) berechnen; aber bei großen
+Primzahlen \(p\) und \(q\) ist dieser Aufwand immens.
+
+Verwenden Sie, um \(d\) zu berechnen, das Java Programm
+
+\texttt{>java Minv c s}.
+
+\item Alle Chiffrate (\(G_1\), \(G_2\), ...) kann der Empfänger mit
+  \begin{eqnarray*}
+	B_1 &=& G_1^d \bmod r \\
+	B_2 &=& G_2^d \bmod r \\
+	...
+  \end{eqnarray*}
+nun entschlüsseln. Verwenden Sie wiederum das Java Programm
+
+\texttt{>java AhBmC Gi d r}.
+
+
+\end{enumerate}
+
+\subsubsection{Ein Zahlenbeispiel}
+
+\paragraph{Schritt 1: Empfänger}
+Wertzuweisungen:
+\begin{eqnarray*}
+	p &=& 467 \\
+	q &=& 619 \\
+	r &=& 467\cdot 619 = 289073 \\
+	s &=& 466\cdot 618 = 287988 \\
+	c &=& 353
+\end{eqnarray*}
+
+
+\paragraph{Schritt 2: Veröffentlichen}
+Öffentlich bekannt geben: \(r = 289073\), \(c = 353\)
+
+\paragraph{Schritt 3: Sender}
+Die Botschaft sei ``Hallo''. Die Botschaft wird in Stücke der Länge 2
+Byte (= 16 Bit) unterteilt. (Die ``\textit{x}'' steht für \textit{hexadezimale Codierung}.)
+
+\begin{tabular}{rcrcrcr}
+\\
+      \(B_1\) &=& ``Ha''            &=& \(x4861\)                    &=& 18592 \\
+      \(B_2\) &=& ``ll''            &=& \(x6C6C\)                    &=& 27756               \\
+      \(B_3\) &=& ``o''             &=& \(x6F\)                      &=& 111                 \\
+      \\
+      \(G_1\) &=& \(B_1^c \bmod r\) &=& \(18529^{353} \bmod 289073\) &=& 200883 \\
+      \(G_2\) &=& \(B_2^c \bmod r\) &=& \(27756^{353} \bmod 289073\) &=& 212601 \\
+      \(G_3\) &=& \(B_3^c \bmod r\) &=& \(  111^{353} \bmod 289073\) &=& 12789 \\
+\\
+\end{tabular}
+
+
+Übermittelt wird nun die chiffrierte Botschaft :
+
+		\((G_1, G_2, G_3) = (200883, 212601, 12789)\)
+
+\paragraph{Schritt 4: Empfänger}
+Der Empfänger berechnet zunächst \(d\), den sog. Dechiffrierexponenten.\\
+
+\begin{tabular}{rcrcrcrcr}
+	\(d\)   &=& \(c^{-1}   \bmod s\) &=& 206405  & &           & &        \\
+        \\
+	\(B_1\) &=& \(200883^d \bmod r\) &=& 18529   &=& \(x4861\) &=& ``Ha'' \\
+	\(B_2\) &=& \(212601^d \bmod r\) &=& 27756   &=& \(x6C6C\) &=& ``ll'' \\
+	\(B_3\) &=& \(12789^d  \bmod r\) &=& 111     &=& \(x6F\)   &=& ``o''
+\end{tabular}
 
 \subsection{Der eigene öffentliche Schlüssel}
 
-\subsection{Java Hilfsprogramme}
-\subsubsection*{\texttt{XorKryptRandom}}
-\subsubsection*{Grösster gemeinsamer Teiler: \texttt{GCD}}
-\subsubsection*{Das Inverse modulo einer Primzahl: \texttt{MInv}}
-\subsubsection*{Potenzieren modulo einer Primzahl: \texttt{AhBmC}}
+Wichtig bei öffentlich benutzten Verfahren ist es natürlich, dass die
+Zahlen, Schlüssel, Hash-Codes etc. in einem standardisierten Protokoll
+übermittelt werden.
+
+\index{PGP}\index{GnuPG}
+Mit PGP (pretty good privacy: \texttt{www.pgpi.org}) von
+Phil Zimmermann existiert eine standardisierte Implementierung des
+Public Key Verfahrens. Unter Linux wird auch GnuPG (\texttt{www.gnupg.org}) als Open
+Source Version angeboten.
+
+PGP arbeitet mit einem Vertrauens-Netzwerk. Jedem Schlüssel in meinem
+Schlüsselbund kann eine Vertrauensstärke angegeben werden. So gibt es
+Schlüssel, deren Herkunft ich eher traue als anderen. Wenn ich nun
+einen neuen Schlüssel in meinen Schlüsselbund aufnehme, so schaue ich
+nach, ob jemand, dem ich traue, diesem Schlüssel bereits vertraut: In
+solchen Fällen kann ich dem neuen Schlüssel auch eher trauen.
+
+
+%\subsection{Java Hilfsprogramme}
+%\label{subsec:java-programme}
+%
+%\subsubsection*{\texttt{XorKryptRandom}}
+%\subsubsection*{Grösster gemeinsamer Teiler: \texttt{GCD}}
+%\subsubsection*{Das Inverse modulo einer Primzahl: \texttt{MInv}}
+%\subsubsection*{Potenzieren modulo einer Primzahl: \texttt{AhBmC}}
 
 % ===========================================================================
 \section{Implementierung}
+\label{sec:implementierung}
+
+In diesem Abschnitt finden Sie Informationen, die teilweise programmier- und produktspezifisch sind.
 
 \subsection{Anpassungen - Change Management}
+\label{subsub:change-management}
+
+
+Vermutlich nicht ganz unbeabsichtigt, kommt im Titel des Moduls ``E-Business-Applikation anpassen''
+das Wort anpassen vor. Ab wann genau etwas eine Anpassung ist oder eine Neuentwicklung ist leider
+wieder eine Definitionsfrage. Durch die Verwendung von Frameworks und Generatoren sind auf
+Neuentwicklungen auf Codebasis eigentlich nur Anpassungen. Wenn es sich aber um eine Applikation
+handelt, die bereits produktiv im Einsatz ist, dann unterscheidet sich das Vorgehen von einer
+Neuentwicklung. Vor allem die Überführung aus der Testumgebung in die produktive Umgebung
+ist in diesem Fall heikel, da der bestehende Applikationseinsatz ungehindert und fehlerfrei
+weiterlaufen soll. Laut ITIL\footnote{IT Infrastructure Library.}
+soll dies kontrolliert, effizient und unter Minimierung der Risiken geschehen.
+
+Das Change-Management ist dafür verantwortlich standardisierte Prozesse zu definieren,
+die bei Änderungen der IT-Infrastruktur angewendet werden. Gerade bei \emph{running-systems}
+kann der Schaden erheblich sein, wenn nach Änderungen Störungen auftreten oder das System
+im Extremfall ganz ausfällt.
+
+Die Anpassungen können darin bestehen, dass vorgegebene Parameter verändert werden - verändern
+der Einstellungen auch Customizing genannt oder dass Codeanpassungen durch Anfügen,
+Entfernen oder Modifizieren bestehender Funktionen gemacht werden.
+
+Ressourcen:
+\begin{itemize}
+    \item \href{https://de.wikipedia.org/wiki/Change_Management_(ITIL)}{Change Management (ITIL)}
+    \item \href{http://www.change-management.com}{www.change-management.com}
+\end{itemize}
+
+In der Praxis werden häufig Versionierungssysteme wie \href{https://de.wikipedia.org/wiki/Concurrent_Versions_System}{CVS},
+\href{https://de.wikipedia.org/wiki/Apache_Subversion}{Subversion} oder heute
+vermehrt \href{https://de.wikipedia.org/wiki/Git}{Git} eingesetzt.
 
 \subsection{Session}
+\label{subsec:session}
+
+Ein generelles Phänomen von Multi-User Applikationen (und somit im speziellen auch
+von Web-Applikationen) ist die Tatsache, dass jeder Benutzer seine eigenen Variablen
+besitzen muss.
+
+Sessions (Sitzungen) implementieren auf verbindungslosen Protokollen (hier http) eine
+Beziehung vom Client zu einem zugehörigen Prozess auf dem Server. Es wird dem Client eine
+ID\footnote{Identifikationsnummer oder -string} zugewiesen. Jeder nun folgende Aufruf des
+Clients übergibt dem Server diese ID. Somit kann der Server seine Prozesse und Daten eindeutig
+den Clients zuweisen. Eine andere Möglichkeit wäre es, alle Nutzdaten auf dem Client abzulegen.
+
+Mögliche Implementationen über \texttt{http}:
+\begin{description}
+    \item[Cookies] Speichern von Variablenwerten durch den Browser auf dem Client.
+    Ein `Cookie' enthält den Namen, den Inhalt (\emph{Content}), die Domain, den Pfad, ein
+    Verfallsdatum, eine \emph{Policy} und den Sicherheitszustand (\emph{secure}).
+
+    \item[URL-Rewriting] Beim URL\footnote{Uniform Resource Locator}-Rewriting wird jedem
+    Hyperlink eine Identifikationsnummer mitgegeben, z.B.
+
+    \begin{minted}[autogobble]{text}
+        <a href="http://www.xyz.com?SessionID=Sz45Km232Kxw22">
+    \end{minted}
+
+    \item[Uidden-Fields] Variablen können auch in versteckten Feldern der
+    Formulare (im \texttt{<form>}-Element) mitgegeben werden.
+\end{description}
+
+Überlegen Sie sich die Sicherheitsrisiken oder allfällige Datenschutzproblematiken der
+drei genannten Verfahren.
+
+In PHP wird eine Session einfach mit  generiert.
+Die Applikationsentwickler müssen sich nicht mehr um das darunterliegende Verfahren kümmern.
 
 % ===========================================================================
 \section{Übungen und Aufgaben}
+\label{sec:uebungen}
 
-\subsection{Warenkorb}
-\subsubsection*{Alternative: Neuer Shop}
+%\subsection{Warenkorb}
+%\label{subsec:wahrenkorb}
+%\index{Ubung@Übung!Warenkorb}
+%
+%Installieren Sie den Demo-Warenkorb. Gehen Sie wie folgt vor:
+%\begin{enumerate}
+% \item Download: Je nach Infrastruktur stellt Ihnen die Lehrperson ein ZIP-File mit PHP-Quellcode zur Verfügung. Extrahieren 		       Sie die Dateien auf Ihrem PC und installieren Sie die Applikation entsprechend.
+% \item Kaufen Sie eine Ware (\texttt{http://localhost/wako/produkte.php})
+%       und vergleichen Sie danach die Bestellungen\\
+%       (\texttt{http://localhost/wako/admin.php?passwort=123456}).
+% \item Versuchen Sie eine Session Ihres Nachbarn zu
+%       \textit{hijacken}. Das geht hier ganz ohne Kenntnisse von TCP.
+% \item Kaufen Sie einen Artikel, der nicht auf der Artikelliste zu
+%       finden ist. Spionieren Sie als Kunde in der Datenbank: GET-Parameter
+%       ausprobieren oder systematisch abholen.
+% \item Betreiben Sie ``E-Shop-Lifting'': Kaufen Sie einen Artikel zu
+%       verfälschtem Preis.
+% \item Fügen Sie neue Produkte in die Produkteliste ein, und testen Sie
+%       eine Bestellung.
+%\end{enumerate}
+
+
+\subsection{Neuer Shop}
+
+Alternativ zum Anpassen eines bestehenden Shops, kann  auch ein
+ganz neuer Shop programmiert werden. Dieser muss natürlich mindestens so viele
+(aber fehlerfreie) Funktionen bieten, wie ein Demo-Warenkorb.
+
+\begin{itemize}
+ \item Der eigene neue Web-Shop muss mindestens folgende Funktionen enthalten:
+   \begin{itemize}
+     \item Warenkorb mit Total-Anzeige,
+     \item Artikelauswahl (Liste oder Suche) und
+     \item eine Bestellmöglichkeit.
+   \end{itemize}
+ \item Der neue Shop muss mindestens zwei Verbesserungen gegenüber dem Demo-Warenkorb enthalten.
+ \item Vergessen Sie nicht, die Testfälle \textbf{vorab} zu beschreiben.
+\end{itemize}
+
 
 \subsection{Shop-Vergleich}
+\label{subsec:shop-vergleich}
 
-\subsection{Sicherheit}
-\subsubsection*{Schutz gegen Angriffe}
-\subsubsection*{Angriff}
+Es gibt eine ganze Menge an bestehenden Webshops - allerdings von unterschiedlicher Qualität.
+Untersuchen Sie möglichst Ihnen bereits bekannte Webshops. Diese müssen nicht optimal sein -
+im Gegenteil. Sie sollen ja gerade Schwachstellen entdecken. Analysieren Sie mindestens 2 Shops.
+Hier sind noch ein paar Kriterien aufgelistet, aber Sie können eigene hinzufügen und müssen
+die aufgelisteten nicht unbedingt verwenden.
 
-\subsection{Verschlüsselung}
+\begin{multicols}{2}
+    \begin{itemize}
+        \item Warenkorb
+        \item Suchfunktionen
+        \item Zahlungsverkehr / -möglichkeiten
+        \item Kategorisierung von Artikeln
+        \item Konfiguration von Artikeln
+        \item Benutzerschnittstelle (Bestellvorgehen, Ergonomie; Verfolgung Auftragsstatus, Usability)
+        \item Login und Benutzerdaten
+        \item Undo-Funktionalität (Rückgängig machen von Aktionen)
+        \item Zusätzliche Funktionen
+    \end{itemize}
+\end{multicols}
 
-\subsection{Verschlüsselung - Praxis}
+In einigen Shops ist es auch möglich etwas zu den folgenden Punkten zu sagen:
 
-\subsection{Standard Web-Shops}
+\begin{itemize}
+    \item eingesetzte Architektur (ASP, JSP, PHP, Java-Script, Applets,$\ldots$)
+    \item Sicherheit (GET-Parameter, \texttt{https},$\ldots$)
+    \item verwendete Standardsoftware oder Frameworks
+\end{itemize}
+
+Die folgenden Beispiele für mögliche Shops finden Sie in der elektronischen Variante
+dieses Skripts als Link. Aber suchen Sie auch eigene Shops:
+
+\begin{multicols}{3}
+    \begin{itemize}
+        \item\href{https://www.amazon.com}{amazon.com}
+        \item\href{https://www.orellfuessli.ch/shop/home/show/}{books.ch}
+        \item\href{https://www.sbb.ch/}{sbb.ch}
+        \item\href{https://www.ticketcorner.ch}{ticketcorner.ch}
+        \item\href{https://www.jukebox.ch}{jukebox.ch}
+        \item\href{https://www.leshop.ch/}{leshop.ch}
+        \item\href{https://www.coopathome.ch}{www.coopathome.ch}
+        \item\href{https://de.fotolia.com}{fotolia.com}
+        \item\href{https://www.thalia.de/}{thalia.de}
+    \end{itemize}
+\end{multicols}
+
+
+% ---------------------------------------------------------------------------
+%\subsection{Sicherheit}
+%\label{subsec:sicherheit}
+%
+%Geben Sie zu vier der folgenden möglichen Angriffe aus dem Kapitel
+%Sicherheit \totalref{subsec:angriffe} eine mögliche Abhilfe.
+%
+%
+%\subsubsection*{Schutz gegen Angriffe}
+%\subsubsection*{Angriff}
+%
+%\subsection{Verschlüsselung}
+%
+%\subsection{Verschlüsselung - Praxis}
+%
+%\subsection{Standard Web-Shops}
 
 % ===========================================================================
 \section{GnuPG}
+\label{sec:gnupg}
+
+Wie wird GnuPG von Hand eingesetzt? Hier einige wichtige Befehle und Optionen,
+falls Sie sich entscheiden, nicht die graphische Benutzeroberfläche von PGP zu verwenden.
 
 \subsection{Installation}
+\label{subsec:gnupg-installation}
+
+Zuerst müssen Sie das gpg-Tool herunterladen. Zum Beispiel hier: (\href{https://www.openpgp.org}{www.pgpi.org} oder
+\href{https://www.gnupg.org}{www.gnupg.org})
+
+\begin{enumerate}
+    \item Erstellen Sie ein Verzeichnis (z.B.~\texttt{'/temp/gpg'}\footnote{Falls Sie in
+    beliebigen Verzeichnissen Schreibrechte haben, können Sie selbstverständlich das
+    Programm auch in ein anderes Verzeichnis kopieren. Sie können dann auch auf den
+    (im Folgenden immer erwähnten Zusatz \texttt{'homedir'}) verzichten.}) und kopieren
+    Sie alles vom Netz da hinein.
+
+    \item Wechseln Sie entweder ins oben erstellte Verzeichnis (\texttt{'cd /temp/gpg'})
+    oder geben Sie dieses Ihrem System-Pfad bekannt.
+
+\end{enumerate}
 
 \subsection{GPG-Home Verzeichnis}
+\label{subsec:gpg-home}
+
+GnuPG benötigt ein Heim-Verzeichnis, um die Schlüssel zu speichern. Wenn nichts angegeben
+wird, sucht sich GnuPG selbständig ein solches Verzeichnis aus. Wenn Sie auf den
+Maschinen nicht überall Schreibrechte haben oder wenn Sie das Verzeichnis explizit
+angeben wollen, verwenden Sie bei jedem Aufruf von \texttt{'gpg'} die Option
+\texttt{'homedir <Verzeichnis>'}. Dabei steht \texttt{'<Verzeichnis>'} für das von
+Ihnen gewählte Verzeichnis.
 
 \subsection{Schlüssel generieren}
+\label{subsec:gpg-key-generieren}
+
+Mit der Option \texttt{'-gen-key'} wird ein Schlüssel generiert. ElGamal-Schlüssel
+sind in der Regel sicher. Wegen einem Implementationsfehler sollten Sie aber nicht
+zum Unterschreiben eingesetzt werden. Für unsere kleine Übung ist das jedoch kein
+Problem, denn der Aufwand, den privaten Schlüssel dennoch zu knacken, ist immer
+noch hoch genug.
+
+\begin{minted}{text}
+    gpg --homedir  /temp/gpg --gen-key
+\end{minted}
 
 \subsection{Importieren von Schlüsseln}
+\label{subsec:gpg-key-import}
+
+Damit Sie später für jemanden etwas verschlüsseln können, müssen Sie seinen
+Public-Key importieren; im Volksmund gesagt: Hängen Sie den öffentlichen Schlüssel
+des Empfängers an Ihren Schlüsselbund (Key-Ring). Das geschieht mit der Option import.
+
+\begin{minted}{text}
+    gpg --homedir /temp/gpg --import phi.key
+\end{minted}
+
+Den erfolgreichen Import testen Sie am einfachsten mit dem Auflisten aller
+Schlüssel in Ihrem Schlüsselbund.
+
+\begin{minted}{text}
+    gpg --homedir /temp/gpg --list-keys
+\end{minted}
 
 \subsection{Schlüssel unterschreiben und beglaubigen}
+\label{subsec:gpg-sign-key}
+
+Es gibt noch zwei weitere Befehle, die je nach Anwendung der Schlüssel einzusetzen
+sind: Schlüssel unterschreiben (\texttt{'sign-key'}) und Schlüssel beglaubigen
+(\texttt{'edit-key'} und \texttt{'trust'}).
 
 \subsection{Verschlüsseln / Entschlüsseln einer Botschaft}
+\label{subsec:gpg-encrypt-decrypt}
+
+
+Das Verschlüsseln für einen Empfänger (z.B.~daniel.senften@talent-factory.ch) ist nun,
+nachdem die obigen Schritte durchgeführt sind, keine Hexerei mehr. Der Befehl
+\texttt{'-encrypt'} verschlüsselt den Text. Hier können mehrere Empfänger angegeben
+werden. Sobald eine Leerzeile eingegeben wird, wird der Text für alle angegebenen
+Empfänger verschlüsselt.
+
+\begin{minted}{text}
+    gpg --homedir /temp/gpg --encrypt geheim.txt
+\end{minted}
+
+Zum Entschlüsseln verwenden Sie den Befehl \texttt{'-decryp'}.
+
 

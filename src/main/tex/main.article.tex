@@ -21,8 +21,6 @@
 
 \begin{document}
 
-    \renewcommand*\l@section{\@dottedtocline{1}{1.5em}{2.3em}}
-
     % TODO In der endgültigen Version des Dokumentes den Befehl auskommentieren
     \fxsetup{draft}
 
@@ -33,15 +31,6 @@
     \newpage
     
     \tableofcontents % Inhaltsverzeichnis
-
-    \newpage
-    \listoffigures   % Abbildungsverzeichnis
-    \listoftables    % Tabellenverzeichnis
-    \listofexercises % Liste der Übungen
-
-    \renewcommand{\listoflistingscaption}{Programmbeispiele}
-    \listoflistings
-
     \listoffixmes
 
     \parindent0em\parskip1em
@@ -51,5 +40,18 @@
     \newmintedfile{java}{frame=single,linenos,samepage}
 
     \input{manual.tex}
+
+    \newpage\appendix
+    \section{Verzeichnisse}
+    \parindent0em\parskip0em
+    \listoffigures   % Abbildungsverzeichnis
+    \listoftables    % Tabellenverzeichnis
+    \listofexercises % Liste der Übungen
+
+    %\renewcommand{\listoflistingscaption}{Programmbeispiele}
+    %\listoflistings
+
+    \bibliographystyle{plain} % We choose the "plain" | "alpha" reference style
+    \bibliography{bibliography}
 
 \end{document}
