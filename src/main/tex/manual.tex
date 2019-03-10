@@ -132,8 +132,7 @@ ausgenutzt und untersuchen die Anbieter nach ihren Artikel- und Angebotsprofilen
 Wer eine alte CD-Sammlung auflöst, verkauft verschiedene CDs einmal und selten
 vielleicht zweimal. Wer aber die gleiche CD mehrfach verkauft muss sich eine
 gute Argumentation zurechtlegen, warum er sich nicht als Händler ausgibt
-und muss entsprechend mit Abmahnungen rechnen (siehe auch
-Kapitel~\ref{subsec:juristische-grundlagen} auf Seite~\pageref{subsec:juristische-grundlagen}).
+und muss entsprechend mit Abmahnungen rechnen \totalref{subsec:juristische-grundlagen}.
 
 \subsubsection*{A2C - Administration to A, B, C}
 
@@ -287,12 +286,23 @@ haben. Die also durch einen Fotografen speziell für sie erstellt werden.
 
 % ===========================================================================
 \section{Bestandteile des eBusiness}
+\label{sec:ebusiness}
 
 \subsection{Übersicht der Wertschöpfungskette}
+\index{Wertschöpfungskette}
+
+\image{Wertschoepfungskette}{Wertschöpfungskette}
+
 
 \subsection{Elemente der Wertschöpfungskette}
+\label{subsec:value-chain}
+
+
 
 \subsubsection*{eProducts \& eServices}
+\index{Produktkatalog}
+\index{eProducts}
+\index{eServices}
 
 Für den Anbieter von Waren ist die Präsentation seiner Produkte ein
 zentraler Punkt. Die Darstellung, Beschreibung mit Attributen und
@@ -318,6 +328,7 @@ sich bei der Konfiguration nicht nur um eine sehr geringe Anzahl an
 Variationsmöglichkeiten handelt.
 
 \subsubsection*{eProcurement}
+\index{eProcurement}
 
 Unter \emph{procurement} wird der Beschaffungsprozess in einem Unternehmen
 verstanden. Mit dem E-Zusatz versehen, handelt es sich dann um die durch
@@ -333,9 +344,15 @@ werden generell 3 Varianten unterschieden:
     Der Betreiber ist in der Regel eine unabhängige Drittfirma .
 \end{itemize}
 
-\subsubsection*{eMarketing}
+\image{eProcurement}{Marktmodelle eProcurement}
+\label{MMeP}
 
-Im Marketing gibt es die bekannte AIDA-Formel. Die Abkürzung steht für
+\subsubsection*{eMarketing}
+\index{eMarketing}
+\index{Marketing}
+
+Im Marketing gibt es die bekannte AIDA-Formel\index{AIDA-Formel}.
+Die Abkürzung steht für
 \emph{Attention}, \emph{Interest}, \emph{Desire} und \emph{Action}.
 So wie viele Erkenntnisse des klassischen Marketings ist auch diese
 Formel im eMarketing gültig. Natürlich gibt es zusätzlich jede Menge
@@ -377,6 +394,7 @@ Weitere wichtige Punkte im eMarketing sind cross-selling und up-selling,
 die noch im weiteren Verlauf des Skriptes behandelt werden.
 
 \subsubsection*{eContracting}
+\index{eContracting}
 
 \begin{itemize}
     \item\textbf{elektronischer Verhandlungsprozess} \\
@@ -388,12 +406,12 @@ die noch im weiteren Verlauf des Skriptes behandelt werden.
     \item\textbf{digitale Signatur} \\
     Um rechtsgültige Vertragsabschlüsse im Internet zu erhalten,
     müssen sich die Geschäftspartner eindeutig identifizieren.
-    Dies geschieht mittels digitaler Signaturen
-    (siehe auch Kapitel~\ref{subsec:digitale-signatur} auf Seite~\ref{subsec:digitale-signatur}).
+    Dies geschieht mittels digitaler Signaturen \totalref{subsec:digitale-signatur}.
     Dokumente, die mit gültigen Signaturen versehen sind, sind rechtswirksam.
 \end{itemize}
 
 \subsubsection*{eDistribution}
+\index{eDistribution}
 
 Die Auswahl eines Distributionssystems sorgt für die Verteilung der Produkte,
 Waren oder Dienstleistungen an die Kunden. Die Definition des Distributionskanals legt
@@ -444,6 +462,7 @@ mit welchem Service die Verteilung stattfindet.
 \end{itemize}
 
 \subsubsection*{ePayment}
+\index{ePayment}
 
 Die elektronische Abwicklung von Zahlungsvorgängen lässt sich folgendermassen
 klassifizieren:
@@ -733,12 +752,14 @@ Restrisiko vorhanden ist, ist vielleicht beunruhigend aber sicher besser
 als ein arroganter Sicherheitsglaube.
 
 \subsection{Angriffe}
+\label{subsec:angriffe}
+\index{Angriffe}
 
 Die Ziele eines Angriffes sind nur selten reine Zerstörung von Daten. Viel
 häufiger ist die Kontrolle über Infrastruktur und Daten das Ziel eines
 Angriffes. Bot-Netze bedienen sich einer ganzen Anzahl von unabhängigen
-Rechnern, um damit wiederum Angriffe wie DoS-Attacken (siehe Abschnitt~\ref{subsub:dos},
-Seite~\pageref{subsub:dos}) zu starten. Ebenso
+Rechnern, um damit wiederum Angriffe wie DoS-Attacken \totalref{subsub:dos}
+zu starten. Ebenso
 wie bei der Spionage geht es also nicht um die Zerstörung, sondern um
 einen Informations- und Kontrollgewinn. Die Urheber sind absolut nicht
 an einer Entdeckung ihrer Tat interessiert und versuchen alle Spuren und
@@ -879,18 +900,17 @@ Hier geht es darum, \textbf{was} eine Person oder ein System tun darf.
 
 Kryptographie ist die Verschlüsselung von Daten, um diese vor fremder Einsicht
 zu schützen. Die Ziele der Kryptographie entsprechen denen aus
-Kapitel~\ref{sec:security} auf Seite~\pageref{sec:security}.
+\totalref{sec:security}.
 Gemäss dem Sprichwort ``viele Wege führen nach Rom'' gibt es auch viele Verfahren,
 um Informationen sicher zu übertragen. Einige dieser Methoden wollen wir in
 diesem Kapitel betrachten.
 
 Wir beginnen mit einem kurzen Einstieg zur Geschichte der Kryptographie.
 Anschliessend erhalten Sie einige technische Informationen zum \textbf{XOR}-Verfahren
-(siehe auch Kapitel~\ref{subsec:xor} auf Seite~\pageref{subsec:xor}) und einige
+\totalref{subsec:xor} und einige
 mathematische Grundlagen. Diese werden im Verfahren von Diffie/Hellmann und
-RSA (siehe auch Kapitel~\ref{subsec:rsa} auf Seite~\pageref{subsec:rsa}) angewendet.
-Im letzten Abschnitt (siehe auch Kapitel~\ref{subsec:java-programme} auf
-Seite~\pageref{subsec:java-programme}) wird noch erklärt, wie die mathematischen
+RSA \totalref{subsec:rsa} angewendet.
+Im letzten Abschnitt \totalref{subsec:java-programme} wird noch erklärt, wie die mathematischen
 Hilfsprogramme zu bedienen sind.
 
 Mathematische Verschlüsselungsverfahren, die auf grossen Primzahlen basieren,
@@ -918,11 +938,11 @@ Dicke besitzt, kann die verschlüsselte Botschaft entziffern. Dieses
 Verfahren gehört zu den Transkriptionsverfahren. Dabei bleiben die
 Zeichen des Klartextes erhalten, werden aber in ihrer Position verändert.
 Im Gegensatz zur mono- oder polyalphabetischen Substitution
-(siehe auch Kapitel~\ref{subsubsec:monoalphabetische-substitution} auf
-Seite~\pageref{subsubsec:monoalphabetische-substitution}), bei der die
+\totalref{subsubsec:monoalphabetische-substitution}, bei der die
 Position bestehen bleibt und die Zeichen ersetzt werden.
 
 \subsubsection*{Cäsar-Verfahren}
+\index{Cäsar ! Verfahren von}
 
 Der Algorithmus von Cäsar ist nicht viel sicherer. Das Verfahren verschiebt
 die Buchstaben im Alphabet um eine vorgegebene Anzahl Buchstaben. Es kommen
@@ -999,8 +1019,7 @@ zu bestimmen, braucht schon wesentlich grösseren Aufwand. Auf einer
 ähnlichen Grundidee basieren moderne Krypto-Verfahren.
 
 Erst mittels solcher `Einwegfunktionen'\footnote{Im Gegensatz zu
-Hash-Funktionen (siehe auch Kapitel~\ref{subsubsec:einfach} auf
-Seite~\pageref{subsubsec:einfach}) sind diese Funktionen umkehrbar.
+Hash-Funktionen \totalref{subsubsec:einfach} sind diese Funktionen umkehrbar.
 Jedoch ist der Aufwand, die Funktion umzukehren enorm viel höher,
 als die Funktion zu berechnen.} wird es möglich, dass zwei Parteien,
 die vorher noch nie miteinander in Kontakt getreten sind, geheime
@@ -1053,7 +1072,7 @@ anfertigen.
 
 Im Gegensatz zur Geheimhaltung bleibt beim digitalen signieren die
 Botschaft unverschlüsselt. Es wird lediglich ein Hash-Code
-(siehe auch Kapitel~\ref{subsec:hash} auf Seite~\pageref{subsec:hash})
+\totalref{subsec:hash}
 der Botschaft \textbf{verschlüsselt}; und zwar diesmal mit dem
 \textbf{Private-Key}.
 
@@ -1149,12 +1168,12 @@ Zeit- bzw. Rechenaufwand die Verfahren geknackt werden können.
 
 Mit Modulo (mod) bezeichnen wir das Berechnen von Divisionsresten.
 
-$\qquad m \mod p$ := Rest, der entsteht, wenn wir $m$ durch $p$ teilen.
+$\qquad m \bmod p$ := Rest, der entsteht, wenn wir $m$ durch $p$ teilen.
 
 Beispiele:
 \begin{enumerate}
-    \item $17 \mod 7 = 3$ (denn $17 = 2\times 7 + 3$)
-    \item $37 \mod 5 = 2$ (denn $37 = 6\times 5 + 2$)
+    \item $17 \bmod 7 = 3$ (denn $17 = 2\times 7 + 3$)
+    \item $37 \bmod 5 = 2$ (denn $37 = 6\times 5 + 2$)
 \end{enumerate}
 
 \begin{bemerkung}[Distributivität von Modulo-Berechnungen]
@@ -1164,9 +1183,9 @@ Beispiele:
 
 \begin{align}
     \label{eq:mod}
-    (a + b) \mod p &= [(a \mod p) + (b \mod p)] \mod p             \\
-    (a \times b) \mod p &= [(a \mod p) \times (b \mod p)] \mod p   \\
-    (a)^n \mod p &= [(a \mod p)^n] \mod p
+    (a + b) \bmod p &= [(a \bmod p) + (b \bmod p)] \bmod p             \\
+    (a \times b) \bmod p &= [(a \bmod p) \times (b \bmod p)] \bmod p   \\
+    (a)^n \bmod p &= [(a \bmod p)^n] \bmod p
 \end{align}
 
 \begin{beispiel}[Modulo Beispiele]
@@ -1175,24 +1194,24 @@ Beispiele:
 
 
 \begin{align*}
-    (5 + 2)\mod 3 &= ((5\mod 3) + 2) \mod 3 = (2 + 2) \mod 3 = 4 \mod 3 = 1 \\
-    (8 \times 15) \mod 7 &= (1 \times 1) \mod 7 = 1 \mod 7 = 1              \\
-    (14 \times 35) \mod 3 &= (2 \times 2) \mod 3 = 4 \mod 3 = 1             \\
-    46^{10} \mod 11 &= 2^{10} \mod 11 = 4^5 \mod 11 = (4\times 4^4) \mod 11 = (4\times 16^2) \mod 11 \\
-    &= (4\times 5^2) \mod 11 = (4\time 25) \mod 11 = (4\times 3) \mod 11 = 1
+    (5 + 2)\bmod 3 &= ((5\bmod 3) + 2) \bmod 3 = (2 + 2) \bmod 3 = 4 \bmod 3 = 1 \\
+    (8 \times 15) \bmod 7 &= (1 \times 1) \bmod 7 = 1 \bmod 7 = 1              \\
+    (14 \times 35) \bmod 3 &= (2 \times 2) \bmod 3 = 4 \bmod 3 = 1             \\
+    46^{10} \bmod 11 &= 2^{10} \bmod 11 = 4^5 \bmod 11 = (4\times 4^4) \bmod 11 = (4\times 16^2) \bmod 11 \\
+    &= (4\times 5^2) \bmod 11 = (4\time 25) \bmod 11 = (4\times 3) \bmod 11 = 1
 \end{align*}
 
 \begin{bemerkung}[RSA]
-    Für das RSA-Verfahren (siehe auch Kapitel~\ref{subsec:rsa} auf Seite~\pageref{subsec:rsa})
-    und das Verfahren von Diffie/Hellmann (siehe auch Kapitel~\ref{subsec:diffie-hellmann}
-    auf Seite~\pageref{subsec:diffie-hellmann}) brauchen wir $a^b \mod c$ zu berechnen.
+    Für das RSA-Verfahren \totalref{subsec:rsa}
+    und das Verfahren von Diffie/Hellmann \totalref{subsec:diffie-hellmann}
+    brauchen wir $a^b \bmod c$ zu berechnen.
 \end{bemerkung}
 
 \begin{Exercise}[%
 title={Modulo Berechnung},
 label={exercise:modulo}]
 \end{Exercise}
-Berechnen Sie zum Beispiel $23^{17} \mod 7$. Erstellen Sie hierzu ein kleines
+Berechnen Sie zum Beispiel $23^{17} \bmod 7$. Erstellen Sie hierzu ein kleines
 Hilfsprogramm in der Programmiersprache Ihrer Wahl (z.B.~Java). Der Aufruf dieses
 Hilfprogrammes könnte wie folgt aussehen:
 \begin{minted}[autogobble]{text}
@@ -1200,7 +1219,7 @@ Hilfprogrammes könnte wie folgt aussehen:
 \end{minted}
 
 
-\subsubsection*{Inverses Modulo $p$}
+\subsubsection*{Inverses Modulo p}
 
 Für das RSA-Verfahren benötigen wir noch die folgende Rechenoperation.
 Wenn Sie sich nur für Difie-Hellman oder das Verfahren von ElGamal
@@ -1208,30 +1227,30 @@ interessieren, so können Sie dieses Kapitel überblättern.
 
 Wenn wir Modulo $p$ rechnen und $p$ eine Primzahl ist, so gibt es für
 jede Zahl $m$ ein sogenanntes multiplikatives inverses Modulo $p$.
-Das heisst: für jedes $m$ gibt es ein $n$, so dass $(m\times n) \mod p = 1$ ist.
+Das heisst: für jedes $m$ gibt es ein $n$, so dass $(m\times n) \bmod p = 1$ ist.
 
 \begin{align*}
-    p = 7, m = 3 &\rightarrow n = 5~ \text{(denn~} 3\times 5\mod 7 = 1 \text{)} \\
-    p = 7, m = 6 &\rightarrow n = 6~ \text{(denn~} 6\times 6\mod 7 = 1 \text{)} \\
+    p = 7, m = 3 &\rightarrow n = 5~ \text{(denn~} 3\times 5\bmod 7 = 1 \text{)} \\
+    p = 7, m = 6 &\rightarrow n = 6~ \text{(denn~} 6\times 6\bmod 7 = 1 \text{)} \\
     p = 11, m = 5 &\rightarrow n = x
 \end{align*}
 
-Hier ein simples Vorgehen, um das Inverse ($\mod p$) zu finden:
+Hier ein simples Vorgehen, um das Inverse ($\bmod p$) zu finden:
 
 Nehmen wir z.B. $p = 13$ und $m = 5$
 
 \begin{align*}
-    5 \times 2 \mod 13 &= 10 \mod 13 = 10 \\
-    5 \times 3 \mod 13 &= 15 \mod 13 = 2  \\
-    5 \times 4 \mod 13 &= 20 \mod 13 = 7  \\
-    5 \times 5 \mod 13 &= 25 \mod 13 = 12 \\
-    5 \times 6 \mod 13 &= 30 \mod 13 = 4  \\
-    5 \times 7 \mod 13 &= 35 \mod 13 = 9  \\
-    5 \times 8 \mod 13 &= 49 \mod 13 = 1  \\
+    5 \times 2 \bmod 13 &= 10 \bmod 13 = 10 \\
+    5 \times 3 \bmod 13 &= 15 \bmod 13 = 2  \\
+    5 \times 4 \bmod 13 &= 20 \bmod 13 = 7  \\
+    5 \times 5 \bmod 13 &= 25 \bmod 13 = 12 \\
+    5 \times 6 \bmod 13 &= 30 \bmod 13 = 4  \\
+    5 \times 7 \bmod 13 &= 35 \bmod 13 = 9  \\
+    5 \times 8 \bmod 13 &= 49 \bmod 13 = 1  \\
 \end{align*}
 
-Daraus ergibt sich 8 als das Inverse ($\mod 13$) zu 5,
-denn $5\times 8 \mod 13 = 1$.
+Daraus ergibt sich 8 als das Inverse ($\bmod 13$) zu 5,
+denn $5\times 8 \bmod 13 = 1$.
 
 \begin{Exercise}[%
 title={Inverse Modulo Berechnung},
@@ -1249,7 +1268,7 @@ label={exercise:inverse-modulo}]
 
 Es gibt nun zwei Eigenschaften, die die Primzahlverfahren sehr sicher machen:
 \begin{enumerate}
-    \item Die Zerlegung von groÿen Zahlen in ihre Primfaktoren ist schwierig,
+    \item Die Zerlegung von grossen Zahlen in ihre Primfaktoren ist schwierig,
     die Multiplikation dagegen ist einfach.
 
     Sind $p$ und $q$ zwei 300-stellige Primzahlen, so ist $p\times q$ einfach
@@ -1262,9 +1281,9 @@ Es gibt nun zwei Eigenschaften, die die Primzahlverfahren sehr sicher machen:
     Diese Schwierigkeit wird vom Diffie/Hellman-Verfahren wie auch vom
     ElGamal-Algorithmus ausgenutzt:
 
-    $a^b \mod p$ zu berechnen ist einfach (siehe Beispiel~\ref{ex:modulo})
+    $a^b \bmod p$ zu berechnen ist einfach (siehe Beispiel~\ref{ex:modulo})
 
-    Aus der Gleichung $a^n \mod p = s$ das $n$ zu berechnen, ist hingegen schwierig.
+    Aus der Gleichung $a^n \bmod p = s$ das $n$ zu berechnen, ist hingegen schwierig.
 \end{enumerate}
 
 \subsection{Hashfunktionen}
@@ -1331,12 +1350,10 @@ die folgenden Eigenschaften erfüllen:
 
 Einsatzgebiete:
 \begin{itemize}
-    \item Digitale Signatur (siehe auch Kapitel~\ref{subsec:digitale-signatur}
-    auf Seite~\pageref{subsec:digitale-signatur})
+    \item Digitale Signatur \totalref{subsec:digitale-signatur}
     \item Digitaler Fingerabdruck
     \item Prüfsummenbildung
-    \item Passwortlisten (siehe auch Kapitel~\ref{subsubsec:password-cracker}
-    auf Seite~\pageref{subsubsec:password-cracker})
+    \item Passwortlisten \totalref{subsubsec:password-cracker}
     \item Indexierung von Textattributen in Datenbanken
     \item Hash-Tabellen (nicht Inhalt dieses Kurses.)
 \end{itemize}
@@ -1417,13 +1434,13 @@ Das Diffie/Hellman-Verfahren besteht aus folgenden Schritten:
     \item Alice sucht sich im Geheimen eine Zahl $a$; Bob sucht sich im Geheimen
     eine Zahl $b$; Die beiden Zahlen sollten kleiner als $p − 1$ sein.
 
-    \item A berechnet $m := s \mod p$ und schickt das Resultat an B;
-    B berechnet $n := s \mod p$ und schickt das Resultat an A;
+    \item A berechnet $m := s \bmod p$ und schickt das Resultat an B;
+    B berechnet $n := s \bmod p$ und schickt das Resultat an A;
     Cleo hört zwar $m$ und $n$ mit und kann damit nun theoretisch $a$ und $b$
     berechnen. Er braucht dazu aber viel zu lange.
 
-    \item A berechnet die Geheimzahl $g = n \mod p$;
-    B berechnet die Geheimzahl $g = m \mod p$.
+    \item A berechnet die Geheimzahl $g = n \bmod p$;
+    B berechnet die Geheimzahl $g = m \bmod p$.
 
     Bemerkung $g = n^a = m^b \text{, denn } n^a = {(s^b)}^a = s^{ba} = s^{ab} = {(s^a)}^b = m^b$
 
@@ -1435,10 +1452,47 @@ Das Diffie/Hellman-Verfahren besteht aus folgenden Schritten:
     werden kann als stures ausprobieren.}.
 
     \item A und B können nun ihre Nachrichten mit $g$ verschlüsseln und entschlüsseln
-    (z.B.~mit dem XOR-Verfahren (siehe auch Kapitel~\ref{subsec:xor}auf Seite~\pageref{subsec:xor})).
+    (z.B.~mit dem XOR-Verfahren \totalref{subsec:xor}).
 \end{enumerate}
 
-%\subsubsection*{Ein Zahlenbeispiel}
+\subsubsection*{Ein Zahlenbeispiel}
+
+\begin{enumerate}
+
+\item Alice und Bob bestimmen gemeinsam die folgenden Zahlen und
+tauschen diese übers Internet aus:
+
+  \begin{eqnarray*}
+	 p &=& 467 \\
+         s &=& 44
+  \end{eqnarray*}
+
+\item Alice wählt sich eine beliebige Geheimzahl \(a\), Bob wählt sich die Geheimzahl \(b\).
+      Diese Zahl darf nicht übers Netz verraten werden! Auch nicht gegenseitig. Alice wird \(b\)
+      nicht erfahren; ebenso wird Bob die Zahl \(a\) nie erfahren:
+
+  \begin{eqnarray*}
+	 a &=& 101 \\
+         b &=& 133
+  \end{eqnarray*}
+
+\item Alice berechnet  \(m = s^a \bmod p  =  44^{101} \bmod 467 = 292\).
+      Alice schickt \(m = 292\) an Bob.
+
+      Bob berechnet  \(n = s^b \bmod p  =  44^{133} \bmod 467 = 115\).
+      Bob schickt \(n = 115\) an Alice.
+
+\item Alice berechnet \(g = n^a \bmod p = 115^{101} \bmod 467 = 150\).
+
+      Bob berechnet   \(g = m^b \bmod p = 292^{133} \bmod 467 = 150\).
+
+      Oh Wunder, es gibt dieselbe Geheimzahl. Nur Alice und Bob kennen sie!
+
+\item Jetzt können Alice und Bob die Zahl 150 als Basis für ein einfaches
+      Verschlüsselungsverfahren benutzen (z. B. das XOR-Verfahren).
+\end{enumerate}
+
+
 
 \subsection{Das Verfahren von Rivest, Shamir und Adleman (RSA)}
 \label{subsec:rsa}
@@ -1500,21 +1554,148 @@ Der Empfänger gibt $r$ und $c$ als öffentlichen Schlüssel bekannt.
 Zum Beispiel steht auf seiner Homepage vereinfacht: \emph{Der öffentliche
 Schlüssel von daniel.senften@talent-factory.ch ist (r = 289073 und c = 353)}.
 
-
 \paragraph*{Schritt 3: Verschlüsseln einer Botschaft}
 
 
-\subsubsection*{Ein Zahlenbeispiel}
+\begin{enumerate}[label={\alph*)}]
+
+ \item Der Sender zerhackt seine Botschaft in kleinere Stücke, die
+danach einzeln verschlüsselt werden. Sind die Stücke sehr klein,
+z. B. 8 Bit, so kommt das Verfahren fast einer monoalphabetischen
+Substitution gleich. Die Stücke dürfen jedoch nicht mehr Bits in
+Anspruch nehmen als die Zahl \(r\). Ist z. B. \(r = 134565\), so darf ein
+Stück nicht mehr als 17 Bit in Anspruch nehmen (\(2^{17} =
+131072\)). Der Einfachheit halber würde man in einem solchen Fall wohl
+2 Byte belegen (2 Byte = 16 Bit \(<\) 17 Bit).
+
+In mathematischen Worten würde man wohl sagen: Die Originalbotschaft
+wird in Stücke \(B_i\) der Bitlänge des (ganzzahligen) Zweierlogarithmus von
+\(r\) unterteilt.
+
+
+\item Diese ``Kurzinformationen'' \(B_i\) muss der Sender nun mit \(r\) und \(c\) verschlüsseln:
+
+\begin{eqnarray*}
+	G_1 &=& B_1^c \bmod r \\
+	G_2 &=& B_2^c \bmod r \\
+	...
+\end{eqnarray*}
+Verwenden Sie das Java Hilfsprogramm
+
+\texttt{>java AhBmC Bi c r}.
+
+\item Diese ``Chiffrate'' (\(G_1\), \(G_2\), ...) sendet er/sie an den
+Empfänger. Das kann problemlos über die öffentliche Telefonleitung
+geschehen, denn nur der Empfänger kann diese entschlüsseln.
+
+\end{enumerate}
+
+
+\paragraph*{Schritt 4: Entschlüsseln der Botschaften}
+
+\begin{enumerate}[label={\alph*)}]
+
+\item Der Empfänger berechnet \(d := c^{-1} \bmod s\).\\
+
+Diesen Dechiffrierexponenten \(d\) kann nur er berechnen, denn nur er
+kennt \(s\)!
+
+Bem.: Alle können zwar rein theoretisch \(r\) in die Primfaktoren
+\(p\) und \(q\) zerlegen und so auch \(s\) berechnen; aber bei großen
+Primzahlen \(p\) und \(q\) ist dieser Aufwand immens.
+
+Verwenden Sie, um \(d\) zu berechnen, das Java Programm
+
+\texttt{>java Minv c s}.
+
+\item Alle Chiffrate (\(G_1\), \(G_2\), ...) kann der Empfänger mit
+  \begin{eqnarray*}
+	B_1 &=& G_1^d \bmod r \\
+	B_2 &=& G_2^d \bmod r \\
+	...
+  \end{eqnarray*}
+nun entschlüsseln. Verwenden Sie wiederum das Java Programm
+
+\texttt{>java AhBmC Gi d r}.
+
+
+\end{enumerate}
+
+\subsubsection{Ein Zahlenbeispiel}
+
+\paragraph{Schritt 1: Empfänger}
+Wertzuweisungen:
+\begin{eqnarray*}
+	p &=& 467 \\
+	q &=& 619 \\
+	r &=& 467\cdot 619 = 289073 \\
+	s &=& 466\cdot 618 = 287988 \\
+	c &=& 353
+\end{eqnarray*}
+
+
+\paragraph{Schritt 2: Veröffentlichen}
+Öffentlich bekannt geben: \(r = 289073\), \(c = 353\)
+
+\paragraph{Schritt 3: Sender}
+Die Botschaft sei ``Hallo''. Die Botschaft wird in Stücke der Länge 2
+Byte (= 16 Bit) unterteilt. (Die ``\textit{x}'' steht für \textit{hexadezimale Codierung}.)
+
+\begin{tabular}{rcrcrcr}
+\\
+      \(B_1\) &=& ``Ha''            &=& \(x4861\)                    &=& 18592 \\
+      \(B_2\) &=& ``ll''            &=& \(x6C6C\)                    &=& 27756               \\
+      \(B_3\) &=& ``o''             &=& \(x6F\)                      &=& 111                 \\
+      \\
+      \(G_1\) &=& \(B_1^c \bmod r\) &=& \(18529^{353} \bmod 289073\) &=& 200883 \\
+      \(G_2\) &=& \(B_2^c \bmod r\) &=& \(27756^{353} \bmod 289073\) &=& 212601 \\
+      \(G_3\) &=& \(B_3^c \bmod r\) &=& \(  111^{353} \bmod 289073\) &=& 12789 \\
+\\
+\end{tabular}
+
+
+Übermittelt wird nun die chiffrierte Botschaft :
+
+		\((G_1, G_2, G_3) = (200883, 212601, 12789)\)
+
+\paragraph{Schritt 4: Empfänger}
+Der Empfänger berechnet zunächst \(d\), den sog. Dechiffrierexponenten.\\
+
+\begin{tabular}{rcrcrcrcr}
+	\(d\)   &=& \(c^{-1}   \bmod s\) &=& 206405  & &           & &        \\
+        \\
+	\(B_1\) &=& \(200883^d \bmod r\) &=& 18529   &=& \(x4861\) &=& ``Ha'' \\
+	\(B_2\) &=& \(212601^d \bmod r\) &=& 27756   &=& \(x6C6C\) &=& ``ll'' \\
+	\(B_3\) &=& \(12789^d  \bmod r\) &=& 111     &=& \(x6F\)   &=& ``o''
+\end{tabular}
 
 \subsection{Der eigene öffentliche Schlüssel}
 
-\subsection{Java Hilfsprogramme}
-\label{subsec:java-programme}
+Wichtig bei öffentlich benutzten Verfahren ist es natürlich, dass die
+Zahlen, Schlüssel, Hash-Codes etc. in einem standardisierten Protokoll
+übermittelt werden.
 
-\subsubsection*{\texttt{XorKryptRandom}}
-\subsubsection*{Grösster gemeinsamer Teiler: \texttt{GCD}}
-\subsubsection*{Das Inverse modulo einer Primzahl: \texttt{MInv}}
-\subsubsection*{Potenzieren modulo einer Primzahl: \texttt{AhBmC}}
+\index{PGP}\index{GnuPG}
+Mit PGP (pretty good privacy: \texttt{www.pgpi.org}) von
+Phil Zimmermann existiert eine standardisierte Implementierung des
+Public Key Verfahrens. Unter Linux wird auch GnuPG (\texttt{www.gnupg.org}) als Open
+Source Version angeboten.
+
+PGP arbeitet mit einem Vertrauens-Netzwerk. Jedem Schlüssel in meinem
+Schlüsselbund kann eine Vertrauensstärke angegeben werden. So gibt es
+Schlüssel, deren Herkunft ich eher traue als anderen. Wenn ich nun
+einen neuen Schlüssel in meinen Schlüsselbund aufnehme, so schaue ich
+nach, ob jemand, dem ich traue, diesem Schlüssel bereits vertraut: In
+solchen Fällen kann ich dem neuen Schlüssel auch eher trauen.
+
+
+%\subsection{Java Hilfsprogramme}
+%\label{subsec:java-programme}
+%
+%\subsubsection*{\texttt{XorKryptRandom}}
+%\subsubsection*{Grösster gemeinsamer Teiler: \texttt{GCD}}
+%\subsubsection*{Das Inverse modulo einer Primzahl: \texttt{MInv}}
+%\subsubsection*{Potenzieren modulo einer Primzahl: \texttt{AhBmC}}
 
 % ===========================================================================
 \section{Implementierung}
@@ -1595,10 +1776,45 @@ Die Applikationsentwickler müssen sich nicht mehr um das darunterliegende Verf
 \section{Übungen und Aufgaben}
 \label{sec:uebungen}
 
-\subsection{Warenkorb}
-\label{subsec:wahrenkorb}
+%\subsection{Warenkorb}
+%\label{subsec:wahrenkorb}
+%\index{Ubung@Übung!Warenkorb}
+%
+%Installieren Sie den Demo-Warenkorb. Gehen Sie wie folgt vor:
+%\begin{enumerate}
+% \item Download: Je nach Infrastruktur stellt Ihnen die Lehrperson ein ZIP-File mit PHP-Quellcode zur Verfügung. Extrahieren 		       Sie die Dateien auf Ihrem PC und installieren Sie die Applikation entsprechend.
+% \item Kaufen Sie eine Ware (\texttt{http://localhost/wako/produkte.php})
+%       und vergleichen Sie danach die Bestellungen\\
+%       (\texttt{http://localhost/wako/admin.php?passwort=123456}).
+% \item Versuchen Sie eine Session Ihres Nachbarn zu
+%       \textit{hijacken}. Das geht hier ganz ohne Kenntnisse von TCP.
+% \item Kaufen Sie einen Artikel, der nicht auf der Artikelliste zu
+%       finden ist. Spionieren Sie als Kunde in der Datenbank: GET-Parameter
+%       ausprobieren oder systematisch abholen.
+% \item Betreiben Sie ``E-Shop-Lifting'': Kaufen Sie einen Artikel zu
+%       verfälschtem Preis.
+% \item Fügen Sie neue Produkte in die Produkteliste ein, und testen Sie
+%       eine Bestellung.
+%\end{enumerate}
 
-\subsubsection*{Alternative: Neuer Shop}
+
+\subsection{Neuer Shop}
+
+Alternativ zum Anpassen eines bestehenden Shops, kann  auch ein
+ganz neuer Shop programmiert werden. Dieser muss natürlich mindestens so viele
+(aber fehlerfreie) Funktionen bieten, wie ein Demo-Warenkorb.
+
+\begin{itemize}
+ \item Der eigene neue Web-Shop muss mindestens folgende Funktionen enthalten:
+   \begin{itemize}
+     \item Warenkorb mit Total-Anzeige,
+     \item Artikelauswahl (Liste oder Suche) und
+     \item eine Bestellmöglichkeit.
+   \end{itemize}
+ \item Der neue Shop muss mindestens zwei Verbesserungen gegenüber dem Demo-Warenkorb enthalten.
+ \item Vergessen Sie nicht, die Testfälle \textbf{vorab} zu beschreiben.
+\end{itemize}
+
 
 \subsection{Shop-Vergleich}
 \label{subsec:shop-vergleich}
@@ -1648,17 +1864,23 @@ dieses Skripts als Link. Aber suchen Sie auch eigene Shops:
     \end{itemize}
 \end{multicols}
 
-\subsection{Sicherheit}
-\label{subsec:sicherheit}
 
-\subsubsection*{Schutz gegen Angriffe}
-\subsubsection*{Angriff}
-
-\subsection{Verschlüsselung}
-
-\subsection{Verschlüsselung - Praxis}
-
-\subsection{Standard Web-Shops}
+% ---------------------------------------------------------------------------
+%\subsection{Sicherheit}
+%\label{subsec:sicherheit}
+%
+%Geben Sie zu vier der folgenden möglichen Angriffe aus dem Kapitel
+%Sicherheit \totalref{subsec:angriffe} eine mögliche Abhilfe.
+%
+%
+%\subsubsection*{Schutz gegen Angriffe}
+%\subsubsection*{Angriff}
+%
+%\subsection{Verschlüsselung}
+%
+%\subsection{Verschlüsselung - Praxis}
+%
+%\subsection{Standard Web-Shops}
 
 % ===========================================================================
 \section{GnuPG}

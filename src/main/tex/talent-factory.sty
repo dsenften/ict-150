@@ -28,6 +28,7 @@
 \RequirePackage{colortbl}
 
 \RequirePackage{enumitem}
+
 \RequirePackage[answerdelayed,lastexercise]{exercise}
 \RequirePackage{wrapfig}
 \RequirePackage{filecontents}
@@ -61,9 +62,10 @@ pdfpagemode = FullScreen,
 \RequirePackage{tikz-uml}
 \RequirePackage{tikz-qtree}
 
+\newcommand\totalref[1]{(siehe auch Kapitel~\ref{#1} auf Seite~\pageref{#1})}
 
 \newcommand\image[2]{%
-\begin{figure}[ht]
+\begin{figure}[!htbp]
     \centering
     \mode<presentation>{\includegraphics[width=6cm]{images/#1.png}}
     \mode<article>{\includegraphics[width=10cm]{images/#1.png}}
