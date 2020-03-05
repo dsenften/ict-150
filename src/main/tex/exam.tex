@@ -1,0 +1,255 @@
+\documentclass[12pt,a4paper]{exam}
+\usepackage{natbib}
+
+\printanswers % If you want to print answers
+%\noprintanswers % If you don't want to print answers
+
+\renewcommand{\solutiontitle}{\noindent\textbf{Lösung:}\enspace}
+
+\RequirePackage{talent-factory}
+\RequirePackage[top=3cm,bottom=2cm,left=2cm,right=1.5cm,headsep=10pt,a4paper]{geometry} % Page margins
+
+\newcommand{\class}{Modul 150}
+\newcommand{\examnum}{Test 1}
+\newcommand{\examdate}{13.03.2019}
+\newcommand{\timelimit}{45 Minuten}
+
+\pagestyle{head}
+\firstpageheader{}{}{}
+\runningheader{\class}{\examnum\ - Seite \thepage\ / \numpages}{\examdate}
+\runningheadrule
+
+\begin{document}
+
+    \setmainfont{Verdana}
+    \parindent0em\parskip1em
+
+    % Deutsche Schreibweise diverser Labels
+    \pointpoints{Punkt}{Punkte}
+
+
+    \noindent
+    \begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} l}
+        \textbf{\class}           & \textbf{Name:} & \makebox[2in]{\hrulefill} \\
+        \textbf{\examnum}         & & \\
+        \textbf{\examdate}        & & \\
+        \textbf{Zeit: \timelimit} & Dozent: & \makebox[2in]{Daniel Senften}
+    \end{tabular*}\\
+    \rule[1ex]{\textwidth}{1pt}
+
+    Dieser Test besteht aus \numpages\ Seiten (inkl. Titelseite) und
+    \numquestions\ Fragen. Wenn alle Fragen richtig beantwortet werden,
+    dann sind maximal \numpoints\ möglich. Fragestellung jeweils gut lesen
+    und bei den Antworten auf eine \emph{lesbare} Schrift achten.
+
+
+    \begin{center}
+        \textbf{Punktetabelle}\footnote{Diese Tabelle wird durch den Dozenten
+        nach der Prüfung ausgefüllt.} \\ \vskip1em
+        \addpoints
+
+        \hqword{Aufgabe}
+        \hpword{Punkte}
+        \htword{\textbf{Total}}
+        \hsword{Erreicht}
+        \gradetable[h][questions]
+    \end{center}
+
+    \noindent
+    \rule[1ex]{\textwidth}{1pt}
+
+    % ===========================================================================
+
+    \begin{questions}
+
+        % -----------------------------------------------
+        \question Geben Sie zu den folgenden möglichen Angriffe aus dem Kapitel
+        Sicherheit eine mögliche Abhilfe.
+
+        \begin{parts}
+            \part[5] Passwort Cracker und Guesser
+            \ifprintanswers
+            \begin{solution}
+                Verwenden von sicheren Passwörtern (keine bekannte Daten vie
+                Geburtstag oder ähnliche Informationen). Verwenden von Ziffern,
+                Buchstaben und Spezialzeichen. Es existieren auch etliche
+                Passwort-Generatoren (Beispiel: \href{https://www.dashlane.com/}
+                {Dashline}). Passwörter regelmässig ändern.
+            \end{solution}
+            \else\makeemptybox{2in}
+            \fi
+
+            \part[5] E-Shop Lifting
+            \ifprintanswers
+            \begin{solution}
+                Keine sensiblen Daten auf dem Client ablegen (\emph{hidden fields},
+                cockies$\ldots$). Falls Daten von einer Session zurr nächsten verwendet
+                werden sollen, dann müssen diese zwingend auf dem Server (und nicht
+                auf dem Client) abgelegt werden.
+            \end{solution}
+            \else\makeemptybox{2in}
+            \fi
+
+            \part[5] DoS Attacken
+            \ifprintanswers
+            \begin{solution}
+                TCP/IP Protokollstack absichern. DDoS-Angriffe auf Anwendungsebene
+                (wie HTTP-GET-/POST-Floods) werden direkt am Netzwerkrand bekämpft,
+                damit sie den Anwendungsursprung nicht erreichen können und die
+                Anwendungssicherheit gewährleistet bleibt. Zusätzlich können
+                Angriffe auf die Anwendung mit Hilfe einer Web Application Firewall
+                (WAF) verhindert.
+            \end{solution}
+            \else\makeemptybox{2in}
+            \fi
+
+            \part[5] Man-in-the-Middle
+            \ifprintanswers
+            \begin{solution}
+                E-Mails verschlüsseln und signieren; Wenn nötig verschlüsseltes
+                \textit{Surfen}. Generell sollte ausschliesslich eine SSL (\texttt{https})
+                Verbindung verwendet werden. Unbekannte, öffentliche WLAN's vermeiden.
+            \end{solution}
+            \else\makeemptybox{2in}
+            \fi
+
+        \end{parts}
+
+        \addpoints
+
+
+        % -----------------------------------------------
+        \question Beschreiben Sie, wie Sie als \textit{Hacker} vorgehen würden,
+        um Sicherheitslöcher im eBanking auszunutzen. Was ist zu tun, um in
+        das System einzudringen, dieses auszuhorchen oder zu manipulieren.
+
+
+        \begin{parts}
+            \part[5] User achtet nicht auf sichere Verbindung.
+            \ifprintanswers
+            \begin{solution}
+                Net-Sniffer (z.B.~\href{https://www.wireshark.org}{Wireshark})
+                einsetzen und Transfer analysieren. Alle besuchten Webseiten mit
+                Passworteingaben notieren. Alle persönlichen Informationen des
+                Users sicherstellen.
+            \end{solution}
+            \else\makeemptybox{2in}
+            \fi
+
+            \part[5] User gibt telefonisch Passwörter durch.
+            \ifprintanswers
+            \begin{solution}
+                Person unter falschem Namen (Bank) anrufen; Telefongespräche abhören.
+            \end{solution}
+            \else\makeemptybox{2in}
+            \fi
+
+            \part[5] User beantwortet alle (auch \emph{Fake-}) E-Mails.
+            \ifprintanswers
+            \begin{solution}
+                \emph{Fake-} E-Mails verfassen (Stichwort:
+                \href{https://de.wikipedia.org/wiki/Phishing}{Phishing}).
+            \end{solution}
+            \else\makeemptybox{2in}
+            \fi
+
+            \part[5] Benutzer verwendet keinen Virenschutz.
+            \ifprintanswers
+            \begin{solution}
+                Trojaner via Virus einschleusen.
+            \end{solution}
+            \else\makeemptybox{2in}
+            \fi
+
+            \part[5] Benutzer hat den Cache nicht geleert.
+            \ifprintanswers
+            \begin{solution}
+                Trojaner nach Browser-Cache-Dateien suchen lassen und anschliessend
+                übermitteln.
+            \end{solution}
+            \else\makeemptybox{2in}
+            \fi
+
+        \end{parts}
+
+        \addpoints
+
+        % -----------------------------------------------
+        \newpage
+        \question[10] Als Webentwickler sollte man die wichtigsten Begriffe und
+        Gepflogenheiten aus dem Bereich der `\emph{Juristischen Grundlagen}'
+        kennen.
+
+        Nenne drei Begriffe und erkläre diese kurz.
+
+        \ifprintanswers
+        \begin{solution}
+            Für jeden Begriff wird je ein Punkt gutgeschrieben und jede
+            korrekte Erklärung wird mit zwei Punkten bewertet.
+            \begin{itemize}
+                \item Abmahnung
+                \item Impressum
+                \item Disclaimer | Allgemeine Geschäftsbedingungen
+                \item Urheberrechtsschutz
+            \end{itemize}
+        \end{solution}
+        \else\makeemptybox{\fill}
+        \fi
+
+        \addpoints
+
+        % -----------------------------------------------
+        \newpage
+        \question[15] Was verstehen wir unter der Wertschöpfungskette
+        (Bestandteile des \emph{E-Business}).
+
+        Nenne fünf dieser Begriffe und erkläre diese kurz.
+
+        \ifprintanswers
+        \begin{solution}
+            Für jeden Begriff wird je ein Punkt gutgeschrieben und jede
+            korrekte Erklärung wird mit zwei Punkten bewertet.
+            \begin{itemize}
+                \item eProduct | eService
+                \item eProcurement
+                \item eMarketing
+                \item eContracting
+                \item eDistribution
+                \item ePayment
+            \end{itemize}
+        \end{solution}
+        \else\makeemptybox{\fill}
+        \fi
+
+        \addpoints
+
+        % -----------------------------------------------
+        \newpage
+        \question[10] Eine gute Web-Applikation sollte die Vielfalt der
+        Anforderungen abdecken und ergonomisch gestaltet sein. Nenne und
+        erläutere Möglichkeiten, die Benutzerfreundlichkeit
+        (\emph{Usability}) zu verbessern.
+
+        \ifprintanswers
+        \begin{solution}
+            Für jedes Stichwort (max. 5) gibt es je einen Punkt und je einen
+            Punkt für eine korrekte Erläuterung des erwähnten Begriffes.
+            \begin{itemize}
+                \item Performance
+                \item Verfügbarkeit
+                \item Plattformunabhängigkeit
+                \item Barrierefreiheit
+                \item Lesbarkeit
+                \item Seitenlänge
+                \item Orientierung
+                \item Konsistenz
+            \end{itemize}
+        \end{solution}
+        \else\makeemptybox{\fill}
+        \fi
+
+        \addpoints
+
+    \end{questions}
+
+\end{document}
